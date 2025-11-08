@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Plum - Concierge Advocacy & Transformative Services</title>
+    <title>Black Plum - Transformative Concierge Consulting</title>
     <style>
         * {
             margin: 0;
@@ -19,31 +19,37 @@
             letter-spacing: 0.5px;
         }
 
+        /* Header & Navigation */
         header {
             background: linear-gradient(135deg, #1a0f1b 0%, #2d1b3d 50%, #1a0f1b 100%);
-            padding: 60px 20px;
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 2px solid #9B4F96;
+            border-bottom: 2px solid #d4af37;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
-            font-size: 2.5em;
-            color: #9B4F96;
-            margin-bottom: 15px;
+            font-size: 2.2em;
+            color: #d4af37;
+            margin-bottom: 10px;
             font-weight: bold;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            font-family: 'Playfair Display', serif;
         }
 
         .tagline {
-            font-size: 1.3em;
+            font-size: 1.1em;
             color: #C0C0C0;
             font-style: italic;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
         }
 
-        .subtitle {
+        .founder {
             font-size: 0.95em;
-            color: #B19CD9;
+            color: #9B4F96;
             letter-spacing: 1px;
         }
 
@@ -55,7 +61,7 @@
 
         section {
             padding: 60px 20px;
-            border-bottom: 1px solid rgba(155, 79, 150, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         section:last-child {
@@ -63,36 +69,129 @@
         }
 
         h2 {
-            font-size: 2em;
-            color: #9B4F96;
+            font-size: 2.2em;
+            color: #d4af37;
             margin-bottom: 30px;
             text-align: center;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
         }
 
         h3 {
-            font-size: 1.4em;
-            color: #C0C0C0;
-            margin-bottom: 15px;
+            font-size: 1.5em;
+            color: #d4af37;
+            margin-bottom: 20px;
             margin-top: 25px;
+            font-family: 'Playfair Display', serif;
         }
 
         p {
             margin-bottom: 15px;
             line-height: 1.9;
             color: #E5E5DC;
+            font-size: 1.05em;
         }
 
-        .philosophy-intro {
-            font-size: 1.1em;
+        .intro-section {
+            background: rgba(45, 27, 61, 0.4);
+            padding: 50px 40px;
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .intro-section p {
+            font-size: 1.15em;
             font-style: italic;
-            color: #B19CD9;
-            margin: 30px 0;
-            padding: 20px;
-            border-left: 3px solid #9B4F96;
-            background: rgba(155, 79, 150, 0.05);
+            color: #F5F1ED;
+            margin-bottom: 20px;
         }
 
+        .cta-button {
+            display: inline-block;
+            background: #d4af37;
+            color: #1a0f1b;
+            padding: 18px 50px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #d4af37;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #d4af37;
+        }
+
+        /* Membership Tiers */
+        .membership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .membership-card {
+            background: rgba(45, 27, 61, 0.6);
+            border: 2px solid #d4af37;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .membership-card:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .membership-card.featured {
+            border: 3px solid #d4af37;
+            transform: scale(1.05);
+        }
+
+        .tier-name {
+            font-size: 1.8em;
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .tier-description {
+            color: #C0C0C0;
+            margin-bottom: 25px;
+            font-size: 1em;
+            line-height: 1.7;
+        }
+
+        .tier-features {
+            text-align: left;
+            margin: 25px 0;
+        }
+
+        .tier-features li {
+            list-style: none;
+            padding: 8px 0;
+            color: #E5E5DC;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .tier-features li:before {
+            content: "✓ ";
+            color: #d4af37;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -102,21 +201,23 @@
 
         .service-card {
             background: rgba(45, 27, 61, 0.5);
-            border: 1px solid #9B4F96;
+            border: 1px solid #d4af37;
             padding: 30px;
             border-radius: 8px;
             transition: all 0.3s ease;
         }
 
         .service-card:hover {
-            background: rgba(155, 79, 150, 0.1);
-            border-color: #C0C0C0;
+            background: rgba(212, 175, 55, 0.1);
+            border-color: #F5F1ED;
             transform: translateY(-5px);
         }
 
-        .service-card h3 {
-            color: #9B4F96;
-            margin-top: 0;
+        .service-card h4 {
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-family: 'Playfair Display', serif;
         }
 
         .service-card p {
@@ -124,120 +225,141 @@
             line-height: 1.8;
         }
 
-        .pathway-section {
-            background: rgba(45, 27, 61, 0.3);
-            padding: 40px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border-left: 4px solid #9B4F96;
-        }
-
-        .pathway-step {
-            margin: 20px 0;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 4px;
-        }
-
-        .pathway-step strong {
-            color: #9B4F96;
-        }
-
-        .systems-grid {
+        /* Methodology Section */
+        .methodology-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            margin-top: 30px;
+            margin: 40px 0;
         }
 
-        .system-card {
-            background: rgba(45, 27, 61, 0.4);
-            padding: 20px;
-            border-radius: 6px;
-            border: 1px solid #9B4F96;
+        .step {
+            background: rgba(212, 175, 55, 0.05);
+            padding: 25px;
+            border-left: 4px solid #d4af37;
+            border-radius: 4px;
         }
 
-        .system-card h4 {
-            color: #9B4F96;
+        .step-number {
+            font-size: 2em;
+            color: #d4af37;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .step-title {
+            color: #d4af37;
+            font-weight: bold;
             margin-bottom: 10px;
             font-size: 1.1em;
         }
 
-        .system-card p {
-            font-size: 0.9em;
-            color: #B19CD9;
+        .step p {
+            font-size: 0.95em;
         }
 
-        .cta-section {
-            background: rgba(155, 79, 150, 0.1);
-            padding: 50px 20px;
-            text-align: center;
-            border: 2px solid #9B4F96;
+        /* Integration Architecture */
+        .integration-box {
+            background: rgba(45, 27, 61, 0.6);
+            border: 2px solid #d4af37;
+            padding: 30px;
             border-radius: 8px;
-            margin-top: 40px;
+            margin: 30px 0;
         }
 
-        .cta-section h3 {
-            color: #9B4F96;
-            margin-top: 0;
+        .integration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: #9B4F96;
-            color: #F5F1ED;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 20px;
-            font-size: 1em;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            border: 2px solid #9B4F96;
+        .integration-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #d4af37;
+            text-align: center;
         }
 
-        .cta-button:hover {
-            background: transparent;
-            color: #9B4F96;
+        .integration-item h5 {
+            color: #d4af37;
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
 
+        .integration-item p {
+            font-size: 0.9em;
+            color: #C0C0C0;
+        }
+
+        /* Financing Section */
+        .financing-section {
+            background: rgba(212, 175, 55, 0.08);
+            padding: 40px;
+            border-radius: 8px;
+            border: 2px solid #d4af37;
+            margin: 40px 0;
+        }
+
+        .financing-section h3 {
+            text-align: center;
+        }
+
+        .financing-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .financing-feature {
+            text-align: center;
+        }
+
+        .financing-feature h4 {
+            color: #d4af37;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .financing-feature p {
+            font-size: 0.95em;
+        }
+
+        /* Footer */
         footer {
             background: #0d0608;
             padding: 40px 20px;
             text-align: center;
-            border-top: 2px solid #9B4F96;
-            color: #B19CD9;
+            border-top: 2px solid #d4af37;
+            color: #C0C0C0;
         }
 
         footer p {
             margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #d4af37;
+            text-decoration: none;
+            margin: 0 15px;
             font-size: 0.9em;
         }
 
-        .founder-note {
-            background: rgba(45, 27, 61, 0.7);
-            padding: 30px;
-            border-left: 4px solid #C0C0C0;
-            margin: 40px 0;
-            font-style: italic;
-            color: #E5E5DC;
+        .footer-links a:hover {
+            text-decoration: underline;
         }
 
-        .highlight {
-            color: #9B4F96;
-            font-weight: bold;
-        }
-
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin: 30px 0;
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
             header {
-                padding: 40px 20px;
+                padding: 30px 20px;
             }
 
             .logo {
@@ -245,222 +367,314 @@
             }
 
             h2 {
-                font-size: 1.5em;
+                font-size: 1.6em;
             }
 
             section {
                 padding: 40px 20px;
             }
 
-            .two-column {
-                grid-template-columns: 1fr;
+            .membership-card.featured {
+                transform: scale(1);
             }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+        }
+
+        .highlight {
+            color: #d4af37;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">BLACK PLUM</div>
-        <div class="tagline">Concierge Advocacy & Transformative Services</div>
-        <div class="subtitle">Founded by Brandy Bianchini | Universal Changemakers L3C</div>
+        <div class="tagline">Transformative Concierge Consulting</div>
+        <div class="founder">Founded by Brandy Bianchini | Universal Changemakers L3C</div>
     </header>
 
     <section class="container">
-        <h2>Our Foundation</h2>
-        <p>Black Plum represents the culmination of generations of service, advocacy, and transformative leadership. Rooted in a family legacy of protection and empowerment, our concierge approach brings unprecedented dedication to each client's unique journey toward wellbeing and success.</p>
-        
-        <h3>Family Legacy</h3>
-        <p>Drawing from generations of advocates, healers, and protectors, Black Plum embodies the wisdom that true service transforms both giver and receiver. Our history informs our commitment to creating lasting, meaningful change in every engagement.</p>
-
-        <p>Through Universal Changemakers L3C, we provide the structural foundation for our mission, ensuring that every service—from entertainment production to digital asset development, from government procurement to wellness advocacy—serves a unified purpose: the elevation of human potential through strategic protection and support.</p>
-
-        <div class="philosophy-intro">
-            "Every service we provide stems from the same wellspring: the belief that when we protect and nurture what matters most, transformation becomes not just possible, but inevitable."
+        <div class="intro-section">
+            <p>Welcome to Black Plum, where human-centered transformation begins with listening, understanding, and personalized guidance.</p>
+            <p>Whether you're seeking lifestyle elevation, crisis support, wellness advocacy, or business development, your journey starts here.</p>
+            <a href="https://calendly.com/blackplum" class="cta-button">ENGAGE NOW - Book Your Consultation</a>
         </div>
     </section>
 
     <section class="container">
-        <h2>The Black Plum Philosophy</h2>
+        <h2>Our Approach</h2>
         
-        <p>At Black Plum, we understand that wellbeing is not a destination but the foundation upon which all meaningful success is built. Our concierge methodology integrates every service offering through this lens, creating a seamless experience that addresses the whole person, not just immediate needs.</p>
+        <p>Black Plum operates through a proven methodology grounded in behavioral health psychology, life coaching, and deep business expertise. We serve individuals, couples, families, groups, and companies with the same commitment to excellence.</p>
 
-        <h3>Our Core Principles</h3>
+        <h3>The Black Plum Methodology</h3>
         
-        <p><span class="highlight">Concierge-Level Attention:</span> Every client receives the dedicated, personalized service typically reserved for the most discerning individuals. Your needs are unique, and your service is customized accordingly.</p>
+        <div class="methodology-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-title">Listen</div>
+                <p>Deep, compassionate listening to understand your complete situation, challenges, and aspirations.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-title">Observe</div>
+                <p>Careful observation of patterns, dynamics, and opportunities across your life and business.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-title">Document</div>
+                <p>Thorough documentation of what we're hearing and understanding about your situation.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-title">Organize</div>
+                <p>Organizing information into clarity, identifying patterns and key insights.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-title">Quantify</div>
+                <p>Identifying measurable pain points and opportunities for transformation.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-title">Simplify</div>
+                <p>Distilling everything into clear, simple next steps and actionable pathways.</p>
+            </div>
+        </div>
 
-        <p><span class="highlight">Advocacy as Core Mission:</span> We don't just provide services; we become your champions, protecting your interests and amplifying your voice in every interaction.</p>
-
-        <p><span class="highlight">Wellbeing-Centered Strategy:</span> All recommendations and implementations prioritize long-term sustainability and human flourishing over short-term gains.</p>
-
-        <p><span class="highlight">Integrated Service Portfolio:</span> Our comprehensive offerings demonstrate how diverse capabilities serve a unified mission. Each service area reinforces and enhances the others, creating exponential value for our clients.</p>
+        <p style="margin-top: 40px; text-align: center; font-style: italic; color: #d4af37;">
+            From this foundation, we curate experiences, coordinate resources, and build the support structure you need to thrive.
+        </p>
     </section>
 
     <section class="container">
-        <h2>Our Service Areas</h2>
+        <h2>Membership Tiers</h2>
         
+        <p style="text-align: center; margin-bottom: 40px;">Choose the level of engagement that aligns with your needs. All memberships include access to our integrated support ecosystem and DENEFITS financing options.</p>
+
+        <div class="membership-grid">
+            <div class="membership-card">
+                <div class="tier-name">Plum Essence</div>
+                <div class="tier-description">Entry-level access to Black Plum's transformative services</div>
+                <ul class="tier-features">
+                    <li>Initial consultation with Brandy</li>
+                    <li>Quarterly curated experiences</li>
+                    <li>Access to digital community</li>
+                    <li>Basic concierge support</li>
+                    <li>DENEFITS financing available</li>
+                </ul>
+            </div>
+
+            <div class="membership-card featured">
+                <div class="tier-name">Royal Plum</div>
+                <div class="tier-description">Premium membership with dedicated support and monthly experiences</div>
+                <ul class="tier-features">
+                    <li>Dedicated concierge manager</li>
+                    <li>Monthly custom-crafted experiences</li>
+                    <li>Exclusive events and networking</li>
+                    <li>Partner discounts and benefits</li>
+                    <li>Priority access to resources</li>
+                    <li>DENEFITS financing available</li>
+                </ul>
+            </div>
+
+            <div class="membership-card">
+                <div class="tier-name">Black Plum Elite</div>
+                <div class="tier-description">Invitation-only, unlimited access to all services and lifestyle management</div>
+                <ul class="tier-features">
+                    <li>24/7 personal concierge access</li>
+                    <li>Bespoke experience curation</li>
+                    <li>Full lifestyle management</li>
+                    <li>Global network access</li>
+                    <li>VIP events and private salons</li>
+                    <li>White-glove DENEFITS support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>What We Offer</h2>
+        
+        <p>Black Plum provides comprehensive support across multiple service areas, all coordinated through our integrated operational ecosystem.</p>
+
         <div class="services-grid">
             <div class="service-card">
-                <h3>Entertainment & Production</h3>
-                <p>Content creation, production management, and distribution strategy that amplifies meaningful messages while protecting creative integrity and intellectual property.</p>
+                <h4>Lifestyle Elevation</h4>
+                <p>Curated experiences, travel planning, and exclusive access to events and cultural opportunities that enrich your life and expand your perspective.</p>
             </div>
 
             <div class="service-card">
-                <h3>Digital Assets & Systems</h3>
-                <p>Strategic development of digital properties, technology integration, and system optimization that serves long-term growth and operational excellence.</p>
+                <h4>Wellness Advocacy</h4>
+                <p>Comprehensive wellness support, crisis intervention, and lifestyle optimization grounded in behavioral health expertise and compassionate guidance.</p>
             </div>
 
             <div class="service-card">
-                <h3>Government Procurement</h3>
-                <p>Expert navigation of federal systems, contract development, and regulatory compliance that opens doors while maintaining ethical standards.</p>
+                <h4>Business Development</h4>
+                <p>Strategic business support, resource coordination, and expert guidance for entrepreneurs and business leaders seeking growth and transformation.</p>
             </div>
 
             <div class="service-card">
-                <h3>Wellness Advocacy</h3>
-                <p>Comprehensive wellness program development, crisis intervention, and lifestyle optimization that creates sustainable success from the inside out.</p>
+                <h4>Crisis Response</h4>
+                <p>Immediate, expert support during challenging times. Our Safe Harbor program provides comprehensive resources and advocacy when you need it most.</p>
             </div>
 
             <div class="service-card">
-                <h3>Brand Protection & IP</h3>
-                <p>Strategic intellectual property development, brand architecture, and asset protection that safeguards your most valuable resources.</p>
+                <h4>Community Connection</h4>
+                <p>Access to our global network of supporters, vendors, service providers, and like-minded individuals committed to growth and positive impact.</p>
             </div>
 
             <div class="service-card">
-                <h3>Provider & Concierge Support</h3>
-                <p>Comprehensive support services, resource coordination, and relationship management that ensures seamless execution across all areas of your life and business.</p>
+                <h4>Personalized Planning</h4>
+                <p>Custom plans tailored to your unique circumstances, challenges, and aspirations. We handle the details so you can focus on what matters most.</p>
             </div>
         </div>
     </section>
 
     <section class="container">
-        <h2>Client Engagement Pathway</h2>
+        <h2>Flexible Financing Through DENEFITS</h2>
         
-        <p>Your journey with Black Plum begins with understanding your unique needs, financial capacity, and transformation goals. We employ a comprehensive assessment process that informs every service decision.</p>
+        <div class="financing-section">
+            <h3>Access Black Plum Services at Your Own Pace</h3>
+            
+            <p style="text-align: center; margin: 20px 0;">DENEFITS is our white-glove financing partner, breaking down service costs into manageable, bite-sized pieces so you can access the support you need without financial strain.</p>
 
-        <div class="pathway-section">
-            <h3>The Intake & Assessment Process</h3>
-            <div class="pathway-step">
-                <strong>Initial Consultation:</strong> Live or recorded conversation to understand your background, current situation, and aspirations.
+            <div class="financing-features">
+                <div class="financing-feature">
+                    <h4>Flexible Payment Plans</h4>
+                    <p>Customized payment schedules aligned to your financial capacity and cash flow.</p>
+                </div>
+
+                <div class="financing-feature">
+                    <h4>Pre-Approval Pathway</h4>
+                    <p>Quick approval process for preferred clients and members to begin services immediately.</p>
+                </div>
+
+                <div class="financing-feature">
+                    <h4>Inclusive Access</h4>
+                    <p>Financial barriers don't prevent you from accessing transformation and support.</p>
+                </div>
+
+                <div class="financing-feature">
+                    <h4>Transparent Terms</h4>
+                    <p>Clear, honest financing terms with no hidden fees or surprises.</p>
+                </div>
             </div>
-            <div class="pathway-step">
-                <strong>Relationship Assessment:</strong> Deep evaluation of your needs, constraints, and opportunities across all life and business domains.
-            </div>
-            <div class="pathway-step">
-                <strong>Financial Capacity Analysis:</strong> Honest assessment of resources, obligations, and realistic pathways to your goals.
-            </div>
-            <div class="pathway-step">
-                <strong>Service Pathway Design:</strong> Customized plan identifying which services activate based on your specific situation.
-            </div>
-            <div class="pathway-step">
-                <strong>Partnership Agreement:</strong> Clear terms, conditions, and mutual commitments that honor your values and our standards.
-            </div>
-            <div class="pathway-step">
-                <strong>Ongoing Transformation:</strong> Regular check-ins, course corrections, and celebration of progress toward your vision.
-            </div>
+
+            <p style="text-align: center; margin-top: 30px; font-style: italic;">
+                DENEFITS financing is discussed and customized during your initial consultation based on your specific needs and circumstances.
+            </p>
         </div>
     </section>
 
     <section class="container">
-        <h2>Integrated Systems & Operations</h2>
+        <h2>Our Operational Ecosystem</h2>
         
-        <p>Black Plum operates through a sophisticated integration of industry-leading platforms and proprietary systems designed to deliver seamless, transparent, and accountable service.</p>
+        <p>Black Plum is powered by an integrated network of specialized platforms and partnerships, ensuring seamless service delivery and expert support across all areas.</p>
 
-        <div class="systems-grid">
-            <div class="system-card">
-                <h4>Practice Panther</h4>
-                <p>Legal case management and compliance tracking for all service agreements and client matters.</p>
-            </div>
+        <div class="integration-box">
+            <h3 style="text-align: center; margin-bottom: 30px;">Integrated Systems & Partnerships</h3>
+            
+            <div class="integration-grid">
+                <div class="integration-item">
+                    <h5>Galaxy Digital</h5>
+                    <p>Volunteer coordination and community engagement</p>
+                </div>
 
-            <div class="system-card">
-                <h4>Odoo Platform</h4>
-                <p>Integrated CRM, project management, accounting, and payroll for operational excellence.</p>
-            </div>
+                <div class="integration-item">
+                    <h5>Odoo Platform</h5>
+                    <p>CRM, project management, and accounting hub</p>
+                </div>
 
-            <div class="system-card">
-                <h4>RingCentral</h4>
-                <p>Professional call routing and communication infrastructure for seamless client access.</p>
-            </div>
+                <div class="integration-item">
+                    <h5>Practice Panther</h5>
+                    <p>Legal case management and compliance</p>
+                </div>
 
-            <div class="system-card">
-                <h4>DENEFITS</h4>
-                <p>In-house financing and payment solutions with flexible terms aligned to your capacity.</p>
-            </div>
+                <div class="integration-item">
+                    <h5>Wethos Studio</h5>
+                    <p>Contract generation and proposal automation</p>
+                </div>
 
-            <div class="system-card">
-                <h4>Studio Binder</h4>
-                <p>Production management for entertainment and creative service delivery.</p>
-            </div>
+                <div class="integration-item">
+                    <h5>Perfect Venue</h5>
+                    <p>Event planning and coordination</p>
+                </div>
 
-            <div class="system-card">
-                <h4>Mighty Networks</h4>
-                <p>Community platform connecting clients, advocates, and transformation partners.</p>
+                <div class="integration-item">
+                    <h5>DENEFITS</h5>
+                    <p>White-glove financing and payment solutions</p>
+                </div>
             </div>
         </div>
 
-        <div class="pathway-section" style="margin-top: 40px;">
-            <h3>Financial Structure</h3>
-            <p>Black Plum operates with transparent financial management through dedicated trust and operating accounts, ensuring your resources are protected and deployed strategically.</p>
-            <div class="pathway-step">
-                <strong>Trust Account:</strong> Secure holding of client funds with clear accounting and reporting.
-            </div>
-            <div class="pathway-step">
-                <strong>Operating Account:</strong> Transparent management of service delivery costs and resource allocation.
-            </div>
-            <div class="pathway-step">
-                <strong>Flexible Payment Options:</strong> Multiple payment methods including real-time ACH, debit cards, and DENEFITS financing.
-            </div>
-        </div>
+        <p style="text-align: center; margin-top: 30px; color: #d4af37; font-style: italic;">
+            This integrated infrastructure ensures that every aspect of your service is coordinated, professional, and aligned with our commitment to excellence.
+        </p>
     </section>
 
     <section class="container">
-        <h2>What Sets Us Apart</h2>
+        <h2>Our Mission & Impact</h2>
         
-        <p><span class="highlight">Generational Wisdom:</span> Decisions informed by family legacy and proven principles that have transformed organizations and lives.</p>
+        <p>Black Plum operates under the <span class="highlight">Universal Changemakers L3C</span> structure, blending luxury concierge services with meaningful community impact. We serve not just individual clients, but also support four global programs addressing critical community needs:</p>
 
-        <p><span class="highlight">Integrated Approach:</span> All services working in harmony toward unified goals, creating synergy that multiplies impact.</p>
+        <div class="integration-box" style="margin-top: 30px;">
+            <h3 style="text-align: center;">The Universal Changemakers Ecosystem</h3>
+            
+            <p style="text-align: center; margin: 20px 0;">Our work extends beyond individual transformation to systemic change through:</p>
 
-        <p><span class="highlight">Concierge Standards:</span> Premium attention and personalized service for every client, regardless of project scope.</p>
+            <ul style="margin: 20px 0; list-style: none;">
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2);"><span class="highlight">Black Plum Elite</span> - High-net-worth concierge services</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2);"><span class="highlight">Bella Dynamic</span> - Public wellness advocacy and authentic healing</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2);"><span class="highlight">Safe Harbor</span> - Crisis response and emergency support programs</li>
+                <li style="padding: 10px 0;"><span class="highlight">Economic Growth Clinic</span> - Business development and entrepreneurship support</li>
+            </ul>
 
-        <p><span class="highlight">Wellbeing Focus:</span> Solutions that serve both immediate needs and long-term health and success.</p>
-
-        <p><span class="highlight">Protective Advocacy:</span> Unwavering commitment to your interests and values in every engagement.</p>
-
-        <p><span class="highlight">Transformative Vision:</span> Seeing and actualizing potential others might miss, with strategic precision and genuine care.</p>
-
-        <p><span class="highlight">Operational Transparency:</span> Clear systems, honest communication, and verifiable results at every stage.</p>
-
-        <div class="founder-note">
-            My journey to creating Black Plum began with understanding that protection and empowerment are not opposing forces, but complementary aspects of true service. Growing up in a family where advocacy was a way of life, I learned early that the most profound transformations occur when someone truly has your back. This perspective shaped my approach to every professional engagement—from crisis response leadership that saved organizations millions, to wellness programs that restored executives' health and performance, to government contracts that opened new possibilities for growth. Each success reinforced the same truth: when you combine strategic excellence with genuine care, extraordinary outcomes become possible.
+            <p style="text-align: center; margin-top: 20px; font-style: italic;">
+                All coordinated through our operational infrastructure, all serving the mission of transformation and community benefit.
+            </p>
         </div>
     </section>
 
     <section class="container">
-        <h2>Eternal Autumn Club</h2>
+        <h2>Begin Your Transformation</h2>
         
-        <p>Black Plum is part of the Eternal Autumn Club ecosystem, a network of integrated brands and services united under the Universal Changemakers L3C umbrella. This structure allows us to offer comprehensive solutions while maintaining the highest standards of service and integrity.</p>
+        <div class="intro-section">
+            <h3 style="text-align: center; margin-top: 0;">Your journey with Black Plum starts with a conversation.</h3>
+            
+            <p>Book a consultation with Brandy to explore what's possible for you. Whether you're an individual, couple, family, group, or company, all options are accessible.</p>
 
-        <p>Through this ecosystem, clients gain access to expanded capabilities, specialized expertise, and a community of like-minded individuals committed to transformation and excellence.</p>
-    </section>
+            <p style="margin-top: 30px; font-weight: bold; color: #d4af37;">
+                During your initial consultation, we'll discuss:
+            </p>
 
-    <section class="container">
-        <h2>Client Partnership</h2>
-        
-        <p>Working with Black Plum means entering a partnership built on mutual respect, shared vision, and unwavering commitment to your success. Our clients don't just receive services—they gain an advocate, a strategist, and a partner invested in their long-term flourishing.</p>
+            <ul style="text-align: left; margin: 20px auto; max-width: 500px; list-style: none;">
+                <li style="padding: 8px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">✓ Your unique situation and aspirations</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">✓ Key pain points and opportunities</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">✓ Customized benefits and services for you</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">✓ DENEFITS financing options</li>
+                <li style="padding: 8px 0;">✓ Your personalized pathway forward</li>
+            </ul>
 
-        <p>We serve discerning clients who understand that true excellence requires both strategic precision and genuine care. If you're ready for a partnership that transforms not just your outcomes, but your entire approach to success, we invite you to explore what's possible.</p>
-
-        <div class="cta-section">
-            <h3>Begin Your Transformation</h3>
-            <p>For consultation regarding concierge services, advocacy support, or integrated transformation initiatives, professional engagement discussions are welcomed.</p>
-            <a href="mailto:hello@blackplum.belladynamic.org" class="cta-button">Contact Us</a>
+            <a href="https://calendly.com/blackplum" class="cta-button">BOOK YOUR CONSULTATION</a>
         </div>
     </section>
 
     <footer>
-        <p><strong>Black Plum Concierge Advocacy & Transformative Services</strong></p>
+        <p><strong>BLACK PLUM</strong></p>
+        <p>Transformative Concierge Consulting</p>
         <p>Founded by Brandy Bianchini | Universal Changemakers L3C</p>
-        <p>hello@blackplum.belladynamic.org</p>
-        <p style="margin-top: 20px; font-size: 0.85em;">Where legacy meets innovation, where service becomes transformation, where your success becomes our shared mission.</p>
-        <p style="margin-top: 15px; color: #9B4F96;">© 2025 Black Plum. All rights reserved.</p>
+        <p style="margin-top: 20px; color: #d4af37;">hello@blackplum.belladynamic.org</p>
+        <div class="footer-links">
+            <a href="https://belladynamic.org">Bella Dynamic</a>
+            <a href="https://universalchangemakers.org">Universal Changemakers</a>
+        </div>
+        <p style="margin-top: 25px; font-size: 0.85em; color: #9B4F96;">
+            Where human connection meets transformation. Where your success becomes our shared mission.
+        </p>
+        <p style="margin-top: 15px; color: #d4af37; font-size: 0.85em;">© 2025 Black Plum. All rights reserved.</p>
     </footer>
 </body>
 </html>
