@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Plum Concierge - Intake & Needs Assessment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black-primary: #1a0f1b;
+            --plum-accent: #9B4F96;
+            --cream-text: #F5F1ED;
+            --silver: #C0C0C0;
+            --deep-charcoal: #2a1f2b;
+            --soft-taupe: #E8E3DD;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--black-primary);
+            color: var(--cream-text);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(26, 15, 27, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--plum-accent);
+            padding: 1.5rem 2rem;
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: var(--cream-text);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        nav a {
+            color: var(--cream-text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--plum-accent);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header {
+            margin-top: 100px;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-bottom: 1px solid var(--plum-accent);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            color: var(--cream-text);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: var(--soft-taupe);
+            font-style: italic;
+        }
+
+        .form-section {
+            background-color: var(--deep-charcoal);
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--plum-accent);
+        }
+
+        .form-section h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: var(--plum-accent);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--plum-accent);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--plum-accent);
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--black-primary);
+            border: 1px solid var(--plum-accent);
+            color: var(--cream-text);
+            font-family: 'Georgia', serif;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group-inline {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .radio-option,
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--plum-accent);
+        }
+
+        .radio-option label,
+        .checkbox-option label {
+            margin: 0;
+            cursor: pointer;
+            color: var(--cream-text);
+        }
+
+        .range-input {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--plum-accent);
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .range-input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--plum-accent);
+            cursor: pointer;
+        }
+
+        .range-input::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--plum-accent);
+            cursor: pointer;
+            border: none;
+        }
+
+        .range-value {
+            color: var(--plum-accent);
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--plum-accent);
+            font-family: 'Georgia', serif;
+            cursor: pointer;
+            text-transform: uppercase;
+            background-color: var(--plum-accent);
+            color: var(--black-primary);
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--plum-accent);
+        }
+
+        .assessment-result {
+            background-color: var(--deep-charcoal);
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid var(--plum-accent);
+            display: none;
+        }
+
+        .assessment-result.active {
+            display: block;
+        }
+
+        .assessment-result h3 {
+            color: var(--plum-accent);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .result-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--plum-accent);
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-label {
+            color: var(--plum-accent);
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .result-value {
+            color: var(--cream-text);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--deep-charcoal);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--plum-accent);
+            margin-top: 3rem;
+        }
+
+        footer p {
+            color: var(--soft-taupe);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-group-inline {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">BLACK PLUM CONCIERGE</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#membership">Membership</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Intake & Needs Assessment</h1>
+        <p>Let's determine the right path forward for your transformation</p>
+    </div>
+
+    <div class="container">
+        <form id="intakeForm">
+            <!-- Contact Information -->
+            <div class="form-section">
+                <h2>Contact Information</h2>
+                
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="timezone">Timezone *</label>
+                    <select id="timezone" name="timezone" required>
+                        <option value="">Select your timezone</option>
+                        <option value="PST">Pacific (PST/PDT)</option>
+                        <option value="MST">Mountain (MST/MDT)</option>
+                        <option value="CST">Central (CST/CDT)</option>
+                        <option value="EST">Eastern (EST/EDT)</option>
+                        <option value="GMT">GMT/UTC</option>
+                        <option value="CET">Central European (CET)</option>
+                        <option value="IST">India Standard (IST)</option>
+                        <option value="AEST">Australian Eastern (AEST)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Financial Capacity Assessment -->
+            <div class="form-section">
+                <h2>Financial Capacity Assessment</h2>
+                <p style="color: var(--soft-taupe); margin-bottom: 1.5rem;">This helps us understand your situation and recommend appropriate service levels.</p>
+
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="monthlyIncome">Monthly Income (All Sources) *</label>
+                        <input type="number" id="monthlyIncome" name="monthlyIncome" placeholder="$" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="monthlyExpenses">Monthly Expenses (Living) *</label>
+                        <input type="number" id="monthlyExpenses" name="monthlyExpenses" placeholder="$" required>
+                    </div>
+                </div>
+
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="businessExpenses">Monthly Business Expenses (if applicable)</label>
+                        <input type="number" id="businessExpenses" name="businessExpenses" placeholder="$">
+                    </div>
+                    <div class="form-group">
+                        <label for="debt">Current Debt Obligations</label>
+                        <input type="number" id="debt" name="debt" placeholder="$">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="discretionary">Available Monthly for Services *</label>
+                    <input type="number" id="discretionary" name="discretionary" placeholder="$" required>
+                </div>
+            </div>
+
+            <!-- Service Pathway -->
+            <div class="form-section">
+                <h2>Service Pathway</h2>
+
+                <div class="form-group">
+                    <label>Primary Income Source *</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="soloEntrepreneur" name="incomeSource" value="Solo Entrepreneur" required>
+                            <label for="soloEntrepreneur">Solo Entrepreneur / Self-Employed</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="professional" name="incomeSource" value="Professional Employment">
+                            <label for="professional">Professional Employment (W-2)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="hybrid" name="incomeSource" value="Hybrid">
+                            <label for="hybrid">Hybrid (Both)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Primary Service Interest *</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="creative" name="serviceInterest" value="Creative & Design" required>
+                            <label for="creative">Creative & Design</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="business" name="serviceInterest" value="Business Development">
+                            <label for="business">Business Development</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="travel" name="serviceInterest" value="Travel & Events">
+                            <label for="travel">Travel & Events</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="lifestyle" name="serviceInterest" value="Lifestyle Services">
+                            <label for="lifestyle">Lifestyle Services</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="coaching" name="serviceInterest" value="Coaching & Counsel">
+                            <label for="coaching">Coaching & Counsel</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="infrastructure" name="serviceInterest" value="Infrastructure & Systems">
+                            <label for="infrastructure">Infrastructure & Systems</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Urgency Level *</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="immediate" name="urgency" value="Immediate (Next 30 days)" required>
+                            <label for="immediate">Immediate (Next 30 days)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="high" name="urgency" value="High Priority (30-90 days)">
+                            <label for="high">High Priority (30-90 days)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="medium" name="urgency" value="Medium (90+ days)">
+                            <label for="medium">Medium (90+ days)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="planning" name="urgency" value="Planning Phase (6+ months)">
+                            <label for="planning">Planning Phase (6+ months)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Desired Service Frequency *</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="oneTime" name="frequency" value="One-time Consultation" required>
+                            <label for="oneTime">One-time Consultation</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="quarterly" name="frequency" value="Quarterly">
+                            <label for="quarterly">Quarterly</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="monthly" name="frequency" value="Monthly">
+                            <label for="monthly">Monthly</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="biweekly" name="frequency" value="Bi-weekly">
+                            <label for="biweekly">Bi-weekly</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="weekly" name="frequency" value="Weekly">
+                            <label for="weekly">Weekly</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="asNeeded" name="frequency" value="As-needed">
+                            <label for="asNeeded">As-needed</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Services -->
+            <div class="form-section">
+                <h2>Additional Service Interests</h2>
+                <p style="color: var(--soft-taupe); margin-bottom: 1.5rem;">Select any additional services you might need in the future.</p>
+
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="creative2" name="additionalServices" value="Creative & Design">
+                        <label for="creative2">Creative & Design</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="business2" name="additionalServices" value="Business Development">
+                        <label for="business2">Business Development</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="travel2" name="additionalServices" value="Travel & Events">
+                        <label for="travel2">Travel & Events</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="lifestyle2" name="additionalServices" value="Lifestyle Services">
+                        <label for="lifestyle2">Lifestyle Services</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="coaching2" name="additionalServices" value="Coaching & Counsel">
+                        <label for="coaching2">Coaching & Counsel</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="infrastructure2" name="additionalServices" value="Infrastructure & Systems">
+                        <label for="infrastructure2">Infrastructure & Systems</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="form-section">
+                <h2>Additional Information</h2>
+
+                <div class="form-group">
+                    <label for="industry">Industry / Professional Field</label>
+                    <input type="text" id="industry" name="industry" placeholder="e.g., Technology, Real Estate, Healthcare">
+                </div>
+
+                <div class="form-group">
+                    <label for="goals">What are your primary goals for working with Black Plum? *</label>
+                    <textarea id="goals" name="goals" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="challenges">What challenges are you currently facing?</label>
+                    <textarea id="challenges" name="challenges"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="referral">How did you hear about Black Plum?</label>
+                    <input type="text" id="referral" name="referral">
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Complete Assessment</button>
+        </form>
+
+        <!-- Assessment Results -->
+        <div id="assessmentResult" class="assessment-result">
+            <h3>Your Personalized Assessment</h3>
+            
+            <div class="result-item">
+                <div class="result-label">Recommended Membership Tier</div>
+                <div class="result-value" id="tierRecommendation"></div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-label">Monthly Available for Services</div>
+                <div class="result-value" id="availableBudget"></div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-label">Recommended Service Frequency</div>
+                <div class="result-value" id="frequencyRecommendation"></div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-label">Primary Service Focus</div>
+                <div class="result-value" id="serviceFocus"></div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-label">Next Steps</div>
+                <div class="result-value" id="nextSteps"></div>
+            </div>
+
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--plum-accent);">
+                <p style="color: var(--soft-taupe); margin-bottom: 1rem;">A member of our team will contact you within 24 hours to discuss your assessment and next steps.</p>
+                <a href="index.html#contact" class="btn">Return to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Black Plum Concierge Agency | hello@blackplum.belladynamic.org</p>
+        <p style="margin-top: 1rem;">© 2025 Black Plum Concierge Agency. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('intakeForm');
+        const assessmentResult = document.getElementById('assessmentResult');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const monthlyIncome = parseFloat(document.getElementById('monthlyIncome').value) || 0;
+            const monthlyExpenses = parseFloat(document.getElementById('monthlyExpenses').value) || 0;
+            const businessExpenses = parseFloat(document.getElementById('businessExpenses').value) || 0;
+            const debt = parseFloat(document.getElementById('debt').value) || 0;
+            const discretionary = parseFloat(document.getElementById('discretionary').value) || 0;
+            const incomeSource = document.querySelector('input[name="incomeSource"]:checked').value;
+            const serviceInterest = document.querySelector('input[name="serviceInterest"]:checked').value;
+            const urgency = document.querySelector('input[name="urgency"]:checked').value;
+            const frequency = document.querySelector('input[name="frequency"]:checked').value;
+
+            // Calculate tier recommendation
+            let tier, tierDescription;
+            if (discretionary < 500) {
+                tier = 'Consultation-Based';
+                tierDescription = 'Hourly consultation services, group coaching, community access';
+            } else if (discretionary < 1500) {
+                tier = 'Standard Membership';
+                tierDescription = 'Monthly consultation hours, email support, resource access, community access';
+            } else if (discretionary < 3000) {
+                tier = 'Premium Membership';
+                tierDescription = 'Priority consultation, dedicated support, strategic planning, ecosystem integration, VIP events';
+            } else {
+                tier = 'Elite Membership';
+                tierDescription = 'Concierge-level service, 24/7 availability, white-glove treatment, custom solutions, executive partnership';
+            }
+
+            // Determine next steps based on urgency
+            let nextSteps;
+            if (urgency.includes('Immediate')) {
+                nextSteps = 'Schedule a consultation call within 48 hours. We\'ll discuss your immediate needs and create an action plan.';
+            } else if (urgency.includes('High')) {
+                nextSteps = 'Schedule a strategy session for next week. We\'ll develop a 30-90 day roadmap for your transformation.';
+            } else if (urgency.includes('Medium')) {
+                nextSteps = 'Schedule a discovery call to explore options. We\'ll create a 90+ day strategic plan.';
+            } else {
+                nextSteps = 'Begin planning phase with quarterly strategy sessions. We\'ll develop a comprehensive 6+ month roadmap.';
+            }
+
+            // Display results
+            document.getElementById('tierRecommendation').textContent = `${tier} - ${tierDescription}`;
+            document.getElementById('availableBudget').textContent = `$${discretionary.toLocaleString()} per month`;
+            document.getElementById('frequencyRecommendation').textContent = frequency;
+            document.getElementById('serviceFocus').textContent = serviceInterest;
+            document.getElementById('nextSteps').textContent = nextSteps;
+
+            // Show results
+            form.style.display = 'none';
+            assessmentResult.classList.add('active');
+
+            // Scroll to results
+            assessmentResult.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
