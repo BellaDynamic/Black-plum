@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Plum Concierge Agency - Executive Consultancy & Elite Membership</title>
-    <meta name="description" content="Sophisticated guidance for discerning professionals seeking transformation, strategic alignment, and curated excellence.">
+    <title>Black Plum - Concierge Advocacy & Transformative Services</title>
     <style>
         * {
             margin: 0;
@@ -12,743 +11,311 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --black-primary: #1a0f1b;
-            --plum-accent: #9B4F96;
-            --cream-text: #F5F1ED;
-            --silver: #C0C0C0;
-            --deep-charcoal: #2a1f2b;
-            --soft-taupe: #E8E3DD;
-        }
-
         body {
             font-family: 'Georgia', serif;
-            background-color: var(--black-primary);
-            color: var(--cream-text);
+            background: #1a0f1b;
+            color: #F5F1ED;
             line-height: 1.8;
-            overflow-x: hidden;
+            letter-spacing: 0.5px;
         }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(26, 15, 27, 0.98);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid var(--plum-accent);
-            padding: 1.5rem 2rem;
-        }
-
-        nav .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        header {
+            background: linear-gradient(135deg, #1a0f1b 0%, #2d1b3d 50%, #1a0f1b 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 2px solid #9B4F96;
         }
 
         .logo {
-            font-size: 1.2rem;
-            font-weight: 400;
-            letter-spacing: 3px;
-            color: var(--cream-text);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            font-size: 2.5em;
+            color: #9B4F96;
+            margin-bottom: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
 
-        .logo img {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
+        .tagline {
+            font-size: 1.3em;
+            color: #C0C0C0;
+            font-style: italic;
+            margin-bottom: 10px;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 3rem;
-        }
-
-        nav a {
-            color: var(--cream-text);
-            text-decoration: none;
-            font-size: 0.95rem;
+        .subtitle {
+            font-size: 0.95em;
+            color: #B19CD9;
             letter-spacing: 1px;
-            transition: color 0.3s ease;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 0.25rem;
-        }
-
-        nav a:hover {
-            color: var(--plum-accent);
-            border-bottom-color: var(--plum-accent);
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 20px;
         }
 
-        /* Hero Section */
-        .hero {
-            margin-top: 80px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--black-primary) 0%, var(--deep-charcoal) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: url('/black_plum_hero_image.png') center/cover;
-            opacity: 0.25;
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 900px;
-        }
-
-        .hero-logo {
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-logo img {
-            height: 120px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 400;
-            letter-spacing: 5px;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            color: var(--cream-text);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-            color: var(--soft-taupe);
-            font-style: italic;
-        }
-
-        .hero-subtitle {
-            font-size: 1rem;
-            letter-spacing: 1.5px;
-            color: var(--cream-text);
-            margin-bottom: 2.5rem;
-            text-transform: uppercase;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            font-size: 0.95rem;
-            letter-spacing: 2px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: 2px solid var(--plum-accent);
-            font-family: 'Georgia', serif;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-
-        .btn-primary {
-            background-color: var(--plum-accent);
-            color: var(--black-primary);
-        }
-
-        .btn-primary:hover {
-            background-color: transparent;
-            color: var(--plum-accent);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--plum-accent);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--plum-accent);
-            color: var(--black-primary);
-        }
-
-        /* Section Styles */
         section {
-            padding: 6rem 2rem;
-            border-top: 1px solid var(--plum-accent);
+            padding: 60px 20px;
+            border-bottom: 1px solid rgba(155, 79, 150, 0.2);
         }
 
-        section h2 {
-            font-size: 2.8rem;
-            font-weight: 400;
-            letter-spacing: 3px;
-            margin-bottom: 3rem;
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #9B4F96;
+            margin-bottom: 30px;
             text-align: center;
-            color: var(--cream-text);
+            letter-spacing: 1.5px;
         }
 
-        section h3 {
-            font-size: 1.6rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            margin-bottom: 1.5rem;
-            color: var(--plum-accent);
+        h3 {
+            font-size: 1.4em;
+            color: #C0C0C0;
+            margin-bottom: 15px;
+            margin-top: 25px;
         }
 
-        /* Services Section */
+        p {
+            margin-bottom: 15px;
+            line-height: 1.9;
+            color: #E5E5DC;
+        }
+
+        .philosophy-intro {
+            font-size: 1.1em;
+            font-style: italic;
+            color: #B19CD9;
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 3px solid #9B4F96;
+            background: rgba(155, 79, 150, 0.05);
+        }
+
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .service-card {
-            background-color: var(--deep-charcoal);
-            overflow: hidden;
-            border: 1px solid var(--plum-accent);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(155, 79, 150, 0.25);
-        }
-
-        .service-card-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .service-card-content {
-            padding: 2rem;
-        }
-
-        .service-card h4 {
-            font-size: 1.3rem;
-            letter-spacing: 2px;
-            margin-bottom: 1rem;
-            color: var(--plum-accent);
-        }
-
-        .service-card p {
-            font-size: 0.95rem;
-            line-height: 1.8;
-            color: var(--soft-taupe);
-        }
-
-        /* Membership Section */
-        .membership-tiers {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .tier-card {
-            background-color: var(--deep-charcoal);
-            padding: 2.5rem;
-            border: 2px solid var(--plum-accent);
-            text-align: center;
+            background: rgba(45, 27, 61, 0.5);
+            border: 1px solid #9B4F96;
+            padding: 30px;
+            border-radius: 8px;
             transition: all 0.3s ease;
         }
 
-        .tier-card.featured {
-            transform: scale(1.05);
-            box-shadow: 0 20px 50px rgba(155, 79, 150, 0.3);
+        .service-card:hover {
+            background: rgba(155, 79, 150, 0.1);
+            border-color: #C0C0C0;
+            transform: translateY(-5px);
         }
 
-        .tier-card h4 {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            margin-bottom: 1rem;
-            color: var(--plum-accent);
+        .service-card h3 {
+            color: #9B4F96;
+            margin-top: 0;
         }
 
-        .tier-price {
-            font-size: 2.5rem;
-            font-weight: 400;
-            color: var(--plum-accent);
-            margin: 1.5rem 0;
+        .service-card p {
+            font-size: 0.95em;
+            line-height: 1.8;
         }
 
-        .tier-features {
-            list-style: none;
-            margin: 2rem 0;
-            text-align: left;
-        }
-
-        .tier-features li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(155, 79, 150, 0.2);
-            color: var(--soft-taupe);
-        }
-
-        /* Image Sections */
-        .image-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            margin: 3rem 0;
-        }
-
-        .image-section img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border: 1px solid var(--plum-accent);
-        }
-
-        .image-section.reverse {
-            direction: rtl;
-        }
-
-        .image-section.reverse > * {
-            direction: ltr;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .testimonial {
-            background-color: var(--deep-charcoal);
-            padding: 2rem;
-            border-left: 4px solid var(--plum-accent);
-        }
-
-        .testimonial p {
-            font-style: italic;
-            margin-bottom: 1rem;
-            color: var(--soft-taupe);
-        }
-
-        .testimonial-author {
-            color: var(--plum-accent);
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-
-        /* Contact Section */
-        .contact-form {
-            max-width: 600px;
-            margin: 3rem auto;
-            background-color: var(--deep-charcoal);
-            padding: 3rem;
-            border: 1px solid var(--plum-accent);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--plum-accent);
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.75rem;
-            background-color: var(--black-primary);
-            border: 1px solid var(--plum-accent);
-            color: var(--cream-text);
-            font-family: 'Georgia', serif;
-            font-size: 0.95rem;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--deep-charcoal);
-            padding: 3rem 2rem;
-            border-top: 1px solid var(--plum-accent);
+        .cta-section {
+            background: rgba(155, 79, 150, 0.1);
+            padding: 50px 20px;
             text-align: center;
+            border: 2px solid #9B4F96;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .cta-section h3 {
+            color: #9B4F96;
+            margin-top: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #9B4F96;
+            color: #F5F1ED;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            font-size: 1em;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid #9B4F96;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #9B4F96;
+        }
+
+        footer {
+            background: #0d0608;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 2px solid #9B4F96;
+            color: #B19CD9;
         }
 
         footer p {
-            color: var(--soft-taupe);
-            margin-bottom: 1rem;
+            margin-bottom: 10px;
+            font-size: 0.9em;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 1.5rem 0;
-            flex-wrap: wrap;
+        .founder-note {
+            background: rgba(45, 27, 61, 0.7);
+            padding: 30px;
+            border-left: 4px solid #C0C0C0;
+            margin: 40px 0;
+            font-style: italic;
+            color: #E5E5DC;
         }
 
-        .footer-links a {
-            color: var(--plum-accent);
-            text-decoration: none;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
+        .highlight {
+            color: #9B4F96;
+            font-weight: bold;
         }
 
-        .footer-links a:hover {
-            color: var(--cream-text);
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            nav ul {
-                gap: 1.5rem;
-                font-size: 0.85rem;
+            header {
+                padding: 40px 20px;
             }
 
-            .hero h1 {
-                font-size: 2rem;
-                letter-spacing: 2px;
+            .logo {
+                font-size: 1.8em;
             }
 
-            .hero p {
-                font-size: 0.95rem;
+            h2 {
+                font-size: 1.5em;
             }
 
-            section h2 {
-                font-size: 1.8rem;
-            }
-
-            .image-section {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
+            section {
+                padding: 40px 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="logo">
-                <img src="/A_sophisticated_branding_design_for_Black_Plum_-1745800173343.png" alt="Black Plum Logo">
-            </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#membership">Membership</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <div class="logo">BLACK PLUM</div>
+        <div class="tagline">Concierge Advocacy & Transformative Services</div>
+        <div class="subtitle">Founded by Brandy Bianchini | Universal Changemakers L3C</div>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-logo">
-                <img src="/A_sophisticated_branding_design_for_Black_Plum_-1745800173343.png" alt="Black Plum Concierge">
+    <section class="container">
+        <h2>Our Foundation</h2>
+        <p>Black Plum represents the culmination of generations of service, advocacy, and transformative leadership. Rooted in a family legacy of protection and empowerment, our concierge approach brings unprecedented dedication to each client's unique journey toward wellbeing and success.</p>
+        
+        <h3>Family Legacy</h3>
+        <p>Drawing from generations of advocates, healers, and protectors, Black Plum embodies the wisdom that true service transforms both giver and receiver. Our history informs our commitment to creating lasting, meaningful change in every engagement.</p>
+
+        <p>Through Universal Changemakers L3C, we provide the structural foundation for our mission, ensuring that every service—from entertainment production to digital asset development, from government procurement to wellness advocacy—serves a unified purpose: the elevation of human potential through strategic protection and support.</p>
+
+        <div class="philosophy-intro">
+            "Every service we provide stems from the same wellspring: the belief that when we protect and nurture what matters most, transformation becomes not just possible, but inevitable."
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>The Black Plum Philosophy</h2>
+        
+        <p>At Black Plum, we understand that wellbeing is not a destination but the foundation upon which all meaningful success is built. Our concierge methodology integrates every service offering through this lens, creating a seamless experience that addresses the whole person, not just immediate needs.</p>
+
+        <h3>Our Core Principles</h3>
+        
+        <p><span class="highlight">Concierge-Level Attention:</span> Every client receives the dedicated, personalized service typically reserved for the most discerning individuals. Your needs are unique, and your service is customized accordingly.</p>
+
+        <p><span class="highlight">Advocacy as Core Mission:</span> We don't just provide services; we become your champions, protecting your interests and amplifying your voice in every interaction.</p>
+
+        <p><span class="highlight">Wellbeing-Centered Strategy:</span> All recommendations and implementations prioritize long-term sustainability and human flourishing over short-term gains.</p>
+
+        <p><span class="highlight">Integrated Service Portfolio:</span> Our comprehensive offerings demonstrate how diverse capabilities serve a unified mission. Each service area reinforces and enhances the others, creating exponential value for our clients.</p>
+    </section>
+
+    <section class="container">
+        <h2>Our Service Areas</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Entertainment & Production</h3>
+                <p>Content creation, production management, and distribution strategy that amplifies meaningful messages while protecting creative integrity and intellectual property.</p>
             </div>
-            <h1>BLACK PLUM CONCIERGE</h1>
-            <p>Transformation Through Excellence</p>
-            <p class="hero-subtitle">Sophisticated guidance for discerning professionals seeking transformation, strategic alignment, and curated excellence.</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
-                <a href="#membership" class="btn btn-secondary">Explore Membership</a>
+
+            <div class="service-card">
+                <h3>Digital Assets & Systems</h3>
+                <p>Strategic development of digital properties, technology integration, and system optimization that serves long-term growth and operational excellence.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Government Procurement</h3>
+                <p>Expert navigation of federal systems, contract development, and regulatory compliance that opens doors while maintaining ethical standards.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Wellness Advocacy</h3>
+                <p>Comprehensive wellness program development, crisis intervention, and lifestyle optimization that creates sustainable success from the inside out.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Brand Protection & IP</h3>
+                <p>Strategic intellectual property development, brand architecture, and asset protection that safeguards your most valuable resources.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Provider & Concierge Support</h3>
+                <p>Comprehensive support services, resource coordination, and relationship management that ensures seamless execution across all areas of your life and business.</p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>Our Philosophy</h2>
-            <div class="image-section">
-                <div>
-                    <h3>Guided Transformation</h3>
-                    <p>Black Plum Concierge Agency serves as the trusted intermediary for individuals, organizations, and communities seeking sophisticated guidance, strategic planning, and transformative experiences grounded in integrity, expertise, and excellence.</p>
-                    <p style="margin-top: 1.5rem;">We believe transformation is not about doing the same thing harder. It's about lifting yourself into a new paradigm where your life looks, feels, and IS what you've been manifesting.</p>
-                    <p style="margin-top: 1.5rem; color: var(--plum-accent); letter-spacing: 1px;">No debt, loss, or critical service will be contracted without thorough evaluation and determination of fit.</p>
-                </div>
-                <img src="/black_plum_consultation_image.png" alt="Professional Consultation">
-            </div>
+    <section class="container">
+        <h2>What Sets Us Apart</h2>
+        
+        <p><span class="highlight">Generational Wisdom:</span> Decisions informed by family legacy and proven principles that have transformed organizations and lives.</p>
+
+        <p><span class="highlight">Integrated Approach:</span> All services working in harmony toward unified goals, creating synergy that multiplies impact.</p>
+
+        <p><span class="highlight">Concierge Standards:</span> Premium attention and personalized service for every client, regardless of project scope.</p>
+
+        <p><span class="highlight">Wellbeing Focus:</span> Solutions that serve both immediate needs and long-term health and success.</p>
+
+        <p><span class="highlight">Protective Advocacy:</span> Unwavering commitment to your interests and values in every engagement.</p>
+
+        <p><span class="highlight">Transformative Vision:</span> Seeing and actualizing potential others might miss, with strategic precision and genuine care.</p>
+
+        <div class="founder-note">
+            My journey to creating Black Plum began with understanding that protection and empowerment are not opposing forces, but complementary aspects of true service. Growing up in a family where advocacy was a way of life, I learned early that the most profound transformations occur when someone truly has your back. This perspective shaped my approach to every professional engagement—from crisis response leadership that saved organizations millions, to wellness programs that restored executives' health and performance, to government contracts that opened new possibilities for growth. Each success reinforced the same truth: when you combine strategic excellence with genuine care, extraordinary outcomes become possible.
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <h2>Six Pillars of Transformation</h2>
-            <p style="text-align: center; color: var(--soft-taupe); margin-bottom: 3rem; font-size: 1.05rem;">
-                Comprehensive service excellence across creative, business, lifestyle, and strategic domains.
-            </p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="/creative_design_services.png" alt="Creative & Design Services" class="service-card-image">
-                    <div class="service-card-content">
-                        <h4>Creative & Design</h4>
-                        <p>Interior design, brand identity, visual systems, product design, photography, film production, and creative campaigns tailored to your vision.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="/business_development_services.png" alt="Business Development" class="service-card-image">
-                    <div class="service-card-content">
-                        <h4>Business Development</h4>
-                        <p>Strategic consulting, business development, grant services, revenue architecture, financial advisory, and partnership structuring.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="/travel_events_services.png" alt="Travel & Events" class="service-card-image">
-                    <div class="service-card-content">
-                        <h4>Travel & Events</h4>
-                        <p>Bespoke travel planning, retreat design, event production, venue curation, and hospitality programming for unforgettable experiences.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="/lifestyle_services.png" alt="Lifestyle Services" class="service-card-image">
-                    <div class="service-card-content">
-                        <h4>Lifestyle Services</h4>
-                        <p>Real estate coordination, personal styling, whole human coaching, family management, and executive systems design.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="/coaching_counsel_services.png" alt="Coaching & Counsel" class="service-card-image">
-                    <div class="service-card-content">
-                        <h4>Coaching & Counsel</h4>
-                        <p>Executive leadership coaching, organizational training, legal counsel support, and strategic policy development.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="/infrastructure_systems_services.png" alt="Infrastructure & Systems" class="service-card-image">
-                    <div class="service-card-content">
-                        <h4>Infrastructure & Systems</h4>
-                        <p>In-house RAPID phase plan modelling, proprietary systems development, and tailored process architecture aligned with your financial capabilities.</p>
-                    </div>
-                </div>
-            </div>
+    <section class="container">
+        <h2>Client Partnership</h2>
+        
+        <p>Working with Black Plum means entering a partnership built on mutual respect, shared vision, and unwavering commitment to your success. Our clients don't just receive services—they gain an advocate, a strategist, and a partner invested in their long-term flourishing.</p>
+
+        <p>We serve discerning clients who understand that true excellence requires both strategic precision and genuine care. If you're ready for a partnership that transforms not just your outcomes, but your entire approach to success, we invite you to explore what's possible.</p>
+
+        <div class="cta-section">
+            <h3>Begin Your Transformation</h3>
+            <p>For consultation regarding concierge services, advocacy support, or integrated transformation initiatives, professional engagement discussions are welcomed.</p>
+            <a href="mailto:hello@blackplum.belladynamic.org" class="cta-button">Contact Us</a>
         </div>
     </section>
 
-    <!-- Membership Section -->
-    <section id="membership">
-        <div class="container">
-            <h2>Membership Tiers</h2>
-            <p style="text-align: center; color: var(--soft-taupe); margin-bottom: 3rem; font-size: 1.05rem;">
-                Choose the level of engagement that serves your transformation journey.
-            </p>
-            <div class="membership-tiers">
-                <div class="tier-card">
-                    <h4>STANDARD</h4>
-                    <div class="tier-price">$500–$1,000<span style="font-size: 0.6em;">/month</span></div>
-                    <ul class="tier-features">
-                        <li>✓ Monthly consultation hours</li>
-                        <li>✓ Email support</li>
-                        <li>✓ Access to resources</li>
-                        <li>✓ Community access</li>
-                    </ul>
-                    <button class="btn btn-secondary">Learn More</button>
-                </div>
-                <div class="tier-card featured">
-                    <h4>PREMIUM</h4>
-                    <div class="tier-price">$1,500–$3,000<span style="font-size: 0.6em;">/month</span></div>
-                    <ul class="tier-features">
-                        <li>✓ Priority consultation access</li>
-                        <li>✓ Dedicated support</li>
-                        <li>✓ Strategic planning sessions</li>
-                        <li>✓ Ecosystem integration</li>
-                        <li>✓ VIP events access</li>
-                    </ul>
-                    <button class="btn btn-primary">Get Started</button>
-                </div>
-                <div class="tier-card">
-                    <h4>ELITE</h4>
-                    <div class="tier-price">$3,000+<span style="font-size: 0.6em;">/month</span></div>
-                    <ul class="tier-features">
-                        <li>✓ Concierge-level service</li>
-                        <li>✓ 24/7 availability</li>
-                        <li>✓ White-glove treatment</li>
-                        <li>✓ Custom solutions</li>
-                        <li>✓ Executive partnership</li>
-                    </ul>
-                    <button class="btn btn-secondary">Inquire</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Transformation Section -->
-    <section>
-        <div class="container">
-            <h2>How We Think About Transformation</h2>
-            <div class="image-section reverse">
-                <div>
-                    <h3>Your Transformation Matters</h3>
-                    <p>We don't just advise—we guide, strategize, and walk alongside you. Our integrity-first approach means we recommend only what genuinely serves your authentic interests.</p>
-                    <p style="margin-top: 1.5rem;">Transformation is measured not by activity, but by meaningful, lasting change in your life and organization. We celebrate your victories and support you through challenges.</p>
-                    <p style="margin-top: 1.5rem; color: var(--plum-accent); letter-spacing: 1px;">Integrity-first financing ensures no debt, loss, or critical service is contracted without thorough evaluation and fit determination.</p>
-                </div>
-                <img src="/black_plum_transformation_image.png" alt="Transformation Journey">
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section>
-        <div class="container">
-            <h2>Transformation in Action</h2>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <p>"Black Plum helped me clarify my vision and create a strategic roadmap that transformed my business. The guidance was invaluable."</p>
-                    <div class="testimonial-author">— Executive Client</div>
-                </div>
-                <div class="testimonial">
-                    <p>"The level of sophistication and care in every interaction exceeded my expectations. This is true concierge service."</p>
-                    <div class="testimonial-author">— Premium Member</div>
-                </div>
-                <div class="testimonial">
-                    <p>"Working with Black Plum was transformative. They understood my needs deeply and delivered solutions that truly worked."</p>
-                    <div class="testimonial-author">— Organizational Leader</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ecosystem Section -->
-    <section>
-        <div class="container">
-            <h2>Universal Changemakers Ecosystem</h2>
-            <p style="text-align: center; margin-bottom: 2rem; color: var(--soft-taupe); font-size: 1.05rem;">
-                Black Plum is the public interface for Universal Changemakers (L3C), an integrated network of complementary services and sister brands.
-            </p>
-            <div class="image-section">
-                <img src="/black_plum_ecosystem_image.png" alt="Ecosystem Network">
-                <div>
-                    <h3>Integrated Excellence</h3>
-                    <p>Our ecosystem includes specialized brands like Bella Dynamic, Eternal Autumn, Luna's Garden, and others—each bringing unique expertise to serve your comprehensive transformation needs.</p>
-                    <p style="margin-top: 1.5rem;">This integration allows us to offer seamless, coordinated services across creative, business, lifestyle, and wellness domains.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Begin Your Transformation</h2>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="inquiry">Inquiry Type</label>
-                        <select id="inquiry" name="inquiry" required>
-                            <option value="">Select an option</option>
-                            <option value="consultation">Consultation</option>
-                            <option value="membership">Membership</option>
-                            <option value="partnership">Partnership</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p style="font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 1rem;">BLACK PLUM CONCIERGE</p>
-            <p style="color: var(--plum-accent); letter-spacing: 1px;">Transformation Through Excellence</p>
-            <div class="footer-links">
-                <a href="mailto:hello@blackplum.belladynamic.org">hello@blackplum.belladynamic.org</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
-            <p style="margin-top: 2rem; font-size: 0.85rem;">A Division of Universal Changemakers (L3C)</p>
-            <p style="font-size: 0.85rem; margin-top: 0.5rem;">© 2025 Black Plum Concierge Agency. All rights reserved.</p>
-        </div>
+        <p><strong>Black Plum Concierge Advocacy & Transformative Services</strong></p>
+        <p>Founded by Brandy Bianchini | Universal Changemakers L3C</p>
+        <p>hello@blackplum.belladynamic.org</p>
+        <p style="margin-top: 20px; font-size: 0.85em;">Where legacy meets innovation, where service becomes transformation, where your success becomes our shared mission.</p>
+        <p style="margin-top: 15px; color: #9B4F96;">© 2025 Black Plum. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your inquiry. We will contact you shortly.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
