@@ -56,38 +56,41 @@ Black Plum Concierge Agency is the public-facing interface for Universal Changem
 ```
 black_plum_concierge/
 ├── public/
-│   ├── index.html          # Main website
-│   ├── images/             # Brand and service imagery
-│   └── assets/             # CSS, JS, fonts
-├── docs/
-│   ├── contracts/          # Jurisdiction-specific templates
-│   ├── rfps/              # Request for proposal templates
-│   ├── industry-tools/    # Industry-specific resources
-│   └── operations/        # Operational guidelines
-├── backend/
-│   ├── intake/            # Assessment system
-│   ├── member-management/ # Member portal and CRM
-│   └── ringcentral/       # Phone integration
-└── README.md              # This file
+│   ├── index.html                      # Main website
+│   ├── intake.html                     # Client intake form
+│   └── images/                         # Brand and service imagery
+├── OPERATIONAL_INFRASTRUCTURE.md       # Detailed operational processes
+├── PLATFORM_INTEGRATION_GUIDE.md       # Complete platform ecosystem guide
+├── IMPLEMENTATION_ROADMAP.md           # 30-day integration timeline
+├── IMMEDIATE_ACTION_CHECKLIST.md       # Priority tasks and action items
+└── README.md                           # This file
 ```
 
 ## Technology Stack
 
+### **Core Infrastructure**
 - **Frontend:** HTML5, CSS3, JavaScript (responsive design)
-- **Backend:** Node.js, Express (to be configured)
-- **Database:** PostgreSQL (to be configured)
-- **Communication:** RingCentral API integration
-- **Hosting:** GitHub Pages / Custom deployment
+- **Hosting:** GitHub Pages (https://belladynamic.github.io/Black-plum/)
 - **Version Control:** Git/GitHub
+
+### **Integrated Platform Ecosystem**
+- **Odoo:** Central CRM, project management, and multi-entity accounting hub
+- **DENEFITS:** Client financing, payment plans, and pre-approval system
+- **Galaxy Digital:** Volunteer management and coordination
+- **Practice Panther:** Legal case management and matter tracking
+- **Wethos Studio:** Automated contract generation and proposals
+- **Perfect Venue + Farsi Events:** Event planning and coordination
+- **RingCentral:** Phone routing and field agent communication
+- **Gusto/Principal:** Payroll and benefits (future implementation)
 
 ## Getting Started
 
 1. Clone the repository
-2. Review brand guidelines and operational documents
-3. Customize jurisdiction-specific contracts and templates
-4. Configure RingCentral integration
-5. Set up member management system
-6. Deploy to production
+2. Review [OPERATIONAL_INFRASTRUCTURE.md](./OPERATIONAL_INFRASTRUCTURE.md) for detailed processes
+3. Review [PLATFORM_INTEGRATION_GUIDE.md](./PLATFORM_INTEGRATION_GUIDE.md) for complete platform ecosystem
+4. Follow [IMPLEMENTATION_ROADMAP.md](./IMPLEMENTATION_ROADMAP.md) for 30-day integration timeline
+5. Execute tasks in [IMMEDIATE_ACTION_CHECKLIST.md](./IMMEDIATE_ACTION_CHECKLIST.md)
+6. Deploy integrated platform ecosystem to production
 
 ## Brand Guidelines
 
