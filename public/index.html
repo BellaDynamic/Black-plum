@@ -124,6 +124,50 @@
             line-height: 1.8;
         }
 
+        .pathway-section {
+            background: rgba(45, 27, 61, 0.3);
+            padding: 40px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #9B4F96;
+        }
+
+        .pathway-step {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+        }
+
+        .pathway-step strong {
+            color: #9B4F96;
+        }
+
+        .systems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .system-card {
+            background: rgba(45, 27, 61, 0.4);
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #9B4F96;
+        }
+
+        .system-card h4 {
+            color: #9B4F96;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .system-card p {
+            font-size: 0.9em;
+            color: #B19CD9;
+        }
+
         .cta-section {
             background: rgba(155, 79, 150, 0.1);
             padding: 50px 20px;
@@ -184,6 +228,13 @@
             font-weight: bold;
         }
 
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 30px 0;
+        }
+
         @media (max-width: 768px) {
             header {
                 padding: 40px 20px;
@@ -199,6 +250,10 @@
 
             section {
                 padding: 40px 20px;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -277,6 +332,86 @@
     </section>
 
     <section class="container">
+        <h2>Client Engagement Pathway</h2>
+        
+        <p>Your journey with Black Plum begins with understanding your unique needs, financial capacity, and transformation goals. We employ a comprehensive assessment process that informs every service decision.</p>
+
+        <div class="pathway-section">
+            <h3>The Intake & Assessment Process</h3>
+            <div class="pathway-step">
+                <strong>Initial Consultation:</strong> Live or recorded conversation to understand your background, current situation, and aspirations.
+            </div>
+            <div class="pathway-step">
+                <strong>Relationship Assessment:</strong> Deep evaluation of your needs, constraints, and opportunities across all life and business domains.
+            </div>
+            <div class="pathway-step">
+                <strong>Financial Capacity Analysis:</strong> Honest assessment of resources, obligations, and realistic pathways to your goals.
+            </div>
+            <div class="pathway-step">
+                <strong>Service Pathway Design:</strong> Customized plan identifying which services activate based on your specific situation.
+            </div>
+            <div class="pathway-step">
+                <strong>Partnership Agreement:</strong> Clear terms, conditions, and mutual commitments that honor your values and our standards.
+            </div>
+            <div class="pathway-step">
+                <strong>Ongoing Transformation:</strong> Regular check-ins, course corrections, and celebration of progress toward your vision.
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Integrated Systems & Operations</h2>
+        
+        <p>Black Plum operates through a sophisticated integration of industry-leading platforms and proprietary systems designed to deliver seamless, transparent, and accountable service.</p>
+
+        <div class="systems-grid">
+            <div class="system-card">
+                <h4>Practice Panther</h4>
+                <p>Legal case management and compliance tracking for all service agreements and client matters.</p>
+            </div>
+
+            <div class="system-card">
+                <h4>Odoo Platform</h4>
+                <p>Integrated CRM, project management, accounting, and payroll for operational excellence.</p>
+            </div>
+
+            <div class="system-card">
+                <h4>RingCentral</h4>
+                <p>Professional call routing and communication infrastructure for seamless client access.</p>
+            </div>
+
+            <div class="system-card">
+                <h4>DENEFITS</h4>
+                <p>In-house financing and payment solutions with flexible terms aligned to your capacity.</p>
+            </div>
+
+            <div class="system-card">
+                <h4>Studio Binder</h4>
+                <p>Production management for entertainment and creative service delivery.</p>
+            </div>
+
+            <div class="system-card">
+                <h4>Mighty Networks</h4>
+                <p>Community platform connecting clients, advocates, and transformation partners.</p>
+            </div>
+        </div>
+
+        <div class="pathway-section" style="margin-top: 40px;">
+            <h3>Financial Structure</h3>
+            <p>Black Plum operates with transparent financial management through dedicated trust and operating accounts, ensuring your resources are protected and deployed strategically.</p>
+            <div class="pathway-step">
+                <strong>Trust Account:</strong> Secure holding of client funds with clear accounting and reporting.
+            </div>
+            <div class="pathway-step">
+                <strong>Operating Account:</strong> Transparent management of service delivery costs and resource allocation.
+            </div>
+            <div class="pathway-step">
+                <strong>Flexible Payment Options:</strong> Multiple payment methods including real-time ACH, debit cards, and DENEFITS financing.
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
         <h2>What Sets Us Apart</h2>
         
         <p><span class="highlight">Generational Wisdom:</span> Decisions informed by family legacy and proven principles that have transformed organizations and lives.</p>
@@ -291,9 +426,19 @@
 
         <p><span class="highlight">Transformative Vision:</span> Seeing and actualizing potential others might miss, with strategic precision and genuine care.</p>
 
+        <p><span class="highlight">Operational Transparency:</span> Clear systems, honest communication, and verifiable results at every stage.</p>
+
         <div class="founder-note">
             My journey to creating Black Plum began with understanding that protection and empowerment are not opposing forces, but complementary aspects of true service. Growing up in a family where advocacy was a way of life, I learned early that the most profound transformations occur when someone truly has your back. This perspective shaped my approach to every professional engagement—from crisis response leadership that saved organizations millions, to wellness programs that restored executives' health and performance, to government contracts that opened new possibilities for growth. Each success reinforced the same truth: when you combine strategic excellence with genuine care, extraordinary outcomes become possible.
         </div>
+    </section>
+
+    <section class="container">
+        <h2>Eternal Autumn Club</h2>
+        
+        <p>Black Plum is part of the Eternal Autumn Club ecosystem, a network of integrated brands and services united under the Universal Changemakers L3C umbrella. This structure allows us to offer comprehensive solutions while maintaining the highest standards of service and integrity.</p>
+
+        <p>Through this ecosystem, clients gain access to expanded capabilities, specialized expertise, and a community of like-minded individuals committed to transformation and excellence.</p>
     </section>
 
     <section class="container">
