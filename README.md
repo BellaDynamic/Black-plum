@@ -1,111 +1,148 @@
-# Black Plum Concierge Agency
+# Black Plum Concierge
 
-**Transformation Through Excellence**
+**Your Direct Portal to Brandy Bianchini**
 
-A sophisticated executive consultancy and elite membership concierge service serving discerning professionals seeking transformation, strategic alignment, and curated excellence.
+*Multi-industry advising and consulting applied to your individual needs—fulfillment for founders and projects at any phase, any stage*
 
-## Overview
+---
 
-Black Plum Concierge Agency is the public-facing interface for Universal Changemakers (L3C), an integrated network of complementary services and specialized sister brands.
+## Welcome
 
-### Core Services (Six Pillars of Transformation)
+Black Plum Concierge is the direct portal to founder **Brandy Bianchini** and the public-facing brand for **Universal Changemakers (L3C)**. We provide transformative, multi-industry advising and consulting across six service pillars, serving clients in the U.S., Mexico, Canada, the U.K., and the E.U.
 
-1. **Creative & Design** - Interior design, brand identity, visual systems, product design, photography, film production, creative campaigns
-2. **Business Development** - Strategic consulting, business development, grant services, revenue architecture, financial advisory, partnership structuring
-3. **Travel & Events** - Bespoke travel planning, retreat design, event production, venue curation, hospitality programming
-4. **Lifestyle Services** - Real estate coordination, personal styling, whole human coaching, family management, executive systems design
-5. **Coaching & Counsel** - Executive leadership coaching, organizational training, legal counsel support, strategic policy development
-6. **Infrastructure & Systems** - In-house RAPID phase plan modelling, proprietary systems development, tailored process architecture
+---
 
-## Key Differentiators
+## Mission
 
-- **Integrity-First Approach** - No debt, loss, or critical service contracted without thorough evaluation and fit determination
-- **Financial Capability Alignment** - Services tailored to actual financial capacity (cost of living + cost of business analysis)
-- **Dual Pathway Service** - Support for solo entrepreneurs AND professional employment modes
-- **Quality Parity** - Same service excellence regardless of financial tier
-- **Phased Service Model** - Services added as needed and earned, not all upfront
-- **Social Enterprise Focus** - Health, wellness, and financial wellbeing integrated throughout
+To resolve systemic challenges in business management, finance, and law while providing fulfillment for founders and projects at any lifecycle stage. Our ultimate function is the **"movement of people and money"** to push resources back into the community and affect **"bottom line changes threefold."**
+
+---
+
+## Repository Structure
+
+### 📁 `/business-hub/`
+**The central hub for all strategic, operational, and brand materials.**
+
+Organized into six core directories:
+- **Strategic Documents** - Master framework, roadmaps, planning
+- **Operational Docs** - Processes, procedures, infrastructure
+- **Brand Identity** - Guidelines, assets, messaging
+- **Programs** - Four core programs, PRI/DAF materials
+- **Technical Integrations** - API specs, integration guides
+- **Resources** - Templates, tools, reference materials
+
+**[→ Explore the Business Hub](./business-hub/README.md)**
+
+### 📁 `/public/`
+**Website assets and public-facing materials.**
+
+Contains the current website files, brand imagery, and visual assets.
+
+---
+
+## Quick Links
+
+| Resource | Description |
+|:---|:---|
+| [Strategic Framework](./business-hub/strategic-documents/Black_Plum_Strategic_Consolidation.md) | Complete strategic overview |
+| [Implementation Roadmap](./business-hub/strategic-documents/IMPLEMENTATION_ROADMAP.md) | 36-month phased plan |
+| [Quick Reference](./business-hub/strategic-documents/QUICK_REFERENCE_SUMMARY.md) | One-page summary |
+| [Recent Updates](./business-hub/strategic-documents/STRATEGIC_UPDATES_ADDENDUM.md) | Latest changes & corrections |
+| [Operations Guide](./business-hub/operational-docs/OPERATIONAL_INFRASTRUCTURE.md) | Operational procedures |
+
+---
+
+## Core Entities
+
+The Black Plum ecosystem includes:
+
+- **Universal Changemakers Series L3C** - Primary operating entity
+- **Eternal Autumn Trust** - Private operating foundation
+- **Black Plum Concierge** - Direct portal to Brandy Bianchini
+- **Better World** - Program management
+- **Luna's Garden** - Wellness and lifestyle
+- **Global Artist Alliance** - Music and artist development
+- **Moonlit Studio (comma series)** - Entertainment platform
+
+---
+
+## Six Service Pillars
+
+1. **Creative & Design** - Brand identity, interior design, film production
+2. **Business Development** - Strategic consulting, revenue architecture
+3. **Travel & Events** - Bespoke travel, retreat design, event production
+4. **Lifestyle Services** - Real estate, personal styling, family management
+5. **Coaching & Counsel** - Executive coaching, organizational training
+6. **Infrastructure & Systems** - Process architecture, systems development
+
+---
 
 ## Membership Tiers
 
-- **Standard** ($500–$1,000/month) - Monthly consultation hours, email support, resource access, community access
-- **Premium** ($1,500–$3,000/month) - Priority consultation, dedicated support, strategic planning, ecosystem integration, VIP events
-- **Elite** ($3,000+/month) - Concierge-level service, 24/7 availability, white-glove treatment, custom solutions, executive partnership
+| Tier | Investment | Key Features |
+|:---|:---|:---|
+| **Standard** | $500-$1,000/mo | Monthly consultation, email support, resources |
+| **Premium** | $1,500-$3,000/mo | Priority support, strategic planning, VIP events |
+| **Elite** | $3,000+/mo | 24/7 concierge, white-glove, custom solutions |
 
-## Operational Infrastructure
+---
 
-### Contact & Communication
-- **Email:** hello@blackplum.belladynamic.org
-- **Phone Routing:** RingCentral integration with field agent routing and timezone alignment
-- **Call Assessment:** Needs analysis conducted at intake to determine frequency, urgency, and scope of support
+## Proprietary Systems
 
-### Service Delivery
-- **Intake Process:** Comprehensive financial and needs assessment
-- **Service Triggers:** Clear pathways identifying which services activate based on assessment
-- **Phased Delivery:** Services added progressively as needs and financial capacity align
-- **Field Agents:** Affiliated agents available for client support across time zones
+- **RAPID Phase Plan** - Project lifecycle methodology (Research, Architecture, Planning, Implementation, Delivery)
+- **RFFS** - Rapid Financial Fiscal Solutions for financial capacity alignment
+- **GRID** - Global Responsible Integrated Development Tool (16+ cells per state)
+- **Beneflts** - White-glove service booking and financing platform
 
-### Jurisdiction & Compliance
-- Jurisdiction-specific contract templates
-- Industry-specific service packaging and tools
-- Responsive guardrails and resources for all parties
-- House rules and management protocols
-
-## Project Structure
-
-```
-black_plum_concierge/
-├── public/
-│   ├── index.html                      # Main website
-│   ├── intake.html                     # Client intake form
-│   └── images/                         # Brand and service imagery
-├── OPERATIONAL_INFRASTRUCTURE.md       # Detailed operational processes
-├── PLATFORM_INTEGRATION_GUIDE.md       # Complete platform ecosystem guide
-├── IMPLEMENTATION_ROADMAP.md           # 30-day integration timeline
-├── IMMEDIATE_ACTION_CHECKLIST.md       # Priority tasks and action items
-└── README.md                           # This file
-```
-
-## Technology Stack
-
-### **Core Infrastructure**
-- **Frontend:** HTML5, CSS3, JavaScript (responsive design)
-- **Hosting:** GitHub Pages (https://belladynamic.github.io/Black-plum/)
-- **Version Control:** Git/GitHub
-
-### **Integrated Platform Ecosystem**
-- **Odoo:** Central CRM, project management, and multi-entity accounting hub
-- **DENEFITS:** Client financing, payment plans, and pre-approval system
-- **Galaxy Digital:** Volunteer management and coordination
-- **Practice Panther:** Legal case management and matter tracking
-- **Wethos Studio:** Automated contract generation and proposals
-- **Perfect Venue + Farsi Events:** Event planning and coordination
-- **RingCentral:** Phone routing and field agent communication
-- **Gusto/Principal:** Payroll and benefits (future implementation)
+---
 
 ## Getting Started
 
-1. Clone the repository
-2. Review [OPERATIONAL_INFRASTRUCTURE.md](./OPERATIONAL_INFRASTRUCTURE.md) for detailed processes
-3. Review [PLATFORM_INTEGRATION_GUIDE.md](./PLATFORM_INTEGRATION_GUIDE.md) for complete platform ecosystem
-4. Follow [IMPLEMENTATION_ROADMAP.md](./IMPLEMENTATION_ROADMAP.md) for 30-day integration timeline
-5. Execute tasks in [IMMEDIATE_ACTION_CHECKLIST.md](./IMMEDIATE_ACTION_CHECKLIST.md)
-6. Deploy integrated platform ecosystem to production
+### New to Black Plum?
 
-## Brand Guidelines
+1. Read the [Quick Reference Summary](./business-hub/strategic-documents/QUICK_REFERENCE_SUMMARY.md)
+2. Review the [Strategic Framework](./business-hub/strategic-documents/Black_Plum_Strategic_Consolidation.md)
+3. Explore the [Business Hub](./business-hub/README.md)
 
-- **Color Palette:** Black (#1a0f1b), Plum (#9B4F96), Cream (#F5F1ED), Silver (#C0C0C0)
-- **Typography:** Georgia serif font with generous letter-spacing
-- **Aesthetic:** Gothic luxury, sophisticated, professional excellence
-- **Tone:** Integrity-first, transparent, transformational
+### Team Members
+
+1. Check [Recent Updates](./business-hub/strategic-documents/STRATEGIC_UPDATES_ADDENDUM.md)
+2. Review [Implementation Priorities](./business-hub/strategic-documents/IMPLEMENTATION_ROADMAP.md)
+3. Consult [Operational Procedures](./business-hub/operational-docs/OPERATIONAL_INFRASTRUCTURE.md)
+
+---
 
 ## Contact
 
-**Black Plum Concierge Agency**
+**Black Plum Concierge**  
 A Division of Universal Changemakers (L3C)
 
-Email: hello@blackplum.belladynamic.org
+**Email:** hello@blackplum.belladynamic.org  
+**Website:** belladynamic.org
+
+---
+
+## Brand Identity
+
+**Color Palette:** Black (#1a0f1b), Plum (#9B4F96), Gold (#d4af37), Cream (#F5F1ED)  
+**Typography:** Georgia serif, Playfair Display  
+**Aesthetic:** Professional excellence, rarity and unique foundational legacy  
+**Tone:** Professional, approachable, expert, transformative
+
+---
+
+## Geographic Scope
+
+We serve clients across:
+- **United States** (Utah, California, New York, Texas, Florida)
+- **Canada** (Ontario, British Columbia)
+- **United Kingdom** (England, Scotland)
+- **European Union** (Germany, France, Netherlands)
+- **Mexico**
 
 ---
 
 *Transformation Through Excellence*
+
+**Last Updated:** December 9, 2025  
+**Repository Maintained By:** Brandy Bianchini / Black Plum Concierge
