@@ -60,7 +60,7 @@ The Black Plum ecosystem includes:
 - **Eternal Autumn Trust** - Private operating foundation
 - **Black Plum Concierge** - Direct portal to Brandy Bianchini
 - **Better World** - Program management
-- **Luna's Garden** - Wellness and lifestyle
+- **Luna's Garden** - Talent Placement and Support for Career earning, travel, benefits, touring, promotion, productions, recording, liscensisng and planning asepcts of real world necessites, legal, financial and welfare for whole human needs, and lifestyle
 - **Global Artist Alliance** - Music and artist development
 - **Moonlit Studio (comma series)** - Entertainment platform
 
