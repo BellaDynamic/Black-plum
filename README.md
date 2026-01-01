@@ -45,7 +45,7 @@ Contains the current website files, brand imagery, and visual assets.
 | Resource | Description |
 |:---|:---|
 | [Strategic Framework](./business-hub/strategic-documents/Black_Plum_Strategic_Consolidation.md) | Complete strategic overview |
-| [Implementation Roadmap](./business-hub/strategic-documents/IMPLEMENTATION_ROADMAP.md) | 36-month phased plan |
+| [Implementation Roadmap](./business-hub/strategic-documents/IMPLEMENTATION_ROADMAP.md) | 3-month phased plan |
 | [Quick Reference](./business-hub/strategic-documents/QUICK_REFERENCE_SUMMARY.md) | One-page summary |
 | [Recent Updates](./business-hub/strategic-documents/STRATEGIC_UPDATES_ADDENDUM.md) | Latest changes & corrections |
 | [Operations Guide](./business-hub/operational-docs/OPERATIONAL_INFRASTRUCTURE.md) | Operational procedures |
