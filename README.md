@@ -56,9 +56,9 @@ Contains the current website files, brand imagery, and visual assets.
 
 The Black Plum ecosystem includes:
 
-- **Universal Changemakers Series L3C** - Primary operating entity
-- **Eternal Autumn Trust** - Private operating foundation
-- **Black Plum Concierge** - Direct portal to Brandy Bianchini
+- **Universal Changemaker's, Series L3C** - Primary operating entity, California **Universal Changemaker's, Series LLC**
+- **Eternal Autumn Trust** - Private operating foundation- Eternal Autumn Trust** Federal, with global Brand Eternal Autumn.
+- **Black Plum Concierge** - Direct portal to Brandy Bianchini to enter any aspect of the ecosystem i have a person, business or group, must oblige with my standard operating processes.
 - **Better World** - Program management
 - **Luna's Garden** - Talent Placement and Support for Career earning, travel, benefits, touring, promotion, productions, recording, liscensisng and planning asepcts of real world necessites, legal, financial and welfare for whole human needs, and lifestyle
 - **Global Artist Alliance** - Music and artist development
