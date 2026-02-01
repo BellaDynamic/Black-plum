@@ -1,0 +1,61 @@
+graph TD
+    Start([New Idea]) --> Discernment{Discernment Phase<br/>Initial Exploration}
+    
+    Discernment -->|Ready to Proceed| PreGab[Phase 1: Assess/Pre-Gab<br/>Gap Analysis & Alignment]
+    Discernment -->|Not Ready| Discernment
+    
+    PreGab --> PreGabApproval{Brandy Approval?}
+    PreGabApproval -->|No| PreGab
+    PreGabApproval -->|Yes| Gab[Phase 2: Assess/Gab<br/>Cohort Presentation]
+    
+    Gab --> GabApproval{Cohort Consensus?}
+    GabApproval -->|No - Revise| Gab
+    GabApproval -->|Yes| PreRapid[Phase 3: Assess/Pre-Rapid<br/>RAPID Training & Structuring]
+    
+    PreRapid --> PreRapidApproval{Brandy Approval?}
+    PreRapidApproval -->|No| PreRapid
+    PreRapidApproval -->|Yes| Rapid[Phase 4: Assess/Rapid<br/>Full RAPID Methodology]
+    
+    Rapid --> RapidCert{Phase 4<br/>Certification?}
+    RapidCert -->|No| Rapid
+    RapidCert -->|Yes - CERTIFIED| RFFS[Phase 5: Assess/RF-FS<br/>Financial Structuring]
+    
+    RFFS --> RFFSCert{Phase 5<br/>Certification?}
+    RFFSCert -->|No| RFFS
+    RFFSCert -->|Yes - LAUNCH READY| PreLaunch[Pre-Launch Phase<br/>Final Preparation]
+    
+    PreLaunch --> Launch[🚀 Launch Event]
+    Launch --> Planned[Planned Phase<br/>Active Execution]
+    
+    Planned --> Quarterly{Quarterly Review}
+    Quarterly --> Planned
+    
+    Discernment -.->|Deep Dive Needed| HTopical[H-Topical Analysis<br/>Rapid Response]
+    PreGab -.->|Deep Dive Needed| HTopical
+    Gab -.->|Deep Dive Needed| HTopical
+    PreRapid -.->|Deep Dive Needed| HTopical
+    Rapid -.->|Deep Dive Needed| HTopical
+    RFFS -.->|Deep Dive Needed| HTopical
+    Planned -.->|Deep Dive Needed| HTopical
+    
+    HTopical -.->|Return| Discernment
+    HTopical -.->|Return| PreGab
+    HTopical -.->|Return| Gab
+    HTopical -.->|Return| PreRapid
+    HTopical -.->|Return| Rapid
+    HTopical -.->|Return| RFFS
+    HTopical -.->|Return| Planned
+    
+    style Start fill:#e1f5ff
+    style Discernment fill:#fff4e6
+    style PreGab fill:#e8f5e9
+    style Gab fill:#e8f5e9
+    style PreRapid fill:#e8f5e9
+    style Rapid fill:#fff9c4
+    style RFFS fill:#fff9c4
+    style RapidCert fill:#ffccbc
+    style RFFSCert fill:#ffccbc
+    style PreLaunch fill:#f3e5f5
+    style Launch fill:#c5e1a5
+    style Planned fill:#b2dfdb
+    style HTopical fill:#ffccbc
