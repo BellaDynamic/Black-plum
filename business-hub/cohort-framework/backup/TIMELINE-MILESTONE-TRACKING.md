@@ -39,17 +39,17 @@ The Timeline and Milestone Tracking System provides a structured approach to man
 
 **Sub-Phases:**
 
-#### Phase 1: Assess/Pre-GRID (1-2 weeks)
+#### Phase 1: Assess/Pre-Gab (1-2 weeks)
 **Milestones:**
 - Week 1: Initial idea presentation submitted
 - Week 1-2: Gap analysis completed
 - Week 2: Vision alignment assessment approved
-- **Exit Milestone:** Approval to advance to Assess/GRID
+- **Exit Milestone:** Approval to advance to Assess/Gab
 
-#### Phase 2: Assess/GRID (2-4 weeks)
+#### Phase 2: Assess/Gab (2-4 weeks)
 **Milestones:**
 - Week 1: Formal presentation prepared
-- Week 2: Cohort GRID session scheduled and conducted
+- Week 2: Cohort Gab session scheduled and conducted
 - Week 3: Feedback incorporated and systems mapping completed
 - Week 4: Communication protocol and IP strategy finalized
 - **Exit Milestone:** Cohort consensus and approval to advance to Assess/Pre-Rapid
@@ -163,9 +163,9 @@ The Timeline and Milestone Tracking System provides a structured approach to man
 Month 1-2: Discernment Phase
     └─ Decision Point: Proceed to Assessment?
 
-Month 3-6: Assessment Phase (Assess/Pre-GRID through Assess/Pre-Rapid)
-    ├─ Month 3: Assess/Pre-GRID → Approval
-    ├─ Month 4: Assess/GRID → Cohort Consensus
+Month 3-6: Assessment Phase (Assess/Pre-Gab through Assess/Pre-Rapid)
+    ├─ Month 3: Assess/Pre-Gab → Approval
+    ├─ Month 4: Assess/Gab → Cohort Consensus
     └─ Month 5-6: Assess/Pre-Rapid → Approval
 
 Month 7-12: Assessment Phase Continued (Assess/Rapid and Assess/RF-FS)
@@ -212,7 +212,7 @@ Month 14+: Planned Phase (Active Execution)
 - Action plan created to address gaps
 - Resource requirements documented
 
-**Cohort GRID Session Conducted**
+**Cohort Gab Session Conducted**
 - Formal presentation delivered to cohort
 - Feedback and questions addressed
 - Consensus achieved on path forward
@@ -280,7 +280,7 @@ Each project in the ASSESS for RAPID framework should maintain a Gantt chart sho
 All milestone dates and key events should be integrated into:
 - **Cohort Master Calendar:** Shared calendar showing all cohort member milestones
 - **Individual Project Calendars:** Detailed calendar for each project
-- **Brandy Bianchini Calendar:** Certification reviews, GRID sessions, and key meetings
+- **Brandy Bianchini Calendar:** Certification reviews, Gab sessions, and key meetings
 
 ### Automated Reminders and Notifications
 

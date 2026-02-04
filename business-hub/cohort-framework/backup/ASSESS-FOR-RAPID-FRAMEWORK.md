@@ -20,15 +20,15 @@ The ASSESS for RAPID framework consists of five sequential assessment phases, ea
 
 | Phase | Name | Purpose | Certification Required |
 |-------|------|---------|----------------------|
-| **Phase 1** | Assess/Pre-GRID | Initial idea evaluation and gap analysis | No |
-| **Phase 2** | Assess/GRID | Formal presentation and alignment discussion | No |
+| **Phase 1** | Assess/Pre-Gab | Initial idea evaluation and gap analysis | No |
+| **Phase 2** | Assess/Gab | Formal presentation and alignment discussion | No |
 | **Phase 3** | Assess/Pre-Rapid | Rapid Phase Plan preparation and systems integration | No |
 | **Phase 4** | Assess/Rapid | Full RAPID methodology application and documentation | Yes |
 | **Phase 5** | Assess/RF-FS | Financial structuring and sustainability planning | Yes |
 
 ---
 
-## Phase 1: Assess/Pre-GRID
+## Phase 1: Assess/Pre-Gab
 
 ### Purpose
 Initial evaluation phase where cohort members bring new ideas, projects, or opportunities for preliminary assessment. This phase identifies gaps, requirements, and determines if the idea aligns with organizational vision and protocols.
@@ -54,10 +54,10 @@ Brandy Bianchini review and approval to advance to Phase 2
 
 ---
 
-## Phase 2: Assess/GRID
+## Phase 2: Assess/Gab
 
 ### Purpose
-Formal presentation and alignment discussion phase where the cohort member presents a more developed concept with gaps addressed. "GRID" represents the collaborative conversation where the idea is refined, questioned, and aligned with organizational systems.
+Formal presentation and alignment discussion phase where the cohort member presents a more developed concept with gaps addressed. "Gab" represents the collaborative conversation where the idea is refined, questioned, and aligned with organizational systems.
 
 ### Activities
 - **Formal Presentation:** Structured presentation of the refined idea with gaps addressed
@@ -75,7 +75,7 @@ Formal presentation and alignment discussion phase where the cohort member prese
 - IP protection strategy
 
 ### Timeline
-**2-4 weeks** from Phase 1 completion, includes scheduled GRID session with cohort
+**2-4 weeks** from Phase 1 completion, includes scheduled Gab session with cohort
 
 ### Approval Required
 Cohort consensus and Brandy Bianchini approval to advance to Phase 3
@@ -216,7 +216,7 @@ Financial structuring and sustainability planning using the **RFFS (Rapid Financ
 Each cohort member maintains a status record tracking their progress through the ASSESS for RAPID framework for each project or idea they bring forward.
 
 **Status Categories:**
-- **Discernment (New Idea) Phase:** Cohort member is in early exploration, not yet ready for Pre-GRID
+- **Discernment (New Idea) Phase:** Cohort member is in early exploration, not yet ready for Pre-Gab
 - **Planned Phase:** Cohort member has completed ASSESS for RAPID and is in active execution
 - **H-Topical Analysis:** Cohort member is conducting deep-dive analysis on a specific topic or component
 - **Brandy Bianchini Certified:** Cohort member has received certification for specific phase completion
@@ -225,7 +225,7 @@ Each cohort member maintains a status record tracking their progress through the
 
 | Cohort Member | Project/Idea | Current Phase | Status | Certification Date | Next Milestone |
 |---------------|--------------|---------------|--------|-------------------|----------------|
-| [Name] | [Project] | Assess/Pre-GRID | In Progress | N/A | Gap Analysis Due [Date] |
+| [Name] | [Project] | Assess/Pre-Gab | In Progress | N/A | Gap Analysis Due [Date] |
 | [Name] | [Project] | Assess/Rapid | In Progress | Phase 3 Certified [Date] | RAPID Plan Due [Date] |
 | [Name] | [Project] | Assess/RF-FS | In Progress | Phase 4 Certified [Date] | Financial Model Due [Date] |
 | [Name] | [Project] | Planned Phase | Executing | Phase 5 Certified [Date] | Quarterly Review [Date] |

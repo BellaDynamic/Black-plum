@@ -15,13 +15,13 @@ Use this guide to quickly identify your current status and next steps.
 1. Document your idea (1-2 pages)
 2. Identify what you don't know (gaps)
 3. Schedule initial meeting with Brandy
-4. Decide if you're ready for Assess/Pre-GRID
+4. Decide if you're ready for Assess/Pre-Gab
 
 **Timeline:** 1-4 weeks
 
 ---
 
-### 📋 Phase 1: Assess/Pre-GRID
+### 📋 Phase 1: Assess/Pre-Gab
 **You're here if:** You've decided to formally pursue your idea and need initial evaluation.
 
 **What to do next:**
@@ -39,12 +39,12 @@ Use this guide to quickly identify your current status and next steps.
 
 ---
 
-### 📋 Phase 2: Assess/GRID
-**You're here if:** Your idea passed Pre-GRID and you're preparing for cohort presentation.
+### 📋 Phase 2: Assess/Gab
+**You're here if:** Your idea passed Pre-Gab and you're preparing for cohort presentation.
 
 **What to do next:**
 1. Prepare formal presentation
-2. Schedule GRID session with cohort
+2. Schedule Gab session with cohort
 3. Incorporate feedback
 4. Develop communication protocols
 5. Create IP protection strategy

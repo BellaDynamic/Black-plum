@@ -47,8 +47,8 @@ This comprehensive framework package provides the complete organizational manage
 | Phase | Name | Purpose | Duration | Certification |
 |-------|------|---------|----------|---------------|
 | **0** | **Assess/Pre-Event** | **NEW:** Event-driven projects only - secure all external dependencies | 30 days | No |
-| **1** | **Assess/Pre-GRID** | Initial evaluation and gap analysis | 1-2 weeks | No |
-| **2** | **Assess/GRID** | Cohort presentation and alignment | 2-4 weeks | No |
+| **1** | **Assess/Pre-Gab** | Initial evaluation and gap analysis | 1-2 weeks | No |
+| **2** | **Assess/Gab** | Cohort presentation and alignment | 2-4 weeks | No |
 | **3** | **Assess/Pre-Rapid** | RAPID methodology preparation | 3-6 weeks | No |
 | **4** | **Assess/Rapid** | Full RAPID application | 6-12 weeks | **Yes** |
 | **5** | **Assess/RF-FS** | Financial structuring (RFFS) | 4-8 weeks | **Yes** |
@@ -171,7 +171,7 @@ Cohort members engage through a Preferred Business-to-Business membership struct
 1. Review **STREET-LEGENDS-PROJECT-TEMPLATE.md** for the event-first methodology
 2. Follow the 30-day action plan in Phase 0
 3. Use **STAKEHOLDER-ALIGNMENT-SYSTEM.md** to onboard all stakeholders
-4. Execute all contracts before entering Phase 1 (Assess/Pre-GRID)
+4. Execute all contracts before entering Phase 1 (Assess/Pre-Gab)
 
 ---
 

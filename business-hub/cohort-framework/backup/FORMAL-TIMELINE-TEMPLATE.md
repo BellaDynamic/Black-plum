@@ -22,8 +22,8 @@ Each asset, project, or program follows this standardized timeline structure, wh
 | Phase | Duration | Behind-the-Scenes Activities | GRID Status | Deliverables |
 |-------|----------|------------------------------|-------------|--------------|
 | **Discernment** | 1-4 weeks | Research, informal conversations, self-assessment | Pre-GRID | Decision to proceed |
-| **Assess/Pre-GRID** | 1-2 weeks | Gap analysis, resource identification, vision alignment | GRID Cell Reserved | Initial presentation, gap report |
-| **Assess/GRID** | 2-4 weeks | Cohort presentation, feedback integration, IP strategy | GRID Cell Active | Formal presentation, systems map |
+| **Assess/Pre-Gab** | 1-2 weeks | Gap analysis, resource identification, vision alignment | GRID Cell Reserved | Initial presentation, gap report |
+| **Assess/Gab** | 2-4 weeks | Cohort presentation, feedback integration, IP strategy | GRID Cell Active | Formal presentation, systems map |
 | **Assess/Pre-Rapid** | 3-6 weeks | RAPID training, project structuring, resource planning | GRID Cell Active | Preliminary RAPID plan |
 | **Assess/Rapid** | 6-12 weeks | Full RAPID application (R-A-P-I-D phases) | GRID Cell Active | Complete RAPID plan, certification |
 | **Assess/RF-FS** | 4-8 weeks | Financial modeling, funding strategy, service agreements | GRID Cell Active | Financial model, legal docs, certification |
@@ -68,8 +68,8 @@ The GRID is structured with a minimum of 16 cells per state, with uncapped squar
 | Status | Color Code | Meaning |
 |--------|-----------|---------|
 | **Pre-GRID** | Gray | Discernment phase, not yet formally entered |
-| **GRID Cell Reserved** | Yellow | Assess/Pre-GRID, cell reserved but not active |
-| **GRID Cell Active** | Blue | Assess/GRID through Assess/RF-FS, actively progressing |
+| **GRID Cell Reserved** | Yellow | Assess/Pre-Gab, cell reserved but not active |
+| **GRID Cell Active** | Blue | Assess/Gab through Assess/RF-FS, actively progressing |
 | **GRID Cell Launch Ready** | Orange | Pre-Launch phase, preparing for execution |
 | **GRID Cell Executing** | Green | Planned Phase, actively executing |
 | **GRID Cell Paused** | Red | H-Topical Analysis or temporary pause |
@@ -99,7 +99,7 @@ This section provides transparency into the operational activities happening beh
 
 ---
 
-#### Assess/Pre-GRID: Behind the Scenes
+#### Assess/Pre-Gab: Behind the Scenes
 
 **Internal Activities:**
 - Formal documentation of idea and concept
@@ -111,12 +111,12 @@ This section provides transparency into the operational activities happening beh
 **Organizational Activities:**
 - GRID cell reservation in appropriate state/category
 - Assignment of support resources (tools, templates, guidance)
-- Scheduling of transition to Assess/GRID phase
+- Scheduling of transition to Assess/Gab phase
 - Documentation of initial assessment findings
 
 ---
 
-#### Assess/GRID: Behind the Scenes
+#### Assess/Gab: Behind the Scenes
 
 **Internal Activities:**
 - Development of formal presentation for cohort review
@@ -127,7 +127,7 @@ This section provides transparency into the operational activities happening beh
 - Intellectual property protection strategy creation
 
 **Organizational Activities:**
-- Scheduling and facilitation of cohort GRID session
+- Scheduling and facilitation of cohort Gab session
 - Documentation of cohort feedback and recommendations
 - Integration planning with existing organizational systems
 - IP protection implementation (NDAs, trademarks, etc.)
@@ -268,7 +268,7 @@ This section provides transparency into the operational activities happening beh
 
 ```
 YEAR 1
-├─ Q1: Discernment → Assess/Pre-GRID → Assess/GRID
+├─ Q1: Discernment → Assess/Pre-Gab → Assess/Gab
 ├─ Q2: Assess/Pre-Rapid → Assess/Rapid (Start)
 ├─ Q3: Assess/Rapid (Continue) → Phase 4 Certification
 └─ Q4: Assess/RF-FS → Phase 5 Certification → Pre-Launch → LAUNCH

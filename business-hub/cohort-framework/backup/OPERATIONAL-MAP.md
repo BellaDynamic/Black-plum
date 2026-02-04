@@ -28,8 +28,8 @@ The **ASSESS for RAPID** framework is the mandatory, five-phase compliance pathw
 
 | Phase | Name | Purpose | Average Duration | Certification Required |
 | :---- | :--- | :--- | :--- | :--- |
-| **1** | **Assess/Pre-GRID** | Initial idea evaluation, alignment check, and gap analysis. | 1-2 Weeks | No |
-| **2** | **Assess/GRID** | Formal presentation to the cohort for collaborative discussion and refinement. | 2-4 Weeks | No |
+| **1** | **Assess/Pre-Gab** | Initial idea evaluation, alignment check, and gap analysis. | 1-2 Weeks | No |
+| **2** | **Assess/Gab** | Formal presentation to the cohort for collaborative discussion and refinement. | 2-4 Weeks | No |
 | **3** | **Assess/Pre-Rapid** | Preparation and structuring of the project according to the RAPID Phase Plan methodology. | 3-6 Weeks | No |
 | **4** | **Assess/Rapid** | Full application of the RAPID methodology to create a comprehensive, execution-ready project plan. | 6-12 Weeks | **Yes** |
 | **5** | **Assess/RF-FS** | Financial structuring and sustainability planning using the Rapid Financial Fiscal Solutions (RFFS) model. | 4-8 Weeks | **Yes** |

@@ -10,7 +10,7 @@
 - All Projects/Key Milestones
 
 **Middle Section - "Compiled" List:**
-- Assess/Pre-GRID/GRID
+- Assess/Pre-Gab/Gab
 - Assess/Pre-Rapid
 - Assess/Rapid
 - Assess/RF-FS (Rapid Financial Fiscal Solutions)
@@ -49,7 +49,7 @@ Key elements visible:
 
 ### 1. ASSESS for RAPID Compliance Framework
 - Pre-assessment phase
-- Assessment phases (Pre-GRID, GRID, Pre-Rapid, Rapid, RF-FS)
+- Assessment phases (Pre-Gab, Gab, Pre-Rapid, Rapid, RF-FS)
 - Certification tracking
 - Compliance checkpoints
 
