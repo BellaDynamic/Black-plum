@@ -1,20 +1,26 @@
 # Black Plum Concierge
 
-**Your Direct Portal to Brandy Bianchini**
+**A Brand of Universal Changemakers (L3C)**
 
-*Multi-industry advising and consulting applied to your individual needs—fulfillment for founders and projects at any phase, any stage*
+*Your Direct Portal to Brandy Bianchini for Multi-Industry Advising & Consulting*
 
 ---
 
 ## Welcome
 
-Black Plum Concierge is the direct portal to founder **Brandy Bianchini** and the public-facing brand for **Universal Changemakers (L3C)**. We provide transformative, multi-industry advising and consulting across six service pillars, serving clients in the U.S., Mexico, Canada, the U.K., and the E.U.
+Black Plum Concierge is the direct portal to founder **Brandy Bianchini** and a premier brand of **Universal Changemakers (L3C)**. We provide transformative, multi-industry advising and consulting across six service pillars. Our work is funded and supported by the **Eternal Autumn Trust**, a private operating foundation dedicated to our mission.
 
 ---
 
 ## Mission
 
 To resolve systemic challenges in business management, finance, and law while providing fulfillment for founders and projects at any lifecycle stage. Our ultimate function is the **"movement of people and money"** to push resources back into the community and affect **"bottom line changes threefold."**
+
+---
+
+## Our Sister Brands
+
+- **Bella Dynamic:** Our public-facing brand for wellness advocacy and strategic communications. Bella Dynamic champions causes, builds communities, and provides a platform for transformative dialogue and action.
 
 ---
 
@@ -49,20 +55,21 @@ Contains the current website files, brand imagery, and visual assets.
 | [Quick Reference](./business-hub/strategic-documents/QUICK_REFERENCE_SUMMARY.md) | One-page summary |
 | [Recent Updates](./business-hub/strategic-documents/STRATEGIC_UPDATES_ADDENDUM.md) | Latest changes & corrections |
 | [Operations Guide](./business-hub/operational-docs/OPERATIONAL_INFRASTRUCTURE.md) | Operational procedures |
+| [Partnership Portal Sitemap](./business-hub/technical-integrations/PARTNERSHIP_PORTAL_SITEMAP.md) | Sitemap for the partner integration portal |
+| [Master Integration Plan](./business-hub/technical-integrations/MASTER_INTEGRATION_PLAN.md) | Technical plan for platform integrations |
 
 ---
 
 ## Core Entities
 
-The Black Plum ecosystem includes:
+The Black Plum ecosystem is built on a clear and powerful structure:
 
-- **Universal Changemaker's, Series L3C** - Primary operating entity, California **Universal Changemaker's, Series LLC**
-- **Eternal Autumn Trust** - Private operating foundation- Eternal Autumn Trust** Federal, with global Brand Eternal Autumn.
-- **Black Plum Concierge** - Direct portal to Brandy Bianchini to enter any aspect of the ecosystem i have a person, business or group, must oblige with my standard operating processes.
-- **Better World** - Program management
-- **Luna's Garden** - Talent Placement and Support for Career earning, travel, benefits, touring, promotion, productions, recording, liscensisng and planning asepcts of real world necessites, legal, financial and welfare for whole human needs, and lifestyle
-- **Global Artist Alliance** - Music and artist development
-- **A Moonlit Studio (comma series)** - Entertainment platform
+| Entity | Role |
+|:---|:---|
+| **Universal Changemakers, Series L3C** | The primary operating entity. |
+| **Eternal Autumn Trust** | The private operating foundation that funds our work. |
+| **Black Plum Concierge** | The direct portal to founder Brandy Bianchini. |
+| **Bella Dynamic** | Our sister brand for public wellness advocacy. |
 
 ---
 
@@ -144,5 +151,5 @@ We serve clients across:
 
 *Transformation Through Excellence*
 
-**Last Updated:** January 1st,2026
+**Last Updated:** March 2, 2026
 **Repository Maintained By:** Brandy Bianchini / Black Plum Concierge
