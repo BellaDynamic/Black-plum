@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership & Benefits</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #1A2238; color: #E8E8E8; overflow: hidden; }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: #1A2238;
+            background-image: 
+                linear-gradient(rgba(143, 155, 179, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(143, 155, 179, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-section {
+            border-bottom: 1px solid #8F9BB3;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 48px;
+            font-weight: 700;
+            color: #CD5C5C;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .slide-id {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            color: #8F9BB3;
+        }
+
+        .intro-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            color: #B0B8C8;
+            margin-bottom: 20px; /* Reduced to save vertical space */
+            max-width: 900px;
+            border-left: 3px solid #CD5C5C;
+            padding-left: 20px;
+        }
+
+        /* Tiers Grid */
+        .tiers-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 2px solid #8F9BB3;
+            border-bottom: 2px solid #8F9BB3;
+            height: 420px;
+        }
+
+        .tier-column {
+            border-right: 1px dashed rgba(143, 155, 179, 0.5);
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .tier-column:last-child {
+            border-right: none;
+        }
+
+        .level-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            color: #8F9BB3;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h3 {
+            font-family: 'Space Mono', monospace;
+            font-size: 22px;
+            color: #E8E8E8;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            height: 55px; /* Fixed height for alignment */
+        }
+
+        .section-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: #CD5C5C;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .criteria-box {
+            background: rgba(143, 155, 179, 0.1);
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #B0B8C8;
+            min-height: 60px;
+        }
+
+        .benefits-list {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            font-size: 14px;
+            color: #E8E8E8;
+            margin-bottom: 12px;
+            padding-left: 15px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .benefits-list li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: #CD5C5C;
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+        }
+
+        /* Highlight for highest tier */
+        .tier-column.benefactor {
+            background: rgba(205, 92, 92, 0.05);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <h1>Membership & Benefits</h1>
+            <div class="slide-id">07 // MEMBER_FRAMEWORK</div>
+        </div>
+
+        <div class="intro-text">
+            Membership is earned, not just purchased. Our performance-based framework ensures cohesion of earning, equity, and cross-platform opportunities for all aligned stakeholders.
+        </div>
+
+        <div class="tiers-container">
+            <!-- Tier 1 -->
+            <div class="tier-column">
+                <span class="level-tag">LVL.01</span>
+                <h3>Associate<br>Member</h3>
+                
+                <div class="section-label">Eligibility</div>
+                <div class="criteria-box">
+                    Application submission & initial alignment review.
+                </div>
+
+                <div class="section-label">Key Benefits</div>
+                <ul class="benefits-list">
+                    <li>Access to community events</li>
+                    <li>Resource library entry</li>
+                    <li>Network inclusion</li>
+                </ul>
+            </div>
+
+            <!-- Tier 2 -->
+            <div class="tier-column">
+                <span class="level-tag">LVL.02</span>
+                <h3>Active<br>Member</h3>
+                
+                <div class="section-label">Eligibility</div>
+                <div class="criteria-box">
+                    Demonstrated performance & active participation.
+                </div>
+
+                <div class="section-label">Key Benefits</div>
+                <ul class="benefits-list">
+                    <li>Individual earning pots</li>
+                    <li>Cross-platform opportunities</li>
+                    <li>Event priority status</li>
+                </ul>
+            </div>
+
+            <!-- Tier 3 -->
+            <div class="tier-column">
+                <span class="level-tag">LVL.03</span>
+                <h3>Preferred<br>Member</h3>
+                
+                <div class="section-label">Eligibility</div>
+                <div class="criteria-box">
+                    Sustained contribution & deep mission alignment.
+                </div>
+
+                <div class="section-label">Key Benefits</div>
+                <ul class="benefits-list">
+                    <li>Equity incentives</li>
+                    <li>Private benefit access</li>
+                    <li>Direct leadership access</li>
+                </ul>
+            </div>
+
+            <!-- Tier 4 -->
+            <div class="tier-column benefactor">
+                <span class="level-tag">LVL.04</span>
+                <h3>Benefactor<br>Partner</h3>
+                
+                <div class="section-label">Eligibility</div>
+                <div class="criteria-box">
+                    Strategic partnership & significant investment.
+                </div>
+
+                <div class="section-label">Key Benefits</div>
+                <ul class="benefits-list">
+                    <li>Bespoke perks package</li>
+                    <li>Legacy recognition</li>
+                    <li>Co-creation opportunities</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

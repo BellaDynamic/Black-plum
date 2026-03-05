@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The GRID: Operational Framework</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #1A2238; color: #E8E8E8; overflow: hidden; }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: #1A2238;
+            background-image: 
+                linear-gradient(rgba(143, 155, 179, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(143, 155, 179, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-section {
+            border-bottom: 1px solid #8F9BB3;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 48px;
+            font-weight: 700;
+            color: #CD5C5C;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .slide-id {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            color: #8F9BB3;
+        }
+
+        /* Content Layout */
+        .content-split {
+            display: flex;
+            gap: 60px;
+            flex: 1;
+        }
+
+        /* Left Column: Text */
+        .text-column {
+            flex: 0 0 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            font-family: 'Space Mono', monospace;
+            font-size: 28px;
+            font-weight: 700;
+            color: #E8E8E8;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .definition-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #B0B8C8;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .stat-box {
+            border: 1px solid #8F9BB3;
+            background: rgba(143, 155, 179, 0.05);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stat-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            color: #CD5C5C;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-family: 'Space Mono', monospace;
+            font-size: 24px;
+            color: #E8E8E8;
+        }
+
+        /* Right Column: Visuals */
+        .visual-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* The Visual GRID */
+        .grid-visual {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 5px;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .grid-cell {
+            border: 1px solid #CD5C5C;
+            background: rgba(205, 92, 92, 0.1);
+            position: relative;
+        }
+
+        /* Highlight some cells to show "filled" status */
+        .grid-cell.filled {
+            background: rgba(205, 92, 92, 0.4);
+        }
+
+        .grid-label {
+            position: absolute;
+            top: -25px;
+            left: 0;
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            color: #8F9BB3;
+        }
+
+        /* Supporting Systems Modules */
+        .systems-row {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .system-module {
+            border: 1px solid #8F9BB3;
+            background: rgba(26, 34, 56, 0.8);
+            padding: 15px;
+            width: 48%;
+            position: relative;
+        }
+
+        /* Connector lines from Grid to Systems */
+        .system-module::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 1px;
+            height: 20px;
+            background: #8F9BB3;
+        }
+
+        .sys-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 16px;
+            color: #CD5C5C;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .sys-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            color: #B0B8C8;
+            line-height: 1.4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <h1>The GRID</h1>
+            <div class="slide-id">09 // OPERATIONAL_FRAMEWORK</div>
+        </div>
+
+        <div class="content-split">
+            <div class="text-column">
+                <h2>Global Responsible Integrated Development Tool</h2>
+                <p class="definition-text">
+                    The GRID is our proprietary operational framework. It structures our ecosystem into manageable units, allowing for precise placement of projects, events, brands, and businesses.
+                </p>
+
+                <div class="stat-box">
+                    <div class="stat-label">Structure Capacity</div>
+                    <div class="stat-value">Min. 16 Cells Per State</div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-label">Current Status</div>
+                    <div class="stat-value">Filled Two-Fold (32+ Assets)</div>
+                </div>
+            </div>
+
+            <div class="visual-column">
+                <div class="grid-visual">
+                    <div class="grid-label">STATE_MATRIX_VIEW</div>
+                    <!-- 16 Cells, some filled to represent assets -->
+                    <div class="grid-cell filled"></div><div class="grid-cell filled"></div><div class="grid-cell"></div><div class="grid-cell filled"></div>
+                    <div class="grid-cell filled"></div><div class="grid-cell filled"></div><div class="grid-cell filled"></div><div class="grid-cell"></div>
+                    <div class="grid-cell"></div><div class="grid-cell filled"></div><div class="grid-cell filled"></div><div class="grid-cell filled"></div>
+                    <div class="grid-cell filled"></div><div class="grid-cell"></div><div class="grid-cell filled"></div><div class="grid-cell filled"></div>
+                </div>
+
+                <div class="systems-row">
+                    <div class="system-module">
+                        <div class="sys-title">RAPID Phase Plan</div>
+                        <div class="sys-desc">Research, Architecture, Planning, Implementation, Delivery.</div>
+                    </div>
+
+                    <div class="system-module">
+                        <div class="sys-title">RFFS System</div>
+                        <div class="sys-desc">Rapid Financial Fiscal Solutions for efficient resource allocation.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

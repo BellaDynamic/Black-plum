@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Changemakers L3C</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #1A2238; color: #E8E8E8; overflow: hidden; }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: #1A2238;
+            background-image: 
+                linear-gradient(rgba(143, 155, 179, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(143, 155, 179, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            /* keep top padding for title consistency */
+            padding: 60px 80px 12px; /* reduced bottom padding to shave height */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-section {
+            border-bottom: 1px solid #8F9BB3;
+            padding-bottom: 10px; /* reduced */
+            margin-bottom: 20px;  /* reduced */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 48px;
+            font-weight: 700;
+            color: #CD5C5C;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .slide-id {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            color: #8F9BB3;
+        }
+
+        /* Intro Text */
+        .intro-container {
+            margin-bottom: 20px; /* reduced */
+            border-left: 4px solid #CD5C5C;
+            padding-left: 22px;
+            background: rgba(26, 34, 56, 0.4);
+            padding: 12px 22px; /* reduced vertical padding */
+        }
+
+        h2 {
+            font-family: 'Space Mono', monospace;
+            font-size: 28px;
+            color: #E8E8E8;
+            margin-bottom: 12px; /* slightly reduced */
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #B0B8C8;
+            max-width: 900px;
+        }
+
+        /* Capability Matrix */
+        .matrix-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px; /* reduced gap */
+            flex-grow: 1;
+        }
+
+        .capability-box {
+            border: 1px solid #8F9BB3;
+            background: rgba(143, 155, 179, 0.05);
+            padding: 18px; /* reduced */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cap-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px; /* reduced */
+            border-bottom: 1px dashed rgba(143, 155, 179, 0.5);
+            padding-bottom: 8px; /* reduced */
+        }
+
+        .cap-icon {
+            font-size: 24px;
+            color: #CD5C5C;
+            margin-right: 12px; /* slight reduce */
+        }
+
+        .cap-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 20px;
+            color: #E8E8E8;
+            font-weight: 700;
+        }
+
+        .cap-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #B0B8C8;
+            line-height: 1.5;
+        }
+
+        /* Technical details */
+        .tech-label {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: #8F9BB3;
+        }
+
+        .status-light {
+            width: 8px;
+            height: 8px;
+            background-color: #CD5C5C;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 0 5px #CD5C5C;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <h1>Universal Changemakers L3C</h1>
+            <div class="slide-id">08 // SOCIAL_ENGINE</div>
+        </div>
+
+        <div class="intro-container">
+            <h2>Resolving Systemic Chaos</h2>
+            <p>
+                Founded in 2015 as the agency of oversight missing in traditional industries. We operate as a "frankensteined entity"—a hybrid structure designed to bridge the gap between profit and purpose, fueling reciprocity to the doers.
+            </p>
+        </div>
+
+        <div class="matrix-container">
+            <!-- Cap 1 -->
+            <div class="capability-box">
+                <div class="tech-label">CAP.01</div>
+                <div class="cap-header">
+                    <div class="status-light"></div>
+                    <i class="fas fa-hand-holding-usd cap-icon"></i>
+                    <div class="cap-title">PRI & DAF Ready</div>
+                </div>
+                <div class="cap-desc">
+                    Uniquely positioned to accept Program-Related Investments and Donor-Advised Funds, bypassing traditional funding bottlenecks.
+                </div>
+            </div>
+
+            <!-- Cap 2 -->
+            <div class="capability-box">
+                <div class="tech-label">CAP.02</div>
+                <div class="cap-header">
+                    <div class="status-light"></div>
+                    <i class="fas fa-balance-scale cap-icon"></i>
+                    <div class="cap-title">Gov & Grant Alignment</div>
+                </div>
+                <div class="cap-desc">
+                    Structured to align with government awards and contracting—bilaterally used and given to maximize community impact.
+                </div>
+            </div>
+
+            <!-- Cap 3 -->
+            <div class="capability-box">
+                <div class="tech-label">CAP.03</div>
+                <div class="cap-header">
+                    <div class="status-light"></div>
+                    <i class="fas fa-rocket cap-icon"></i>
+                    <div class="cap-title">High-Impact Investment</div>
+                </div>
+                <div class="cap-desc">
+                    Investing in high-risk, high-reward nonprofit projects without the constraints of traditional risk-averse funding models.
+                </div>
+            </div>
+
+            <!-- Cap 4 -->
+            <div class="capability-box">
+                <div class="tech-label">CAP.04</div>
+                <div class="cap-header">
+                    <div class="status-light"></div>
+                    <i class="fas fa-users-cog cap-icon"></i>
+                    <div class="cap-title">Direct Solutions</div>
+                </div>
+                <div class="cap-desc">
+                    Reviewing and awarding members and fellows with direct-to-issue solutions, fueling the work of those on the ground.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

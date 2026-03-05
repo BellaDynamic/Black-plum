@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ecosystem</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #1A2238; color: #E8E8E8; overflow: hidden; }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: #1A2238;
+            background-image: 
+                linear-gradient(rgba(143, 155, 179, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(143, 155, 179, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            padding: 60px 80px;
+        }
+
+        /* Header Styling */
+        .header-section {
+            border-bottom: 1px solid #8F9BB3;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 48px;
+            font-weight: 700;
+            color: #CD5C5C;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .slide-id {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            color: #8F9BB3;
+        }
+
+        /* Grid Layout for Pillars */
+        /* Reduced grid height from 500 -> 460 to bring total slide height under 720px */
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 30px;
+            height: 460px;
+        }
+
+        .pillar-module {
+            background: rgba(26, 34, 56, 0.6);
+            border: 1px solid #8F9BB3;
+            padding: 25px;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .module-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed rgba(143, 155, 179, 0.5);
+            padding-bottom: 10px;
+        }
+
+        .sys-code {
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            color: #CD5C5C;
+        }
+
+        .icon-box {
+            color: #E8E8E8;
+            font-size: 24px;
+        }
+
+        h3 {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            color: #E8E8E8;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #B0B8C8;
+        }
+
+        /* Decorative Connectors */
+        .connector-h {
+            position: absolute;
+            height: 1px;
+            background: #CD5C5C;
+            top: 50%;
+            z-index: 0;
+            opacity: 0.5;
+        }
+        
+        .connector-v {
+            position: absolute;
+            width: 1px;
+            background: #CD5C5C;
+            left: 50%;
+            z-index: 0;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <h1>The Ecosystem</h1>
+            <div class="slide-id">02 // SYSTEM_ARCHITECTURE</div>
+        </div>
+
+        <div class="ecosystem-grid">
+            <!-- Pillar 1 -->
+            <div class="pillar-module">
+                <div class="module-header">
+                    <span class="sys-code">SYS.01</span>
+                    <i class="fas fa-landmark icon-box"></i>
+                </div>
+                <h3>The Trust</h3>
+                <p>Dynasty formation, asset holding, and strategic investment structure designed for generational wealth.</p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="pillar-module">
+                <div class="module-header">
+                    <span class="sys-code">SYS.02</span>
+                    <i class="fas fa-seedling icon-box"></i>
+                </div>
+                <h3>Sister Companies</h3>
+                <p>Commercial operations in harvest, culture, and living quality driving diversified revenue streams.</p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="pillar-module">
+                <div class="module-header">
+                    <span class="sys-code">SYS.03</span>
+                    <i class="fas fa-users icon-box"></i>
+                </div>
+                <h3>Field Rep Program</h3>
+                <p>Multipurpose agents and human labor driving the mission on the ground with equity incentives.</p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="pillar-module">
+                <div class="module-header">
+                    <span class="sys-code">SYS.04</span>
+                    <i class="fas fa-id-card icon-box"></i>
+                </div>
+                <h3>Membership</h3>
+                <p>Performance-based rewards framework for aligned stakeholders and contributors.</p>
+            </div>
+
+            <!-- Pillar 5 -->
+            <div class="pillar-module">
+                <div class="module-header">
+                    <span class="sys-code">SYS.05</span>
+                    <i class="fas fa-hand-holding-heart icon-box"></i>
+                </div>
+                <h3>L3C Enterprise</h3>
+                <p>Social enterprise engine for community development, grant alignment, and impact.</p>
+            </div>
+
+            <!-- Pillar 6 -->
+            <div class="pillar-module">
+                <div class="module-header">
+                    <span class="sys-code">SYS.06</span>
+                    <i class="fas fa-calendar-alt icon-box"></i>
+                </div>
+                <h3>Quarterly Events</h3>
+                <p>Programmatic engagement, movement organization, and consistent content production.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

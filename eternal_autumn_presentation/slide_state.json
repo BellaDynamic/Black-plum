@@ -1,0 +1,168 @@
+{
+  "project_info": {
+    "title": "Eternal Autumn Trust",
+    "created": 1772682678.263696,
+    "last_updated": 1772682996.4502802,
+    "total_slides": 13
+  },
+  "slides": [
+    {
+      "id": "title_slide",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "mission",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "ecosystem",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "trust_dynasty",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "sister_companies",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "field_reps",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "membership",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "l3c_social",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "grid_ops",
+      "state": "edited",
+      "pageNum": 9
+    },
+    {
+      "id": "quarterly_events",
+      "state": "edited",
+      "pageNum": 10
+    },
+    {
+      "id": "b2b_gov",
+      "state": "edited",
+      "pageNum": 11
+    },
+    {
+      "id": "call_to_action",
+      "state": "edited",
+      "pageNum": 12
+    },
+    {
+      "id": "closing",
+      "state": "edited",
+      "pageNum": 13
+    }
+  ],
+  "outline": [
+    {
+      "id": "title_slide",
+      "title": "Eternal Autumn Trust",
+      "summary": "Title slide introducing the Trust and its legacy of purpose, prosperity, and perpetual impact.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "mission",
+      "title": "The Mission",
+      "summary": "Overview of the Trust's mission to move people, money, and purpose to better lives and the planet.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "ecosystem",
+      "title": "The Ecosystem at a Glance",
+      "summary": "Visual overview of the six integrated pillars of the Eternal Autumn Trust ecosystem.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "trust_dynasty",
+      "title": "The Trust: Dynasty Formation",
+      "summary": "Explanation of the dynasty formation model and asset diversification strategy.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "sister_companies",
+      "title": "Sister Companies",
+      "summary": "Details on the three commercial arms: Harvest, Culture, and Living Quality.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "field_reps",
+      "title": "Field Rep Program",
+      "summary": "Description of the Field Rep opportunity, earning models, and role in the mission.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "membership",
+      "title": "Membership & Benefits",
+      "summary": "Breakdown of the performance-based membership tiers and benefits framework.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "l3c_social",
+      "title": "Universal Changemakers L3C",
+      "summary": "The role of the L3C social enterprise in resolving systemic chaos and driving change.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "grid_ops",
+      "title": "The GRID: Operational Framework",
+      "summary": "Explanation of the proprietary GRID tool and its role in operational management.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "quarterly_events",
+      "title": "Quarterly Events",
+      "summary": "The programmatic heartbeat of the Trust, driving engagement and content production.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "b2b_gov",
+      "title": "B2B, Government & Grant Alignment",
+      "summary": "Strategy for bilateral value exchange with institutional partners and government.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "call_to_action",
+      "title": "Join the Movement",
+      "summary": "Call to action for prospective reps, members, and partners to join the ecosystem.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "closing",
+      "title": "A Legacy of Rarity",
+      "summary": "Closing statement on the Trust's commitment to building a lasting, rare legacy.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    }
+  ]
+}

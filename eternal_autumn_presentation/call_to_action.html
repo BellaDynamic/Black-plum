@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Movement</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #1A2238; color: #E8E8E8; overflow: hidden; }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: #1A2238;
+            background-image: 
+                linear-gradient(rgba(143, 155, 179, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(143, 155, 179, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            /* keep top padding for title consistency, reduce bottom padding to trim overall height */
+            padding: 60px 80px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-section {
+            border-bottom: 1px solid #8F9BB3;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 48px;
+            font-weight: 700;
+            color: #CD5C5C;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .slide-id {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            color: #8F9BB3;
+        }
+
+        .subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            color: #E8E8E8;
+            margin-bottom: 40px; /* slightly reduced to save space */
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Action Modules Grid */
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px; /* reduced from 60px to tighten layout */
+        }
+
+        .action-module {
+            border: 1px solid #8F9BB3;
+            background: rgba(26, 34, 56, 0.6);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        /* Top accent bar */
+        .action-module::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #CD5C5C;
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #CD5C5C;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            background: rgba(205, 92, 92, 0.1);
+        }
+
+        .icon-circle i {
+            font-size: 32px;
+            color: #E8E8E8;
+        }
+
+        h3 {
+            font-family: 'Space Mono', monospace;
+            font-size: 22px;
+            color: #E8E8E8;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #B0B8C8;
+            margin-bottom: 20px; /* slightly reduced */
+        }
+
+        .action-btn {
+            margin-top: auto;
+            font-family: 'Space Mono', monospace;
+            font-size: 14px;
+            color: #1A2238;
+            background: #8F9BB3;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            width: 100%;
+            border: none;
+        }
+
+        /* Contact Block */
+        .contact-block {
+            margin-top: auto;
+            border-top: 1px solid #8F9BB3;
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Space Mono', monospace;
+            font-size: 16px;
+            color: #CD5C5C;
+        }
+
+        .contact-item i {
+            font-size: 18px;
+        }
+
+        .contact-item span {
+            color: #E8E8E8;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <h1>Join the Movement</h1>
+            <div class="slide-id">11 // ACTIVATION_PROTOCOL</div>
+        </div>
+
+        <div class="subtitle">
+            The Eternal Autumn Trust Is Growing. Be Part of What Lasts.
+        </div>
+
+        <div class="action-grid">
+            <!-- Module 1: Reps -->
+            <div class="action-module">
+                <div class="icon-circle">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3>For Field Reps</h3>
+                <p>
+                    Apply to become a multipurpose agent and begin building your individual earning pot within the ecosystem.
+                </p>
+                <div class="action-btn">INITIATE APPLICATION</div>
+            </div>
+
+            <!-- Module 2: Members -->
+            <div class="action-module">
+                <div class="icon-circle">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>For Members</h3>
+                <p>
+                    Demonstrate your alignment and performance. Earn your place in a community built on shared prosperity.
+                </p>
+                <div class="action-btn">REQUEST ALIGNMENT</div>
+            </div>
+
+            <!-- Module 3: Partners -->
+            <div class="action-module">
+                <div class="icon-circle">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>For Partners</h3>
+                <p>
+                    Explore B2B, government, and grant alignment opportunities with an ecosystem built to last.
+                </p>
+                <div class="action-btn">EXPLORE PARTNERSHIP</div>
+            </div>
+        </div>
+
+        <div class="contact-block">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>hello@blackplum.belladynamic.org</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <span>belladynamic.org</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

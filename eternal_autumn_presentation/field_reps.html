@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Rep Program</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #1A2238; color: #E8E8E8; overflow: hidden; }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: #1A2238;
+            background-image: 
+                linear-gradient(rgba(143, 155, 179, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(143, 155, 179, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-section {
+            border-bottom: 1px solid #8F9BB3;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 48px;
+            font-weight: 700;
+            color: #CD5C5C;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .slide-id {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            color: #8F9BB3;
+        }
+
+        /* Main Content Layout */
+        .content-wrapper {
+            display: flex;
+            gap: 60px;
+            flex: 1;
+        }
+
+        /* Left Column: Intro */
+        .intro-column {
+            flex: 0 0 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: #E8E8E8;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .intro-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #B0B8C8;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .agent-badge {
+            border: 1px solid #CD5C5C;
+            background: rgba(205, 92, 92, 0.1);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .badge-icon {
+            font-size: 24px;
+            color: #CD5C5C;
+        }
+
+        .badge-text {
+            font-family: 'Space Mono', monospace;
+            font-size: 14px;
+            color: #E8E8E8;
+            text-transform: uppercase;
+        }
+
+        /* Right Column: Specs Grid */
+        .specs-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .spec-card {
+            background: rgba(26, 34, 56, 0.6);
+            border: 1px solid #8F9BB3;
+            padding: 25px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .spec-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            color: #8F9BB3;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .spec-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            color: #CD5C5C;
+            margin-bottom: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .spec-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #E8E8E8;
+        }
+
+        .spec-icon {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 32px;
+            color: rgba(143, 155, 179, 0.2);
+        }
+
+        /* Decorative corner accents for cards */
+        .card-corner {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #CD5C5C;
+            border-left: 2px solid #CD5C5C;
+            top: -1px;
+            left: -1px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <h1>Field Rep Program</h1>
+            <div class="slide-id">03 // AGENT_OPERATIONS</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="intro-column">
+                <h2>Being a Rep for Us Is Unique</h2>
+                <p class="intro-text">
+                    Field Reps are the human force behind the mission. Acting as <strong>multipurpose agents</strong>, they represent the Trust's interests in the marketplace, supporting program activities, coordinating volunteers, and acting as equity partners.
+                </p>
+                
+                <div class="agent-badge">
+                    <i class="fas fa-user-shield badge-icon"></i>
+                    <div class="badge-text">
+                        Role: Multipurpose Agent<br>
+                        Status: Active Asset
+                    </div>
+                </div>
+            </div>
+
+            <div class="specs-grid">
+                <!-- Spec 1 -->
+                <div class="spec-card">
+                    <div class="card-corner"></div>
+                    <div class="spec-label">
+                        <span>MOD.01</span>
+                        <span>REVENUE</span>
+                    </div>
+                    <div class="spec-title">Individual Earning Pots</div>
+                    <p class="spec-desc">
+                        Each Rep manages their own earning structure, directly tied to performance and the specific programs they support.
+                    </p>
+                    <i class="fas fa-coins spec-icon"></i>
+                </div>
+
+                <!-- Spec 2 -->
+                <div class="spec-card">
+                    <div class="card-corner"></div>
+                    <div class="spec-label">
+                        <span>MOD.02</span>
+                        <span>OWNERSHIP</span>
+                    </div>
+                    <div class="spec-title">Equity & Incentives</div>
+                    <p class="spec-desc">
+                        Aligned Reps don't just work; they build. Opportunities to earn equity in the initiatives they help grow.
+                    </p>
+                    <i class="fas fa-chart-pie spec-icon"></i>
+                </div>
+
+                <!-- Spec 3 -->
+                <div class="spec-card">
+                    <div class="card-corner"></div>
+                    <div class="spec-label">
+                        <span>MOD.03</span>
+                        <span>DIVERSIFICATION</span>
+                    </div>
+                    <div class="spec-title">Cross-Platform Earning</div>
+                    <p class="spec-desc">
+                        Correctly aligned Reps can leverage multiple platforms and programs within the ecosystem for diverse income streams.
+                    </p>
+                    <i class="fas fa-network-wired spec-icon"></i>
+                </div>
+
+                <!-- Spec 4 -->
+                <div class="spec-card">
+                    <div class="card-corner"></div>
+                    <div class="spec-label">
+                        <span>MOD.04</span>
+                        <span>SUSTAINABILITY</span>
+                    </div>
+                    <div class="spec-title">Perpetual Function</div>
+                    <p class="spec-desc">
+                        Human labor is required in perpetual function. The ecosystem is always growing, creating constant opportunity.
+                    </p>
+                    <i class="fas fa-infinity spec-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

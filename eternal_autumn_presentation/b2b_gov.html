@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B, Government & Grant Alignment</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #1A2238; color: #E8E8E8; overflow: hidden; }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            position: relative;
+            background-color: #1A2238;
+            background-image: 
+                linear-gradient(rgba(143, 155, 179, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(143, 155, 179, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            padding: 60px 80px; /* keep top padding (60px) for title consistency */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-section {
+            border-bottom: 1px solid #8F9BB3;
+            padding-bottom: 20px;
+            margin-bottom: 18px; /* reduced from 30 to reclaim height */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 42px;
+            font-weight: 700;
+            color: #CD5C5C;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            max-width: 900px;
+            line-height: 1.1;
+        }
+
+        .slide-id {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            color: #8F9BB3;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+
+        .subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            color: #B0B8C8;
+            margin-bottom: 18px; /* reduced from 40 */
+            border-left: 3px solid #CD5C5C;
+            padding-left: 20px;
+        }
+
+        /* Quadrant Layout */
+        .quadrant-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0; /* No gap, using borders for separation */
+            flex-grow: 1;
+            position: relative;
+            border: 1px solid #8F9BB3;
+        }
+
+        /* Central Crosshair */
+        .quadrant-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 1px;
+            background: #8F9BB3;
+            z-index: 1;
+        }
+
+        .quadrant-container::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            height: 1px;
+            background: #8F9BB3;
+            z-index: 1;
+        }
+
+        /* Central Hub Icon */
+        .central-hub {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: #1A2238;
+            border: 2px solid #CD5C5C;
+            border-radius: 50%;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(205, 92, 92, 0.3);
+        }
+
+        .hub-dot {
+            width: 10px;
+            height: 10px;
+            background: #CD5C5C;
+            border-radius: 50%;
+        }
+
+        /* Quadrant Blocks */
+        .quad-block {
+            padding: 18px; /* reduced from 40 to save vertical space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            background: rgba(26, 34, 56, 0.2);
+            transition: background 0.3s;
+        }
+
+        .quad-block:hover {
+            background: rgba(143, 155, 179, 0.05);
+        }
+
+        .quad-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            color: #8F9BB3;
+        }
+
+        .icon-wrapper {
+            font-size: 32px;
+            color: #CD5C5C;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-family: 'Space Mono', monospace;
+            font-size: 24px;
+            color: #E8E8E8;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #B0B8C8;
+            max-width: 450px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <h1>B2B, Government & Grant Alignment</h1>
+            <div class="slide-id">10 // STRATEGIC_CHANNELS</div>
+        </div>
+
+        <div class="subtitle">
+            Bilateral Value: Giving and Receiving at Every Level
+        </div>
+
+        <div class="quadrant-container">
+            <!-- Central Hub Visual -->
+            <div class="central-hub">
+                <div class="hub-dot"></div>
+            </div>
+
+            <!-- Q1: Gov -->
+            <div class="quad-block">
+                <div class="quad-label">CH.01 // PUBLIC_SECTOR</div>
+                <div class="icon-wrapper"><i class="fas fa-university"></i></div>
+                <h3>Government Contracts</h3>
+                <p>
+                    Leveraging L3C structure and leadership expertise in procurement to secure and fulfill government contracts and awards.
+                </p>
+            </div>
+
+            <!-- Q2: Grants -->
+            <div class="quad-block" style="align-items: flex-end; text-align: right;">
+                <div class="quad-label" style="left: auto; right: 20px;">CH.02 // INSTITUTIONAL</div>
+                <div class="icon-wrapper"><i class="fas fa-file-signature"></i></div>
+                <h3>Grants & Funding</h3>
+                <p>
+                    Programs are 100% PRI and DAF ready, creating a streamlined pathway for institutional funders and foundations.
+                </p>
+            </div>
+
+            <!-- Q3: B2B -->
+            <div class="quad-block">
+                <div class="quad-label">CH.03 // COMMERCIAL</div>
+                <div class="icon-wrapper"><i class="fas fa-handshake"></i></div>
+                <h3>B2B Partnerships</h3>
+                <p>
+                    Sister Companies and Field Reps create robust opportunities for supply chain integration and co-branded activations.
+                </p>
+            </div>
+
+            <!-- Q4: Community -->
+            <div class="quad-block" style="align-items: flex-end; text-align: right;">
+                <div class="quad-label" style="left: auto; right: 20px;">CH.04 // SOCIAL_IMPACT</div>
+                <div class="icon-wrapper"><i class="fas fa-users"></i></div>
+                <h3>Community Development</h3>
+                <p>
+                    Strategies aligned with social enterprise mission to create a virtuous cycle of local investment and impact.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

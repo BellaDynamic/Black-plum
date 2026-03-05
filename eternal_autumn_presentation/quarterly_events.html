@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarterly Events</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;background:#1A2238;color:#E8E8E8;overflow:hidden}
+        .slide-container{width:1280px;min-height:720px;position:relative;background-color:#1A2238;background-image:linear-gradient(rgba(143,155,179,0.1) 1px,transparent 1px),linear-gradient(90deg,rgba(143,155,179,0.1) 1px,transparent 1px);background-size:40px 40px;padding:60px 80px 30px;display:flex;flex-direction:column}
+        .header-section{border-bottom:1px solid #8F9BB3;padding-bottom:12px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:flex-end}
+        h1{font-family:'Space Mono',monospace;font-size:48px;font-weight:700;color:#CD5C5C;text-transform:uppercase;letter-spacing:-1px}
+        .slide-id{font-family:'Space Mono',monospace;font-size:18px;color:#8F9BB3}
+        .content-split{display:flex;gap:40px;flex:1}
+        .engine-panel{flex:0 0 45%;border:1px solid rgba(143,155,179,0.3);background:rgba(26,34,56,0.4);padding:16px;display:flex;flex-direction:column}
+        .panel-label{font-family:'Space Mono',monospace;font-size:14px;color:#CD5C5C;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;border-bottom:1px dashed #CD5C5C;padding-bottom:5px;display:inline-block}
+        h2{font-family:'Space Mono',monospace;font-size:28px;color:#E8E8E8;margin-bottom:8px;line-height:1.2}
+        .metric-big{font-family:'Space Mono',monospace;font-size:64px;color:#E8E8E8;font-weight:700;margin:12px 0}
+        .metric-desc{font-family:'Inter',sans-serif;font-size:16px;color:#B0B8C8;margin-bottom:10px}
+        .matrix-visual{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:auto}
+        .matrix-cell{height:32px;background:rgba(143,155,179,0.1);border:1px solid #8F9BB3;position:relative}
+        .matrix-cell.active{background:rgba(205,92,92,0.4);border-color:#CD5C5C}
+        .output-panel{flex:1;display:flex;flex-direction:column;justify-content:flex-start}
+        .function-row{display:flex;align-items:flex-start;margin-bottom:12px;position:relative;padding-left:20px}
+        .function-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:#8F9BB3}
+        .icon-box{width:44px;height:44px;background:rgba(26,34,56,0.8);border:1px solid #CD5C5C;display:flex;justify-content:center;align-items:center;margin-right:16px;flex-shrink:0}
+        .icon-box i{color:#E8E8E8;font-size:18px}
+        .function-content{flex:1}
+        .function-title{font-family:'Space Mono',monospace;font-size:18px;color:#CD5C5C;margin-bottom:4px;text-transform:uppercase;font-weight:700}
+        .function-desc{font-family:'Inter',sans-serif;font-size:15px;color:#B0B8C8;line-height:1.4}
+        /* Slightly smaller footer label */
+        .matrix-footer{font-family:'Space Mono',monospace;font-size:10px;color:#8F9BB3;margin-top:6px;text-align:right}
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <h1>Quarterly Events</h1>
+            <div class="slide-id">06 // PROGRAM_HEARTBEAT</div>
+        </div>
+
+        <div class="content-split">
+            <div class="engine-panel">
+                <div class="panel-label">Production Engine</div>
+                <h2>Perpetual Production Schedule</h2>
+                <div class="metric-big">16+</div>
+                <div class="metric-desc">Major activations annually.<br>4 Core Programs × 4 Events Each.</div>
+                <div class="matrix-visual">
+                    <div class="matrix-cell active"></div><div class="matrix-cell"></div><div class="matrix-cell"></div><div class="matrix-cell"></div>
+                    <div class="matrix-cell"></div><div class="matrix-cell active"></div><div class="matrix-cell"></div><div class="matrix-cell"></div>
+                    <div class="matrix-cell"></div><div class="matrix-cell"></div><div class="matrix-cell active"></div><div class="matrix-cell"></div>
+                    <div class="matrix-cell"></div><div class="matrix-cell"></div><div class="matrix-cell"></div><div class="matrix-cell active"></div>
+                </div>
+                <div class="matrix-footer">SYS.MATRIX_VISUALIZATION</div>
+            </div>
+
+            <div class="output-panel">
+                <div class="panel-label">System Outputs</div>
+
+                <div class="function-row">
+                    <div class="icon-box"><i class="fas fa-users"></i></div>
+                    <div class="function-content">
+                        <div class="function-title">Engagement</div>
+                        <div class="function-desc">Bringing members, Field Reps, and the community together in shared purpose.</div>
+                    </div>
+                </div>
+
+                <div class="function-row">
+                    <div class="icon-box"><i class="fas fa-video"></i></div>
+                    <div class="function-content">
+                        <div class="function-title">Content Production</div>
+                        <div class="function-desc">Location-specific content production fueling the monthly media strategy.</div>
+                    </div>
+                </div>
+
+                <div class="function-row">
+                    <div class="icon-box"><i class="fas fa-hand-holding-usd"></i></div>
+                    <div class="function-content">
+                        <div class="function-title">Revenue Generation</div>
+                        <div class="function-desc">Direct revenue, sponsorship opportunities, and B2B partnership activation.</div>
+                    </div>
+                </div>
+
+                <div class="function-row">
+                    <div class="icon-box"><i class="fas fa-user-plus"></i></div>
+                    <div class="function-content">
+                        <div class="function-title">Recruitment</div>
+                        <div class="function-desc">Key moments for onboarding new service providers, volunteers, and members.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

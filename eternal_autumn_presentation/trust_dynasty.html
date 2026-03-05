@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trust: Dynasty Formation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #1A2238; color: #E8E8E8; overflow: hidden; }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background-color: #1A2238;
+            background-image: 
+                linear-gradient(rgba(143, 155, 179, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(143, 155, 179, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            padding: 60px 80px 48px; /* keep top padding, reduce bottom */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-section {
+            border-bottom: 1px solid #8F9BB3;
+            padding-bottom: 20px;
+            margin-bottom: 28px; /* reduced from 40 */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 48px;
+            font-weight: 700;
+            color: #CD5C5C;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .slide-id {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            color: #8F9BB3;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            flex-grow: 1;
+        }
+
+        /* Left Column: Text */
+        .text-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            font-family: 'Space Mono', monospace;
+            font-size: 36px;
+            font-weight: 700;
+            color: #E8E8E8;
+            margin-bottom: 18px; /* reduced from 30 */
+            line-height: 1.2;
+        }
+
+        p {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #B0B8C8;
+            margin-bottom: 12px; /* reduced from 24 */
+            text-align: justify;
+        }
+
+        .highlight-box {
+            border-left: 4px solid #CD5C5C;
+            padding-left: 20px;
+            margin-top: 12px; /* reduced from 20 */
+        }
+
+        .highlight-text {
+            font-family: 'Space Mono', monospace;
+            font-size: 16px;
+            color: #CD5C5C;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        /* Right Column: Asset Matrix */
+        .asset-matrix {
+            display: flex;
+            flex-direction: column;
+            gap: 14px; /* slightly tighter */
+            justify-content: center;
+        }
+
+        .matrix-header {
+            font-family: 'Space Mono', monospace;
+            font-size: 14px;
+            color: #8F9BB3;
+            margin-bottom: 6px; /* reduced */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #8F9BB3;
+            padding-bottom: 5px;
+            width: 100%;
+        }
+
+        .asset-block {
+            background: rgba(143, 155, 179, 0.05);
+            border: 1px solid #8F9BB3;
+            padding: 14px; /* reduced from 20 */
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .asset-block::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #CD5C5C;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .asset-block:hover::before {
+            opacity: 1;
+        }
+
+        .block-code {
+            font-family: 'Space Mono', monospace;
+            font-size: 14px;
+            color: #CD5C5C;
+            margin-right: 16px; /* slightly reduced */
+            min-width: 80px;
+        }
+
+        .block-content {
+            flex-grow: 1;
+        }
+
+        .block-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            color: #E8E8E8;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+
+        .block-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #B0B8C8;
+        }
+
+        /* Decorative Tech Elements */
+        .tech-corner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #8F9BB3;
+            bottom: 20px;
+            right: 20px;
+            border-top: none;
+            border-left: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <h1>The Trust</h1>
+            <div class="slide-id">03 // DYNASTY_FORMATION</div>
+        </div>
+
+        <div class="content-grid">
+            <div class="text-column">
+                <h2>Built to Last Generations: The Dynasty Formation Model</h2>
+                <p>
+                    The Eternal Autumn Trust is not a conventional holding company. It is a <span style="color: #E8E8E8; font-weight: 600;">dynasty structure</span> intentionally designed to acquire, grow, and preserve wealth across generations.
+                </p>
+                <p>
+                    We unite memberships, eligibility, and performance-based benefits to reward those who perform with the spirit of our mission, creating a self-sustaining ecosystem of prosperity.
+                </p>
+                
+                <div class="highlight-box">
+                    <div class="highlight-text">CORE STRATEGY</div>
+                    <p style="margin-bottom: 0; font-size: 16px;">
+                        Leveraging all assets to acquire financial wealth and freedom for members, beneficiaries, and benefactors.
+                    </p>
+                </div>
+            </div>
+
+            <div class="asset-matrix">
+                <div class="matrix-header">Asset Diversification Matrix</div>
+                
+                <div class="asset-block">
+                    <div class="block-code">AST.01</div>
+                    <div class="block-content">
+                        <div class="block-title">Harvest & Land</div>
+                        <div class="block-desc">Sustainable agriculture, land stewardship, and natural goods production.</div>
+                    </div>
+                </div>
+
+                <div class="asset-block">
+                    <div class="block-code">AST.02</div>
+                    <div class="block-content">
+                        <div class="block-title">Culture & Tourism</div>
+                        <div class="block-desc">Curated cultural experiences, eco-tourism, and heritage promotion.</div>
+                    </div>
+                </div>
+
+                <div class="asset-block">
+                    <div class="block-code">AST.03</div>
+                    <div class="block-content">
+                        <div class="block-title">Travel & Living</div>
+                        <div class="block-desc">Bespoke travel services, wellness retreats, and quality of life initiatives.</div>
+                    </div>
+                </div>
+
+                <div class="asset-block">
+                    <div class="block-code">AST.04</div>
+                    <div class="block-content">
+                        <div class="block-title">Strategic M&A</div>
+                        <div class="block-desc">Mergers, acquisitions, and partnerships to expand the ecosystem's reach.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-corner"></div>
+    </div>
+</body>
+</html>
