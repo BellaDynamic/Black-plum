@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna's Garden | Creative Sanctuary | Eternal Autumn Ecosystem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #1a0f1b;
+            --plum: #9B4F96;
+            --teal: #007a7a;
+            --lavender: #9b7fd4;
+            --cream: #F5F1ED;
+            --white: #ffffff;
+            --gray-dark: #2a1f2b;
+            --gray-mid: #3a2f3b;
+            --gray-text: #b5aeb6;
+            --border: rgba(255, 255, 255, 0.1);
+            --border-teal: rgba(0, 122, 122, 0.3);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--black); 
+            color: var(--cream); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--white); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            background: rgba(26, 15, 27, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 40px;
+        }
+
+        .nav-logo { display: flex; align-items: center; text-decoration: none; gap: 12px; cursor: pointer; }
+        .nav-logo-icon { width: 40px; height: 40px; background: var(--plum); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 1.2rem; }
+        .nav-logo-text { display: flex; flex-direction: column; }
+        .nav-logo-main { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--white); font-weight: bold; letter-spacing: 1px; }
+        .nav-logo-sub { font-size: 0.7rem; color: var(--teal); text-transform: uppercase; letter-spacing: 2px; }
+
+        .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--gray-text); font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--teal); }
+        .nav-cta { background: var(--teal); color: white !important; padding: 10px 20px; border-radius: 6px; }
+
+        .hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
+        .hamburger span { width: 24px; height: 2px; background: var(--cream); }
+
+        .mobile-menu { display: none; }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            position: relative; padding-top: 80px; text-align: center;
+            background: linear-gradient(135deg, rgba(155, 79, 150, 0.1) 0%, rgba(0, 122, 122, 0.05) 100%);
+        }
+        
+        .hero-content { max-width: 800px; z-index: 10; }
+        .hero-badge { display: inline-block; padding: 8px 16px; background: rgba(155, 79, 150, 0.2); border: 1px solid var(--plum); border-radius: 100px; color: var(--plum); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px; }
+        .hero h1 { font-size: clamp(3rem, 8vw, 5rem); line-height: 1.1; margin-bottom: 24px; }
+        .hero-tagline { font-size: 1.5rem; color: var(--lavender); margin-bottom: 16px; font-weight: 300; font-style: italic; }
+        .hero-sub { font-size: 1rem; color: var(--gray-text); margin-bottom: 48px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        .btn-primary { background: var(--plum); color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-primary:hover { background: var(--lavender); }
+        .btn-secondary { background: transparent; border: 1px solid var(--teal); color: var(--teal); padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.3s; cursor: pointer; }
+        .btn-secondary:hover { background: rgba(0, 122, 122, 0.1); }
+        .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--gray-text); padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.3s; cursor: pointer; }
+        .btn-ghost:hover { border-color: var(--plum); color: var(--plum); }
+
+        /* BREADCRUMB */
+        .breadcrumb {
+            padding: 20px 40px; background: var(--gray-dark); border-bottom: 1px solid var(--border);
+            font-size: 0.85rem; color: var(--gray-text);
+        }
+        .breadcrumb a { color: var(--teal); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        /* SECTION */
+        .section { padding: 100px 0; }
+        .section-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; background: rgba(155, 79, 150, 0.1); color: var(--plum); border: 1px solid var(--border); }
+        .section h2 { font-size: 3rem; margin-bottom: 24px; }
+        .section-intro { max-width: 700px; color: var(--gray-text); margin-bottom: 64px; font-size: 1.1rem; }
+
+        /* GRID */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-bottom: 64px; }
+        .card { background: var(--gray-dark); border: 1px solid var(--border); padding: 40px; border-radius: 16px; transition: 0.4s; }
+        .card:hover { transform: translateY(-8px); border-color: var(--plum); }
+        .card-icon { font-size: 2.5rem; margin-bottom: 20px; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 16px; }
+        .card p { color: var(--gray-text); font-size: 0.95rem; }
+
+        /* FEATURES */
+        .features { background: var(--gray-dark); padding: 80px 0; }
+        .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; }
+        .feature-row:nth-child(even) { direction: rtl; }
+        .feature-row:nth-child(even) > * { direction: ltr; }
+        .feature-content h3 { font-size: 2rem; margin-bottom: 24px; }
+        .feature-list { list-style: none; }
+        .feature-list li { padding: 12px 0; color: var(--gray-text); display: flex; gap: 12px; }
+        .feature-list li:before { content: "✓"; color: var(--plum); font-weight: bold; flex-shrink: 0; }
+
+        /* TIERS */
+        .tiers { padding: 100px 0; }
+        .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
+        .tier-card { background: var(--gray-dark); border: 1px solid var(--border); padding: 48px; border-radius: 16px; text-align: center; transition: 0.4s; }
+        .tier-card:hover { border-color: var(--plum); transform: scale(1.05); }
+        .tier-card h3 { font-size: 1.75rem; margin-bottom: 16px; }
+        .tier-card .tier-desc { color: var(--gray-text); margin-bottom: 32px; font-size: 0.95rem; }
+        .tier-benefits { list-style: none; text-align: left; margin-bottom: 32px; }
+        .tier-benefits li { padding: 8px 0; color: var(--gray-text); display: flex; gap: 12px; }
+        .tier-benefits li:before { content: "→"; color: var(--plum); font-weight: bold; }
+
+        /* CTA */
+        .cta { background: linear-gradient(135deg, rgba(155, 79, 150, 0.15) 0%, rgba(0, 122, 122, 0.1) 100%); padding: 80px 0; text-align: center; }
+        .cta h2 { margin-bottom: 24px; }
+        .cta p { color: var(--gray-text); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        /* FOOTER */
+        footer { padding: 80px 0 40px; border-top: 1px solid var(--border); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px; margin-bottom: 80px; }
+        .footer-brand h3 { font-size: 1.5rem; margin-bottom: 12px; }
+        .tagline { color: var(--teal); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px; }
+        .footer-brand p { color: var(--gray-text); font-size: 0.9rem; }
+        .footer-col h4 { margin-bottom: 24px; font-size: 1.1rem; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { text-decoration: none; color: var(--gray-text); font-size: 0.9rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--teal); }
+        .footer-bottom { border-top: 1px solid var(--border); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; color: var(--gray-text); font-size: 0.85rem; }
+
+        .teal { color: var(--teal); }
+        .plum { color: var(--plum); }
+        .lavender { color: var(--lavender); }
+
+        @media (max-width: 768px) {
+            nav { padding: 16px 24px; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .mobile-menu.open { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; right: 0; background: var(--black); border-bottom: 1px solid var(--border); padding: 24px; gap: 16px; z-index: 999; }
+            .mobile-menu a { text-decoration: none; color: var(--gray-text); padding: 12px 0; }
+            .hero h1 { font-size: 2.5rem; }
+            .section h2 { font-size: 2rem; }
+            .feature-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">EA</div>
+        <div class="nav-logo-text">
+            <span class="nav-logo-main">Eternal Autumn</span>
+            <span class="nav-logo-sub">Ecosystem</span>
+        </div>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html#ecosystem">Ecosystem</a></li>
+        <li><a href="bwen_hub.html">BWEN</a></li>
+        <li><a href="black_plum_concierge.html">Concierge</a></li>
+        <li><a href="agritourism_events.html">Events</a></li>
+        <li><a href="lunas_garden.html" style="color: var(--plum);">Luna's Garden</a></li>
+        <li><a href="#contact" class="nav-cta">Get Started</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <a href="index.html#ecosystem" onclick="toggleMenu()">Ecosystem</a>
+    <a href="bwen_hub.html" onclick="toggleMenu()">BWEN</a>
+    <a href="black_plum_concierge.html" onclick="toggleMenu()">Concierge</a>
+    <a href="agritourism_events.html" onclick="toggleMenu()">Events</a>
+    <a href="lunas_garden.html" onclick="toggleMenu()">Luna's Garden</a>
+    <a href="#contact" onclick="toggleMenu()">Get Started</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="index.html">Home</a> / <a href="index.html#ecosystem">Ecosystem</a> / Luna's Garden
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">Creative Sanctuary</div>
+        <h1>Luna's <span class="plum">Garden</span></h1>
+        <p class="hero-tagline">"Everything grows in my garden."</p>
+        <p class="hero-sub">Where passion meets purpose and is professionally placed. Luna's Garden is the creative sanctuary within the Eternal Autumn Ecosystem, nurturing diverse voices, sounds, art, and expression.</p>
+        <div class="hero-buttons">
+            <a href="#programs" class="btn-primary">Explore Programs</a>
+            <a href="#membership" class="btn-secondary">Join the Garden</a>
+            <a href="#contact" class="btn-ghost">Book a Consultation</a>
+        </div>
+    </div>
+</section>
+
+<!-- MISSION SECTION -->
+<section class="section">
+    <div class="container">
+        <div class="section-badge">Our Mission</div>
+        <h2>The Creative Sanctuary</h2>
+        <p class="section-intro">Luna's Garden serves as the incubator for artists, sound engineers, producers, and healing creatives. We provide pathways from creation to production to distribution, ensuring that every voice is heard and every talent is professionally nurtured.</p>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">🎵</div>
+                <h3>Music & Promotions</h3>
+                <p>Artist showcases, indie label alignments, streaming platform integration, and professional tour coordination for emerging and established musicians.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎤</div>
+                <h3>Talent Pipeline</h3>
+                <p>Auditions, artist management, personal growth coaching, member-to-mentor matching, and residency opportunities for creative professionals.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌱</div>
+                <h3>Farm-to-Stage Model</h3>
+                <p>From creation through production to distribution. Seasonal workshops, therapeutic artistic exploration, and collaborative residencies.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features">
+    <div class="container">
+        <div class="section-badge">Program Elements</div>
+        <h2>What We Offer</h2>
+
+        <div class="feature-row">
+            <div class="feature-content">
+                <h3>Music & Performance</h3>
+                <ul class="feature-list">
+                    <li>Artist showcases and curated performances</li>
+                    <li>Indie label partnerships and collaborations</li>
+                    <li>Streaming platform distribution support</li>
+                    <li>Professional booking and tour management</li>
+                    <li>Recording studio access and production support</li>
+                </ul>
+            </div>
+            <div style="background: var(--gray-mid); padding: 40px; border-radius: 16px; border: 1px solid var(--border);">
+                <p style="color: var(--gray-text); font-style: italic;">Professional pathways for musicians and sound creators to reach their audience and build sustainable careers.</p>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-content">
+                <h3>Artist Development</h3>
+                <ul class="feature-list">
+                    <li>Comprehensive audition and evaluation process</li>
+                    <li>Artist management and career coaching</li>
+                    <li>Mentorship and peer learning pathways</li>
+                    <li>Residency and production opportunities</li>
+                    <li>Personal growth and creative development support</li>
+                </ul>
+            </div>
+            <div style="background: var(--gray-mid); padding: 40px; border-radius: 16px; border: 1px solid var(--border);">
+                <p style="color: var(--gray-text); font-style: italic;">Dedicated support for artists at every stage of their creative journey, from emerging talent to established professionals.</p>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-content">
+                <h3>Ecosystem Integration</h3>
+                <ul class="feature-list">
+                    <li>BWEN: Media production and content distribution</li>
+                    <li>TGAA: Global artist alliance and international exposure</li>
+                    <li>A Moonlit Studio: Production and multimedia services</li>
+                    <li>Black Plum Concierge: Premium event and lifestyle coordination</li>
+                    <li>Bella Dynamic: Wellness advocacy and authentic healing</li>
+                </ul>
+            </div>
+            <div style="background: var(--gray-mid); padding: 40px; border-radius: 16px; border: 1px solid var(--border);">
+                <p style="color: var(--gray-text); font-style: italic;">Seamless integration with the entire Eternal Autumn Ecosystem, amplifying your reach and impact.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MEMBERSHIP TIERS -->
+<section class="tiers">
+    <div class="container">
+        <div class="section-badge">Membership</div>
+        <h2>Luna's Garden <span class="plum">Tiers</span></h2>
+        <p class="section-intro">Choose the tier that aligns with your creative journey and professional goals.</p>
+
+        <div class="tier-grid">
+            <div class="tier-card">
+                <h3>Emerging Creator</h3>
+                <p class="tier-desc">For artists just beginning their professional journey.</p>
+                <ul class="tier-benefits">
+                    <li>Access to audition process</li>
+                    <li>Monthly workshops and skill-building</li>
+                    <li>Peer mentorship matching</li>
+                    <li>Studio access (limited hours)</li>
+                    <li>Community events and networking</li>
+                </ul>
+                <a href="#contact" class="btn-secondary">Learn More</a>
+            </div>
+
+            <div class="tier-card" style="border-color: var(--plum); background: rgba(155, 79, 150, 0.05);">
+                <h3>Professional Artist</h3>
+                <p class="tier-desc">For established artists seeking growth and collaboration.</p>
+                <ul class="tier-benefits">
+                    <li>All Emerging Creator benefits</li>
+                    <li>Priority studio access</li>
+                    <li>Artist management support</li>
+                    <li>Performance booking assistance</li>
+                    <li>Streaming platform distribution</li>
+                    <li>Residency opportunities</li>
+                </ul>
+                <a href="#contact" class="btn-primary">Join Now</a>
+            </div>
+
+            <div class="tier-card">
+                <h3>Creative Producer</h3>
+                <p class="tier-desc">For producers, engineers, and creative directors.</p>
+                <ul class="tier-benefits">
+                    <li>All Professional Artist benefits</li>
+                    <li>Full studio access and production suite</li>
+                    <li>Collaboration opportunities</li>
+                    <li>Production and multimedia services</li>
+                    <li>International exposure through TGAA</li>
+                    <li>Revenue-sharing opportunities</li>
+                </ul>
+                <a href="#contact" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta" id="contact">
+    <div class="container">
+        <h2>Ready to Grow in Luna's Garden?</h2>
+        <p>Whether you're an emerging artist, established professional, or creative producer, Luna's Garden offers the sanctuary and support you need to thrive. Let's cultivate your creative potential together.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="mailto:hello@blackplum.belladynamic.org" class="btn-primary">Get in Touch</a>
+            <a href="https://calendly.com/blackplum" class="btn-secondary">Book a Consultation</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Luna's Garden</h3>
+                <div class="tagline">Creative Sanctuary · Eternal Autumn Ecosystem</div>
+                <p>Where passion meets purpose and is professionally placed. Luna's Garden nurtures diverse voices, sounds, art, and expression within the Eternal Autumn Ecosystem.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Properties</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Eternal Autumn</a></li>
+                    <li><a href="black_plum_concierge.html">Black Plum Concierge</a></li>
+                    <li><a href="bwen_hub.html">BWEN Media</a></li>
+                    <li><a href="agritourism_events.html">Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#">Artist Guidelines</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:hello@blackplum.belladynamic.org">Email</a></li>
+                    <li><a href="https://calendly.com/blackplum">Book Consultation</a></li>
+                    <li><a href="#">Member Portal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Luna's Garden · Part of the Eternal Autumn Ecosystem · All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('open');
+    }
+
+    document.addEventListener('click', (e) => {
+        const menu = document.getElementById('mobileMenu');
+        const hamburger = document.querySelector('.hamburger');
+        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+            menu.classList.remove('open');
+        }
+    });
+</script>
+
+</body>
+</html>
