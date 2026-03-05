@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal Autumn - Black Plum Concierge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a0f1b;
+            color: #f5f1ed;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1a0f1b;
+            border-bottom: 2px solid #9B4F96;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f5f1ed;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #f5f1ed;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #9B4F96;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2d1b3d 0%, #1a0f1b 100%);
+            padding: 6rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #9B4F96;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+            color: #f5f1ed;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #d4a5d4;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: #e0d5e0;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #9B4F96;
+            color: #f5f1ed;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background-color: #7a3d75;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #9B4F96;
+            padding-bottom: 1rem;
+            color: #f5f1ed;
+        }
+
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .component-card {
+            background-color: #2d1b3d;
+            border: 1px solid #9B4F96;
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .component-card:hover {
+            background-color: #3d2b4d;
+            border-color: #d4a5d4;
+            box-shadow: 0 0 15px rgba(155, 79, 150, 0.3);
+        }
+
+        .component-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #d4a5d4;
+            letter-spacing: 1px;
+        }
+
+        .component-card p {
+            color: #e0d5e0;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .component-link {
+            color: #9B4F96;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .component-link:hover {
+            color: #d4a5d4;
+        }
+
+        .vision-mission {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .vision-box, .mission-box {
+            background-color: #2d1b3d;
+            border: 1px solid #9B4F96;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .vision-box h3, .mission-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #d4a5d4;
+            letter-spacing: 1px;
+        }
+
+        .vision-box p, .mission-box p {
+            color: #e0d5e0;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .vision-quote, .mission-quote {
+            font-style: italic;
+            color: #d4a5d4;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #9B4F96;
+        }
+
+        footer {
+            background-color: #0d0608;
+            border-top: 2px solid #9B4F96;
+            padding: 2rem;
+            text-align: center;
+            color: #a0959a;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #9B4F96;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #d4a5d4;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .vision-mission {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                margin-left: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Black Plum</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="eternal_autumn_main.html">Eternal Autumn</a>
+                <a href="#components">Components</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ETERNAL AUTUMN</h1>
+            <p class="hero-subtitle">Where Autumn's Mystery Never Ends</p>
+            <p class="hero-description">
+                A sophisticated ecosystem of immersive experiences, cultural preservation, and transformative community engagement. 
+                Eternal Autumn represents a year-round celebration of autumn's unique magic, blending creative expression with 
+                meaningful impact through our network of carefully curated experiences and partnerships.
+            </p>
+            <a href="#components" class="cta-button">Explore Our Ecosystem</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="vision-mission">
+            <div class="vision-box">
+                <h3>Our Vision</h3>
+                <p>
+                    To create a year-round autumn-inspired community that transcends seasons, blending creative expression 
+                    with immersive experiences and meaningful impact.
+                </p>
+                <p class="vision-quote">
+                    "A world where autumn's magic is eternal."
+                </p>
+            </div>
+            <div class="mission-box">
+                <h3>Our Mission</h3>
+                <p>
+                    We transform how the world experiences fall through:
+                </p>
+                <ul style="margin-left: 1.5rem; color: #e0d5e0;">
+                    <li>Building supportive creative communities</li>
+                    <li>Hosting therapeutic immersive events</li>
+                    <li>Preserving harvest traditions and culture</li>
+                    <li>Leveraging our foundation for philanthropy</li>
+                </ul>
+                <p class="mission-quote">
+                    "The actions we take today shape the world we inhabit tomorrow."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="components">
+        <h2 class="section-title">Our Ecosystem Components</h2>
+        <div class="components-grid">
+            <div class="component-card">
+                <h3>BWEN</h3>
+                <p>
+                    <strong>Beautiful Webbed Entertainment Network</strong> — The first autumn-centric media network dedicated to celebrating 
+                    the eternal autumn aesthetic year-round. Featuring original shows, YouTube channels, podcasts, and immersive 
+                    digital content that captures the essence of autumn's mystery.
+                </p>
+                <a href="bwen_hub.html" class="component-link">Learn More →</a>
+            </div>
+
+            <div class="component-card">
+                <h3>Black Plum Autumn Concierge</h3>
+                <p>
+                    Luxury concierge services transforming autumn's aesthetic into bespoke experiences and curated services. 
+                    From community harvest tours to signature masquerade events, we deliver the essence of autumn's allure 
+                    through personalized, high-end experiences.
+                </p>
+                <a href="black_plum_concierge.html" class="component-link">Explore Services →</a>
+            </div>
+
+            <div class="component-card">
+                <h3>Agritourism & Immersive Events</h3>
+                <p>
+                    Strategic partnerships with orchards, vineyards, pumpkin patches, and heritage farms create authentic 
+                    seasonal experiences. Our immersive events, including the signature Masquerade Ball of the Macabre, 
+                    celebrate harvest traditions and community connection.
+                </p>
+                <a href="agritourism_events.html" class="component-link">Discover Experiences →</a>
+            </div>
+
+            <div class="component-card">
+                <h3>Private Operating Foundation</h3>
+                <p>
+                    The Eternal Autumn Trust operates as a private operating foundation, actively conducting exempt activities 
+                    and directly managing programs. This structure enables us to maximize tax efficiency for donors while 
+                    maintaining operational control and mission alignment.
+                </p>
+                <a href="foundation_info.html" class="component-link">Foundation Details →</a>
+            </div>
+
+            <div class="component-card">
+                <h3>Multiplier Effect</h3>
+                <p>
+                    Our strategic model creates exponential growth through interconnected components: Audience Growth drives 
+                    Experiences, which generate Content, which attracts new Audiences. Each element reinforces and amplifies 
+                    the others for sustainable expansion.
+                </p>
+                <a href="strategic_framework.html" class="component-link">Strategic Overview →</a>
+            </div>
+
+            <div class="component-card">
+                <h3>Partnership & Sponsorship</h3>
+                <p>
+                    We welcome partnerships with local businesses, content creators, nonprofits, and strategic investors. 
+                    Our collaborative model offers tax benefits, brand amplification, and meaningful social impact for all partners.
+                </p>
+                <a href="partnerships.html" class="component-link">Partner With Us →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Market Opportunity</h2>
+        <div style="background-color: #2d1b3d; border: 1px solid #9B4F96; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+            <p style="color: #e0d5e0; margin-bottom: 1rem;">
+                The autumn aesthetic and luxury experience markets are experiencing unprecedented growth:
+            </p>
+            <ul style="color: #e0d5e0; margin-left: 2rem; line-height: 2;">
+                <li><strong>Concierge Services Market:</strong> $1.5B+ by 2032 (SNS Insider)</li>
+                <li><strong>Luxury Experiences:</strong> 8.7% annual growth (Market.us)</li>
+                <li><strong>Spooky Autumn Aesthetic Market:</strong> $2.2B by 2032, growing at 8.2% annually</li>
+                <li><strong>Dark Academia Trend:</strong> 182% growth in autumn-themed products online</li>
+                <li><strong>Seasonal Content:</strong> 40% growth in autumn content consumption (2021-2022)</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p><strong>Eternal Autumn — A Division of Black Plum Concierge</strong></p>
+        <p>A Brand of Universal Changemakers (L3C)</p>
+        <p>Funded and Supported by the Eternal Autumn Trust</p>
+        <p style="margin-top: 1rem;">
+            <strong>Email:</strong> <a href="mailto:hello@blackplum.belladynamic.org">hello@blackplum.belladynamic.org</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">
+            © 2026 Black Plum Concierge. All rights reserved. | 
+            <a href="index.html">Back to Black Plum</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Plum Autumn Concierge | Eternal Autumn</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a0f1b;
+            color: #f5f1ed;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1a0f1b;
+            border-bottom: 2px solid #9B4F96;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f5f1ed;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #f5f1ed;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #9B4F96;
+        }
+
+        .breadcrumb {
+            background-color: #2d1b3d;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            color: #d4a5d4;
+        }
+
+        .breadcrumb a {
+            color: #9B4F96;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #d4a5d4;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2d1b3d 0%, #1a0f1b 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #9B4F96;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+            color: #f5f1ed;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #d4a5d4;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #9B4F96;
+            padding-bottom: 1rem;
+            color: #f5f1ed;
+        }
+
+        .intro-box {
+            background-color: #2d1b3d;
+            border: 1px solid #9B4F96;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .intro-box h3 {
+            color: #d4a5d4;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .intro-box p {
+            color: #e0d5e0;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background-color: #2d1b3d;
+            border: 1px solid #9B4F96;
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            background-color: #3d2b4d;
+            border-color: #d4a5d4;
+            box-shadow: 0 0 15px rgba(155, 79, 150, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #d4a5d4;
+            letter-spacing: 1px;
+        }
+
+        .service-card p {
+            color: #e0d5e0;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .service-card ul {
+            margin-left: 1.5rem;
+            color: #e0d5e0;
+            line-height: 1.8;
+        }
+
+        .service-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .community-section {
+            background-color: #2d1b3d;
+            border: 1px solid #9B4F96;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .community-section h3 {
+            font-size: 1.5rem;
+            color: #d4a5d4;
+            margin-bottom: 1.5rem;
+        }
+
+        .community-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .community-item h4 {
+            color: #d4a5d4;
+            margin-bottom: 0.5rem;
+        }
+
+        .community-item p {
+            color: #e0d5e0;
+            line-height: 1.7;
+        }
+
+        .community-item ul {
+            margin-left: 1.5rem;
+            color: #e0d5e0;
+            line-height: 1.8;
+            margin-top: 0.5rem;
+        }
+
+        .community-item li {
+            margin-bottom: 0.3rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #9B4F96;
+            color: #f5f1ed;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #7a3d75;
+        }
+
+        .quote-box {
+            background-color: #3d2b4d;
+            border-left: 4px solid #9B4F96;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #d4a5d4;
+        }
+
+        .highlight {
+            color: #d4a5d4;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #0d0608;
+            border-top: 2px solid #9B4F96;
+            padding: 2rem;
+            text-align: center;
+            color: #a0959a;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #9B4F96;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #d4a5d4;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                margin-left: 1rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Black Plum</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="eternal_autumn_main.html">Eternal Autumn</a>
+                <a href="black_plum_concierge.html">Concierge</a>
+                <a href="mailto:hello@blackplum.belladynamic.org">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="eternal_autumn_main.html">Eternal Autumn</a> / Black Plum Autumn Concierge
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>BLACK PLUM AUTUMN CONCIERGE</h1>
+            <p class="hero-subtitle">Embracing the Spooky Autumn Spirit</p>
+            <p style="color: #e0d5e0; font-size: 1.1rem;">
+                Luxury concierge services delivering the essence of autumn's mystique through bespoke experiences and curated services.
+            </p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="intro-box">
+            <h3>Our Philosophy</h3>
+            <p>
+                Black Plum delivers the essence of autumn's mystique through curated experiences for community members seeking 
+                to connect with the seasonal magic year-round. We specialize in creating authentic, immersive experiences that 
+                blend seasonal traditions with contemporary luxury.
+            </p>
+            <p class="quote-box" style="margin: 1.5rem 0; border: none; padding: 0;">
+                "Where autumn's allure meets community spirit."
+            </p>
+        </div>
+
+        <h2 class="section-title">Signature Experiences</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Community Harvest Tours</h3>
+                <p>
+                    Seasonal farm visits with tastings and activities. Explore local orchards, vineyards, and heritage farms 
+                    while connecting with community members and learning about harvest traditions.
+                </p>
+                <ul>
+                    <li>Apple orchards & cider tastings</li>
+                    <li>Vineyard experiences</li>
+                    <li>Pumpkin patch adventures</li>
+                    <li>Heritage farm tours</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Masquerade Events</h3>
+                <p>
+                    Our signature immersive experience: the Ball of the Macabre. An elaborate, theatrical celebration of 
+                    autumn's mystery featuring live performances, interactive storytelling, and curated ambiance.
+                </p>
+                <ul>
+                    <li>Elaborate décor & ambiance</li>
+                    <li>Live performances</li>
+                    <li>Interactive storytelling</li>
+                    <li>Networking & community</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Seasonal Gatherings</h3>
+                <p>
+                    Community wellness experiences centered on autumn themes. From meditation circles to creative workshops, 
+                    these gatherings foster connection and personal growth.
+                </p>
+                <ul>
+                    <li>Wellness experiences</li>
+                    <li>Creative workshops</li>
+                    <li>Community circles</li>
+                    <li>Themed celebrations</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Folk Traditions</h3>
+                <p>
+                    Celebrating autumn heritage through cultural education and participation. Learn traditional crafts, 
+                    cooking, and customs that honor harvest season across cultures.
+                </p>
+                <ul>
+                    <li>Traditional crafts</li>
+                    <li>Harvest cooking classes</li>
+                    <li>Cultural education</li>
+                    <li>Heritage celebrations</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Space Transformation</h3>
+                <p>
+                    Home & office autumn makeovers. Transform your personal or professional space with curated décor, 
+                    ambiance design, and seasonal styling.
+                </p>
+                <ul>
+                    <li>Interior design consultation</li>
+                    <li>Décor curation</li>
+                    <li>Ambiance design</li>
+                    <li>Seasonal styling</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Seasonal Baskets & Gifts</h3>
+                <p>
+                    Handcrafted spooky gift sets curated for the season. Each basket is thoughtfully assembled with premium 
+                    autumn products, artisan goods, and exclusive items.
+                </p>
+                <ul>
+                    <li>Curated gift sets</li>
+                    <li>Artisan products</li>
+                    <li>Personalized options</li>
+                    <li>Corporate gifting</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title">Community Members</h2>
+        <div class="community-section">
+            <h3>Who We Serve</h3>
+            <div class="community-grid">
+                <div class="community-item">
+                    <h4>Autumn Enthusiasts</h4>
+                    <p>Those who celebrate autumn year-round and seek authentic seasonal experiences.</p>
+                </div>
+                <div class="community-item">
+                    <h4>Creative Spirits</h4>
+                    <p>Artists, makers, and creators looking for inspiration and community connection.</p>
+                </div>
+                <div class="community-item">
+                    <h4>Community Groups</h4>
+                    <p>Organizations seeking meaningful, themed events and experiences for their members.</p>
+                </div>
+                <div class="community-item">
+                    <h4>Wellness Seekers</h4>
+                    <p>Individuals pursuing therapeutic, immersive experiences and personal growth.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Your Member Journey</h3>
+            <div class="community-grid">
+                <div class="community-item">
+                    <h4>Community Welcome</h4>
+                    <p>Receive a warm introduction to our community and personalized guidance on available experiences.</p>
+                </div>
+                <div class="community-item">
+                    <h4>Personalized Guidance</h4>
+                    <p>Work with our concierge team to identify experiences aligned with your interests and preferences.</p>
+                </div>
+                <div class="community-item">
+                    <h4>Shared Experiences</h4>
+                    <p>Participate in curated events and activities alongside fellow community members.</p>
+                </div>
+                <div class="community-item">
+                    <h4>Exclusive Benefits</h4>
+                    <p>Access member-only discounts, early event registration, and special offerings.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro-box">
+            <h3>Eternal Autumn Ecosystem Integration</h3>
+            <p>
+                Black Plum Autumn Concierge is featured in the BWEN network, connects with our agritourism partnerships, 
+                and supports local events. Our services are designed to work synergistically with all components of the 
+                Eternal Autumn ecosystem.
+            </p>
+            <ul style="margin-left: 1.5rem; color: #e0d5e0; line-height: 1.8; margin-top: 1rem;">
+                <li><strong>Featured in BWEN Network:</strong> Our events and experiences are showcased across media platforms</li>
+                <li><strong>Community Connections:</strong> Members benefit from network-wide partnerships and opportunities</li>
+                <li><strong>Farm Partnerships:</strong> Direct relationships with local agritourism venues</li>
+                <li><strong>Event Support:</strong> Participation in and support for Eternal Autumn initiatives</li>
+            </ul>
+        </div>
+
+        <div style="background-color: #2d1b3d; border: 1px solid #9B4F96; padding: 2rem; border-radius: 8px; text-align: center;">
+            <h3 style="color: #d4a5d4; margin-bottom: 1rem;">Ready to Experience Autumn's Magic?</h3>
+            <p style="color: #e0d5e0; margin-bottom: 1.5rem;">
+                Connect with our concierge team to explore membership options and discover experiences tailored to your interests.
+            </p>
+            <a href="mailto:hello@blackplum.belladynamic.org" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Black Plum Autumn Concierge — A Division of Eternal Autumn</strong></p>
+        <p>A Component of Black Plum Concierge | Universal Changemakers (L3C)</p>
+        <p style="margin-top: 1rem;">
+            <strong>Email:</strong> <a href="mailto:hello@blackplum.belladynamic.org">hello@blackplum.belladynamic.org</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">
+            © 2026 Black Plum Concierge. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agritourism & Immersive Events | Eternal Autumn</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a0f1b;
+            color: #f5f1ed;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1a0f1b;
+            border-bottom: 2px solid #9B4F96;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f5f1ed;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #f5f1ed;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #9B4F96;
+        }
+
+        .breadcrumb {
+            background-color: #2d1b3d;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            color: #d4a5d4;
+        }
+
+        .breadcrumb a {
+            color: #9B4F96;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #d4a5d4;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2d1b3d 0%, #1a0f1b 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #9B4F96;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+            color: #f5f1ed;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #d4a5d4;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #9B4F96;
+            padding-bottom: 1rem;
+            color: #f5f1ed;
+        }
+
+        .intro-box {
+            background-color: #2d1b3d;
+            border: 1px solid #9B4F96;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .intro-box h3 {
+            color: #d4a5d4;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .intro-box p {
+            color: #e0d5e0;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .partnership-card {
+            background-color: #2d1b3d;
+            border: 1px solid #9B4F96;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .partnership-card:hover {
+            background-color: #3d2b4d;
+            border-color: #d4a5d4;
+            box-shadow: 0 0 15px rgba(155, 79, 150, 0.3);
+        }
+
+        .partnership-card h3 {
+            font-size: 1.3rem;
+            color: #d4a5d4;
+            margin-bottom: 1rem;
+        }
+
+        .partnership-card p {
+            color: #e0d5e0;
+            line-height: 1.7;
+        }
+
+        .events-section {
+            background-color: #2d1b3d;
+            border: 1px solid #9B4F96;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .events-section h3 {
+            font-size: 1.5rem;
+            color: #d4a5d4;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .event-item h4 {
+            color: #d4a5d4;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .event-item p {
+            color: #e0d5e0;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .event-item ul {
+            margin-left: 1.5rem;
+            color: #e0d5e0;
+            line-height: 1.8;
+        }
+
+        .event-item li {
+            margin-bottom: 0.3rem;
+        }
+
+        .benefits-section {
+            background-color: #2d1b3d;
+            border: 1px solid #9B4F96;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-section h3 {
+            font-size: 1.5rem;
+            color: #d4a5d4;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background-color: #3d2b4d;
+            border: 1px solid #9B4F96;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .benefit-card h4 {
+            color: #d4a5d4;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-card p {
+            color: #e0d5e0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #9B4F96;
+            color: #f5f1ed;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #7a3d75;
+        }
+
+        .quote-box {
+            background-color: #3d2b4d;
+            border-left: 4px solid #9B4F96;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #d4a5d4;
+        }
+
+        .highlight {
+            color: #d4a5d4;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #0d0608;
+            border-top: 2px solid #9B4F96;
+            padding: 2rem;
+            text-align: center;
+            color: #a0959a;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #9B4F96;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #d4a5d4;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .event-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                margin-left: 1rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Black Plum</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="eternal_autumn_main.html">Eternal Autumn</a>
+                <a href="agritourism_events.html">Events</a>
+                <a href="mailto:hello@blackplum.belladynamic.org">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="eternal_autumn_main.html">Eternal Autumn</a> / Agritourism & Events
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>AGRITOURISM & IMMERSIVE EVENTS</h1>
+            <p class="hero-subtitle">Authentic Seasonal Experiences & Community Connection</p>
+            <p style="color: #e0d5e0; font-size: 1.1rem;">
+                Strategic partnerships with harvest venues creating authentic, immersive experiences that celebrate autumn traditions.
+            </p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="intro-box">
+            <h3>Our Approach</h3>
+            <p>
+                We partner with authentic harvest-related venues to create genuine, immersive experiences that celebrate 
+                autumn traditions while building community connections. These partnerships create a haven for people seeking 
+                meaningful change, a place to decompress, shed stress, and forge new friendships through shared autumn experiences.
+            </p>
+            <p class="quote-box" style="margin: 1.5rem 0; border: none; padding: 0;">
+                "These events create a haven for people seeking a change, a place to decompress, to shed stress and forge new friendships."
+            </p>
+        </div>
+
+        <h2 class="section-title">Partnership Venues</h2>
+        <div class="partnership-grid">
+            <div class="partnership-card">
+                <h3>Apple Orchards</h3>
+                <p>
+                    Experience the tradition of apple picking, cider pressing, and orchard-fresh tastings. Connect with 
+                    agricultural heritage while enjoying seasonal produce.
+                </p>
+            </div>
+
+            <div class="partnership-card">
+                <h3>Vineyards</h3>
+                <p>
+                    Explore harvest season wine production, vineyard tours, and wine tastings. Learn about seasonal viticulture 
+                    and enjoy curated wine experiences.
+                </p>
+            </div>
+
+            <div class="partnership-card">
+                <h3>Pumpkin Patches</h3>
+                <p>
+                    From selection to celebration, experience the joy of pumpkin patches. Participate in seasonal activities 
+                    and harvest traditions.
+                </p>
+            </div>
+
+            <div class="partnership-card">
+                <h3>Corn Mazes</h3>
+                <p>
+                    Navigate elaborate corn mazes while enjoying the autumn landscape. A fun, interactive experience for 
+                    individuals and groups.
+                </p>
+            </div>
+
+            <div class="partnership-card">
+                <h3>Heritage Farms</h3>
+                <p>
+                    Connect with sustainable agriculture and traditional farming practices. Learn about seasonal crops and 
+                    heritage preservation.
+                </p>
+            </div>
+
+            <div class="partnership-card">
+                <h3>Nut Farms</h3>
+                <p>
+                    Discover the harvest of nuts and specialty crops. Experience agricultural traditions and seasonal production.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Signature Events</h2>
+        <div class="events-section">
+            <h3>Immersive Experiences</h3>
+            <div class="event-grid">
+                <div class="event-item">
+                    <h4>Masquerade Ball of the Macabre</h4>
+                    <p>
+                        Our flagship immersive experience blending elaborate décor, live performances, and interactive storytelling. 
+                        This theatrical celebration of autumn's mystery brings together community members for an unforgettable evening.
+                    </p>
+                    <ul>
+                        <li>Elaborate gothic décor and ambiance</li>
+                        <li>Live performances and entertainment</li>
+                        <li>Interactive storytelling experiences</li>
+                        <li>Therapeutic release and social connection</li>
+                        <li>BWEN on-location filming opportunities</li>
+                    </ul>
+                </div>
+
+                <div class="event-item">
+                    <h4>Cultural Tours & Community Impact</h4>
+                    <p>
+                        Curated experiences partnering with tourism boards to create unique autumn travel journeys. These events 
+                        celebrate regional harvest traditions, crafts, food, and folklore while supporting local communities.
+                    </p>
+                    <ul>
+                        <li>Partner with tourism boards for unique experiences</li>
+                        <li>Celebrate regional harvest traditions</li>
+                        <li>Support cultural preservation</li>
+                        <li>Build genuine community connections</li>
+                        <li>Create sustainable local economic impact</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Event Benefits</h3>
+            <div class="event-grid">
+                <div class="event-item">
+                    <h4>Therapeutic Release</h4>
+                    <p>
+                        Events are intentionally designed as healing spaces, providing opportunities for stress relief, 
+                        emotional expression, and personal renewal.
+                    </p>
+                </div>
+
+                <div class="event-item">
+                    <h4>Artistic Expression</h4>
+                    <p>
+                        Creative opportunities for participants to express their authentic autumn vision through art, 
+                        performance, and collaborative creation.
+                    </p>
+                </div>
+
+                <div class="event-item">
+                    <h4>Social Connection</h4>
+                    <p>
+                        Genuine community building through shared experiences, creating lasting friendships and meaningful 
+                        relationships among participants.
+                    </p>
+                </div>
+
+                <div class="event-item">
+                    <h4>Environmental Sustainability</h4>
+                    <p>
+                        Commitment to sustainable practices, local partnerships, and cultural preservation that benefits 
+                        communities and the environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Partnership Benefits</h2>
+        <div class="benefits-section">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>For Venues</h4>
+                    <p>
+                        Extended season revenue, access to dedicated audiences, media exposure through BWEN, and partnership 
+                        recognition within the Eternal Autumn network.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <h4>For Participants</h4>
+                    <p>
+                        Authentic seasonal experiences, community connection, therapeutic benefits, and access to exclusive 
+                        events and member benefits.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <h4>For Communities</h4>
+                    <p>
+                        Economic support for local businesses, cultural preservation initiatives, environmental stewardship, 
+                        and community engagement opportunities.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <h4>For Content Creators</h4>
+                    <p>
+                        Unique filming opportunities, authentic content material, BWEN network exposure, and collaborative 
+                        production possibilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro-box">
+            <h3>Becoming a Partner</h3>
+            <p>
+                Are you a harvest-related venue, event organizer, or community partner interested in collaborating with 
+                Eternal Autumn? We're actively seeking partnerships that align with our mission of creating authentic, 
+                therapeutic, and community-centered experiences.
+            </p>
+            <p style="margin-top: 1rem;">
+                <strong>Partnership opportunities include:</strong>
+            </p>
+            <ul style="margin-left: 1.5rem; color: #e0d5e0; line-height: 1.8; margin-top: 0.5rem;">
+                <li>Venue partnerships for events and experiences</li>
+                <li>Content creation collaborations</li>
+                <li>Sponsorship and co-marketing opportunities</li>
+                <li>Community development initiatives</li>
+                <li>Revenue sharing arrangements</li>
+            </ul>
+            <a href="mailto:hello@blackplum.belladynamic.org" class="cta-button">Explore Partnership</a>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Agritourism & Immersive Events — A Division of Eternal Autumn</strong></p>
+        <p>A Component of Black Plum Concierge | Universal Changemakers (L3C)</p>
+        <p style="margin-top: 1rem;">
+            <strong>Email:</strong> <a href="mailto:hello@blackplum.belladynamic.org">hello@blackplum.belladynamic.org</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">
+            © 2026 Black Plum Concierge. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BWEN - Beautiful Webbed Entertainment Network | Eternal Autumn</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a0f1b;
+            color: #f5f1ed;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1a0f1b;
+            border-bottom: 2px solid #9B4F96;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f5f1ed;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #f5f1ed;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #9B4F96;
+        }
+
+        .breadcrumb {
+            background-color: #2d1b3d;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            color: #d4a5d4;
+        }
+
+        .breadcrumb a {
+            color: #9B4F96;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #d4a5d4;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2d1b3d 0%, #1a0f1b 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #9B4F96;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+            color: #f5f1ed;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #d4a5d4;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #9B4F96;
+            padding-bottom: 1rem;
+            color: #f5f1ed;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .content-box {
+            background-color: #2d1b3d;
+            border: 1px solid #9B4F96;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .content-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #d4a5d4;
+            letter-spacing: 1px;
+        }
+
+        .content-box p {
+            color: #e0d5e0;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .content-box ul {
+            margin-left: 1.5rem;
+            color: #e0d5e0;
+            line-height: 1.8;
+        }
+
+        .content-box li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            color: #d4a5d4;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #9B4F96;
+            color: #f5f1ed;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #7a3d75;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .quote-box {
+            background-color: #3d2b4d;
+            border-left: 4px solid #9B4F96;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #d4a5d4;
+        }
+
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .opportunity-card {
+            background-color: #2d1b3d;
+            border: 1px solid #9B4F96;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .opportunity-card h4 {
+            color: #d4a5d4;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .opportunity-card p {
+            color: #e0d5e0;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            background-color: #0d0608;
+            border-top: 2px solid #9B4F96;
+            padding: 2rem;
+            text-align: center;
+            color: #a0959a;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #9B4F96;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #d4a5d4;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                margin-left: 1rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Black Plum</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="eternal_autumn_main.html">Eternal Autumn</a>
+                <a href="bwen_hub.html">BWEN</a>
+                <a href="mailto:hello@blackplum.belladynamic.org">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="eternal_autumn_main.html">Eternal Autumn</a> / BWEN
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>BWEN</h1>
+            <p class="hero-subtitle">Beautiful Webbed Entertainment Network</p>
+            <p style="color: #e0d5e0; font-size: 1.1rem;">
+                The first autumn-centric media network dedicated to celebrating the eternal autumn aesthetic year-round.
+            </p>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">What is BWEN?</h2>
+        <div class="content-grid">
+            <div class="content-box">
+                <h3>Our Mission</h3>
+                <p>
+                    BWEN is not a future plan—we are actively building the first-ever entertainment network dedicated to 
+                    celebrating the eternal autumn aesthetic year-round. We capture and amplify autumn experiences across 
+                    digital platforms, creating a dedicated audience of autumn enthusiasts.
+                </p>
+                <p>
+                    <span class="highlight">"This isn't just content creation—it's cultivating a movement."</span>
+                </p>
+            </div>
+
+            <div class="content-box">
+                <h3>What We're Creating</h3>
+                <ul>
+                    <li>Original shows like <span class="highlight">"Specters and Secrets Radio"</span></li>
+                    <li>YouTube channels featuring immersive autumn experiences</li>
+                    <li>Podcast series exploring mysterious and seasonal themes</li>
+                    <li>Seasonal content that transcends traditional media boundaries</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            "BWEN represents the convergence of content, community, and commerce—a circular model where audience, 
+            experiences, and content create endless possibilities."
+        </div>
+
+        <h2 class="section-title">Open Call to Creators</h2>
+        <div class="content-grid">
+            <div class="content-box">
+                <h3>We Are Actively Seeking</h3>
+                <ul>
+                    <li><strong>Content Creators</strong> exploring autumn aesthetics</li>
+                    <li><strong>Podcasters</strong> covering mysterious or seasonal topics</li>
+                    <li><strong>YouTubers</strong> creating cozy fall content</li>
+                    <li><strong>Social Media Influencers</strong> with gothic or harvest sensibilities</li>
+                    <li><strong>Artists</strong> documenting fall experiences through any medium</li>
+                </ul>
+                <a href="mailto:hello@blackplum.belladynamic.org" class="cta-button">Apply Now</a>
+            </div>
+
+            <div class="content-box">
+                <h3>Creator Benefits</h3>
+                <ul>
+                    <li><strong>Monetization:</strong> Revenue sharing, sponsored content opportunities, and multiple income streams beyond traditional platforms</li>
+                    <li><strong>Amplification:</strong> Cross-promotion across the BWEN network, events, and partnerships to multiply your audience reach</li>
+                    <li><strong>Creative Freedom:</strong> Express your authentic autumn vision with production support and collaborative resources</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title">Strategic Opportunities</h2>
+        <div class="opportunities-grid">
+            <div class="opportunity-card">
+                <h4>Audience Growth</h4>
+                <p>
+                    Build a dedicated audience of autumn enthusiasts with significant seasonal spending and brand loyalty.
+                </p>
+            </div>
+
+            <div class="opportunity-card">
+                <h4>Year-Round Demand</h4>
+                <p>
+                    Create consistent demand for fall-centric content, breaking seasonal market limitations.
+                </p>
+            </div>
+
+            <div class="opportunity-card">
+                <h4>Bridging Digital & Real-World</h4>
+                <p>
+                    Connect digital content experiences with live events, farm partnerships, and immersive experiences.
+                </p>
+            </div>
+
+            <div class="opportunity-card">
+                <h4>Exponential Growth</h4>
+                <p>
+                    Positioned for exponential growth in an untapped market segment with proven consumer demand.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-box full-width">
+            <h3>The Multiplier Effect in Action</h3>
+            <p>
+                BWEN operates on a circular model: <span class="highlight">Audience Growth → Experiences → Content → New Audiences</span>
+            </p>
+            <p>
+                Each component reinforces and amplifies the others, creating exponential value for all partners. Creators gain 
+                access to a growing audience, audiences discover new content and experiences, and the network expands to serve 
+                more communities.
+            </p>
+            <p style="margin-top: 1.5rem;">
+                <strong>Ready to join the movement?</strong> Contact us to learn how BWEN can amplify your creative vision 
+                and connect you with a passionate autumn community.
+            </p>
+            <a href="mailto:hello@blackplum.belladynamic.org" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>BWEN — A Division of Eternal Autumn</strong></p>
+        <p>A Component of Black Plum Concierge | Universal Changemakers (L3C)</p>
+        <p style="margin-top: 1rem;">
+            <strong>Email:</strong> <a href="mailto:hello@blackplum.belladynamic.org">hello@blackplum.belladynamic.org</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">
+            © 2026 Black Plum Concierge. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
