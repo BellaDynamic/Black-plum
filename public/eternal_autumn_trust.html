@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal Autumn Trust | Community Welfare & Warmth</title>
+    <style>
+        :root {
+            --black: #1a0f1b;
+            --plum: #9B4F96;
+            --plum-dark: #5B2C6F;
+            --plum-light: #8E44AD;
+            --cream: #F5F1ED;
+            --lavender: #d4a5d4;
+            --gold: #D4AF37;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--black);
+            color: var(--cream);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--black);
+            border-bottom: 2px solid var(--plum);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--cream);
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover { color: var(--plum); }
+
+        .hero {
+            background: linear-gradient(rgba(26, 15, 27, 0.8), rgba(26, 15, 27, 0.8)), url('https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--plum);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 4px;
+            color: var(--cream);
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--lavender);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .trust-banner {
+            background-color: var(--plum-dark);
+            color: var(--cream);
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--plum);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: 2px;
+            color: var(--lavender);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background-color: var(--plum);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background-color: rgba(45, 27, 61, 0.5);
+            border: 1px solid var(--plum);
+            padding: 2.5rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--lavender);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .card h3 {
+            color: var(--lavender);
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .card p {
+            color: #e0d5e0;
+            margin-bottom: 1.5rem;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px dotted var(--plum);
+            padding-bottom: 0.3rem;
+        }
+
+        .menu-price { color: var(--gold); font-weight: bold; }
+
+        .donate-section {
+            background-color: var(--plum-dark);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 4rem;
+        }
+
+        .donate-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .donate-btn {
+            background-color: transparent;
+            border: 1px solid var(--cream);
+            color: var(--cream);
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-width: 100px;
+        }
+
+        .donate-btn:hover {
+            background-color: var(--cream);
+            color: var(--plum-dark);
+        }
+
+        .cta-main {
+            display: inline-block;
+            background-color: var(--plum);
+            color: var(--cream);
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .cta-main:hover { background-color: var(--plum-light); }
+
+        footer {
+            background-color: #0d0608;
+            border-top: 2px solid var(--plum);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: #a0959a;
+        }
+
+        .footer-links { margin-bottom: 1.5rem; }
+        .footer-links a { color: var(--lavender); text-decoration: none; margin: 0 1rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="trust-banner">
+        ✦ Registered Community Trust · All Proceeds to Local Welfare ✦
+    </div>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">ETERNAL AUTUMN TRUST</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="black_plum_concierge.html">Concierge</a>
+                <a href="#activities">Activities</a>
+                <a href="#bistro">Bistro</a>
+                <a href="#donate">Donate</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Celebrating Season, Craft & Connection</h1>
+        <p>Every stall, every gathering, every excursion funds warmth programmes, community meals, and skills training for those who need it most.</p>
+        <a href="#donate" class="cta-main">Support the Trust</a>
+    </section>
+
+    <div class="container">
+        <section id="activities">
+            <h2 class="section-title">Living Activities</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Morning Craft Circles</h3>
+                    <p>Join our community artisans for shared creativity. From weaving to botanical arts, these circles foster connection and skill-sharing.</p>
+                </div>
+                <div class="card">
+                    <h3>Twilight Walks</h3>
+                    <p>Experience the magic of the season through guided evening excursions. All proceeds fund our local warmth initiatives.</p>
+                </div>
+                <div class="card">
+                    <h3>The Autumn Emporium</h3>
+                    <p>Unique seasonal goods handcrafted by our community. Every purchase directly supports the Trust's welfare programs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="bistro">
+            <h2 class="section-title">Mobile Bistro & Market</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Warming Bowls & Soups</h3>
+                    <div class="menu-item"><span>Roasted Squash & Sage Bisque</span> <span class="menu-price">£5.50</span></div>
+                    <div class="menu-item"><span>Wild Mushroom Broth</span> <span class="menu-price">£6.00</span></div>
+                    <div class="menu-item"><span>Roasted Root Stew</span> <span class="menu-price">£7.00</span></div>
+                    <div class="menu-item"><span>Truffle Forest Bowl</span> <span class="menu-price">£9.00</span></div>
+                </div>
+                <div class="card">
+                    <h3>Spiced Drinks</h3>
+                    <div class="menu-item"><span>Spiced Apple & Clove Cider</span> <span class="menu-price">£3.50</span></div>
+                    <div class="menu-item"><span>Autumn Chai Latte</span> <span class="menu-price">£4.00</span></div>
+                    <div class="menu-item"><span>Elderflower & Rosehip Tea</span> <span class="menu-price">£3.00</span></div>
+                    <div class="menu-item"><span>Forest Floor Espresso</span> <span class="menu-price">£3.50</span></div>
+                </div>
+                <div class="card">
+                    <h3>Baked & Sweet</h3>
+                    <div class="menu-item"><span>Salted Caramel Tart</span> <span class="menu-price">£4.50</span></div>
+                    <div class="menu-item"><span>Spiced Pear & Almond Cake</span> <span class="menu-price">£4.00</span></div>
+                    <div class="menu-item"><span>Dark Chocolate Bark</span> <span class="menu-price">£3.50</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="donate" class="donate-section">
+            <h2 class="section-title" style="color: white;">Every Act of Giving Changes the Season</h2>
+            <p style="color: white; margin-bottom: 2rem;">Your contribution keeps the season alive for those who need warmth, community, and nourishment most.</p>
+            <div class="donate-grid">
+                <button class="donate-btn">£5</button>
+                <button class="donate-btn">£15</button>
+                <button class="donate-btn">£30</button>
+                <button class="donate-btn">£50</button>
+                <button class="donate-btn">£100</button>
+            </div>
+            <p style="font-style: italic; color: var(--lavender);">Received with gratitude, warmth, and the promise of good things given forward.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="black_plum_concierge.html">Black Plum Concierge</a>
+            <a href="eternal_autumn_main.html">Ecosystem</a>
+            <a href="mailto:hello@blackplum.belladynamic.org">Contact</a>
+        </div>
+        <p>© 2026 Eternal Autumn Trust. A Registered Charity. All proceeds support community warmth & welfare.</p>
+    </footer>
+</body>
+</html>
