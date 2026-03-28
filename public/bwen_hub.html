@@ -383,6 +383,224 @@
         </div>
     </section>
 
+    <!-- ============================================================
+     BLACK PLUM FIELD AGENT EARNINGS CALCULATOR
+     Embed this section before the <footer> tag on each property
+     ============================================================ -->
+<section id="earnings-calculator" style="background: linear-gradient(180deg, rgba(26,15,27,0) 0%, rgba(26,15,27,1) 100%); padding: 80px 0;">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 2rem;">
+
+        <!-- Section Header -->
+        <div style="text-align: center; margin-bottom: 50px;">
+            <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; color: #DAA520; margin-bottom: 12px;">Join the Network</p>
+            <h2 style="font-size: 2.2rem; color: #f5f1ed; margin-bottom: 16px; font-family: 'Georgia', serif;">Field Agent Earnings Calculator</h2>
+            <p style="color: #b5aeb6; max-width: 640px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7;">Explore your income potential as a Black Plum Field Agent. Adjust the inputs below to see a personalized projection based on your experience, availability, and service focus.</p>
+        </div>
+
+        <!-- Calculator Card -->
+        <div style="background: rgba(0,0,0,0.55); border: 2px solid #DAA520; border-radius: 16px; padding: 48px; box-shadow: 0 12px 40px rgba(0,0,0,0.5);">
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+
+                <!-- LEFT: Inputs -->
+                <div style="background: rgba(75,0,50,0.18); padding: 32px; border-radius: 12px; border-left: 5px solid #DAA520;">
+                    <h3 style="color: #DAA520; font-size: 1.4rem; margin-bottom: 28px; padding-bottom: 10px; border-bottom: 1px solid rgba(75,0,50,0.5); font-family: 'Georgia', serif;">Your Profile</h3>
+
+                    <div style="margin-bottom: 22px;">
+                        <label style="display: block; color: #DAA520; margin-bottom: 8px; font-weight: bold; font-size: 0.95rem;" for="bp-exp">Experience Level</label>
+                        <select id="bp-exp" onchange="bpCalc()" style="width:100%; padding:11px; background:rgba(0,0,0,0.7); border:2px solid #4B0032; border-radius:6px; color:#f5f1ed; font-family:'Georgia',serif; font-size:0.95rem;">
+                            <option value="new">New to Professional Services</option>
+                            <option value="some">Some Experience (1–3 years)</option>
+                            <option value="experienced">Experienced Professional (3–7 years)</option>
+                            <option value="expert">Expert / Executive Level (7+ years)</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 22px;">
+                        <label style="display: block; color: #DAA520; margin-bottom: 8px; font-weight: bold; font-size: 0.95rem;">Hours Per Week Available: <span id="bp-hrs-display" style="color:#f5f1ed;">20</span></label>
+                        <input type="range" id="bp-hrs" min="5" max="60" value="20" oninput="document.getElementById('bp-hrs-display').textContent=this.value; bpCalc();" style="width:100%; height:8px; border-radius:5px; background:rgba(75,0,50,0.5); outline:none; -webkit-appearance:none; cursor:pointer;">
+                        <div style="display:flex; justify-content:space-between; color:#b5aeb6; font-size:0.85rem; margin-top:4px;"><span>5 hrs</span><span>60 hrs</span></div>
+                    </div>
+
+                    <div style="margin-bottom: 22px;">
+                        <label style="display: block; color: #DAA520; margin-bottom: 8px; font-weight: bold; font-size: 0.95rem;" for="bp-clients">Existing Network</label>
+                        <select id="bp-clients" onchange="bpCalc()" style="width:100%; padding:11px; background:rgba(0,0,0,0.7); border:2px solid #4B0032; border-radius:6px; color:#f5f1ed; font-family:'Georgia',serif; font-size:0.95rem;">
+                            <option value="none">No existing clients</option>
+                            <option value="small">Small network (1–5 contacts)</option>
+                            <option value="medium">Moderate network (6–15 contacts)</option>
+                            <option value="large">Large network (16+ contacts)</option>
+                            <option value="executive">Executive / Corporate connections</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 22px;">
+                        <label style="display: block; color: #DAA520; margin-bottom: 8px; font-weight: bold; font-size: 0.95rem;" for="bp-svc">Primary Service Focus</label>
+                        <select id="bp-svc" onchange="bpCalc()" style="width:100%; padding:11px; background:rgba(0,0,0,0.7); border:2px solid #4B0032; border-radius:6px; color:#f5f1ed; font-family:'Georgia',serif; font-size:0.95rem;">
+                            <option value="essential">Essential Concierge (Day-to-day support)</option>
+                            <option value="strategic">Strategic Partner (Business operations)</option>
+                            <option value="executive">Executive Transformation (Full ecosystem)</option>
+                            <option value="crisis">Crisis Response (Emergency services)</option>
+                            <option value="mixed">Mixed Services (Multiple areas)</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 22px;">
+                        <label style="display: block; color: #DAA520; margin-bottom: 8px; font-weight: bold; font-size: 0.95rem;" for="bp-skills">Professional Skills</label>
+                        <select id="bp-skills" onchange="bpCalc()" style="width:100%; padding:11px; background:rgba(0,0,0,0.7); border:2px solid #4B0032; border-radius:6px; color:#f5f1ed; font-family:'Georgia',serif; font-size:0.95rem;">
+                            <option value="basic">Basic professional skills</option>
+                            <option value="intermediate">Intermediate business knowledge</option>
+                            <option value="advanced">Advanced expertise</option>
+                            <option value="specialized">Specialized / Technical expertise</option>
+                            <option value="executive">Executive / C-suite experience</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 0;">
+                        <label style="display: block; color: #DAA520; margin-bottom: 8px; font-weight: bold; font-size: 0.95rem;" for="bp-commit">Commitment Level</label>
+                        <select id="bp-commit" onchange="bpCalc()" style="width:100%; padding:11px; background:rgba(0,0,0,0.7); border:2px solid #4B0032; border-radius:6px; color:#f5f1ed; font-family:'Georgia',serif; font-size:0.95rem;">
+                            <option value="parttime">Part-time / Flexible</option>
+                            <option value="committed">Committed Growth</option>
+                            <option value="fulltime">Full-time Focus</option>
+                            <option value="entrepreneurial">Entrepreneurial (All-in)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Results -->
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <h3 style="color: #DAA520; font-size: 1.4rem; margin-bottom: 4px; font-family: 'Georgia', serif;">Your Earning Potential</h3>
+
+                    <div style="background:rgba(75,0,50,0.25); padding:22px; border-radius:10px; border-left:4px solid #DAA520;">
+                        <p style="color:#DAA520; font-size:0.9rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Monthly Income Range</p>
+                        <div id="bp-monthly" style="font-size:2rem; color:#90EE90; font-weight:bold; font-family:'Georgia',serif;">$5,000 – $15,000</div>
+                        <p style="color:#b5aeb6; font-size:0.85rem; margin-top:4px;">Based on your current profile</p>
+                    </div>
+
+                    <div style="background:rgba(75,0,50,0.25); padding:22px; border-radius:10px; border-left:4px solid #DAA520;">
+                        <p style="color:#DAA520; font-size:0.9rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Annual Potential</p>
+                        <div id="bp-annual" style="font-size:2rem; color:#90EE90; font-weight:bold; font-family:'Georgia',serif;">$60,000 – $180,000</div>
+                        <p style="color:#b5aeb6; font-size:0.85rem; margin-top:4px;">Projected yearly income</p>
+                    </div>
+
+                    <!-- Breakdown -->
+                    <div style="background:rgba(0,0,0,0.35); padding:22px; border-radius:10px;">
+                        <p style="color:#DAA520; font-size:0.9rem; font-weight:bold; margin-bottom:14px; text-transform:uppercase; letter-spacing:1px;">Income Breakdown</p>
+                        <div style="display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid rgba(75,0,50,0.3); font-size:0.9rem;"><span style="color:#b5aeb6;">Base Service Rate</span><span id="bp-base-rate" style="color:#f5f1ed;">$75/hr</span></div>
+                        <div style="display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid rgba(75,0,50,0.3); font-size:0.9rem;"><span style="color:#b5aeb6;">Retention Bonus</span><span id="bp-retention" style="color:#f5f1ed;">15%</span></div>
+                        <div style="display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid rgba(75,0,50,0.3); font-size:0.9rem;"><span style="color:#b5aeb6;">Performance Multiplier</span><span id="bp-perf" style="color:#f5f1ed;">1.2×</span></div>
+                        <div style="display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid rgba(75,0,50,0.3); font-size:0.9rem;"><span style="color:#b5aeb6;">Network Growth Bonus</span><span id="bp-network" style="color:#f5f1ed;">$500/mo</span></div>
+                        <div style="display:flex; justify-content:space-between; padding:9px 0; font-size:0.95rem; font-weight:bold;"><span style="color:#DAA520;">Effective Hourly Rate</span><span id="bp-eff-rate" style="color:#DAA520;">$85/hr</span></div>
+                    </div>
+
+                    <!-- Tier Comparison -->
+                    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+                        <div id="bp-tier1" style="background:rgba(75,0,50,0.2); padding:16px; border-radius:10px; text-align:center; border:2px solid transparent; transition:all 0.3s;">
+                            <p style="color:#DAA520; font-size:0.85rem; font-weight:bold; margin-bottom:6px;">Entry Level</p>
+                            <div style="font-size:1.1rem; color:#90EE90; font-weight:bold;">$5K–$12K</div>
+                            <p style="color:#b5aeb6; font-size:0.75rem; margin-top:4px;">Monthly</p>
+                        </div>
+                        <div id="bp-tier2" style="background:rgba(75,0,50,0.2); padding:16px; border-radius:10px; text-align:center; border:2px solid transparent; transition:all 0.3s;">
+                            <p style="color:#DAA520; font-size:0.85rem; font-weight:bold; margin-bottom:6px;">Professional</p>
+                            <div style="font-size:1.1rem; color:#90EE90; font-weight:bold;">$15K–$30K</div>
+                            <p style="color:#b5aeb6; font-size:0.75rem; margin-top:4px;">Monthly</p>
+                        </div>
+                        <div id="bp-tier3" style="background:rgba(75,0,50,0.2); padding:16px; border-radius:10px; text-align:center; border:2px solid transparent; transition:all 0.3s;">
+                            <p style="color:#DAA520; font-size:0.85rem; font-weight:bold; margin-bottom:6px;">Executive</p>
+                            <div style="font-size:1.1rem; color:#90EE90; font-weight:bold;">$35K–$50K+</div>
+                            <p style="color:#b5aeb6; font-size:0.75rem; margin-top:4px;">Monthly</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div style="margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(218,165,32,0.3); text-align: center;">
+                <p style="color:#f5f1ed; font-size:1.05rem; margin-bottom:8px;">Your earning potential is based on real Black Plum Field Agent performance data.</p>
+                <p style="color:#b5aeb6; font-style:italic; font-size:0.9rem; margin-bottom:24px;">Results reflect actual field agent earnings in our network. Individual results may vary based on effort, market conditions, and service delivery quality.</p>
+                <a href="mailto:hello@blackplum.belladynamic.org" style="display:inline-block; background:#DAA520; color:#1a0f1b; padding:14px 36px; border-radius:6px; font-weight:bold; text-decoration:none; font-family:'Georgia',serif; font-size:1rem; letter-spacing:1px; transition:background 0.3s;" onmouseover="this.style.background='#c49a10'" onmouseout="this.style.background='#DAA520'">Apply as a Field Agent</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Responsive: stack calculator columns on mobile */
+@media (max-width: 768px) {
+    #earnings-calculator > div > div:last-child {
+        grid-template-columns: 1fr !important;
+    }
+}
+/* Slider thumb styling */
+#bp-hrs::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #DAA520;
+    cursor: pointer;
+}
+#bp-hrs::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #DAA520;
+    cursor: pointer;
+    border: none;
+}
+</style>
+
+<script>
+(function() {
+    function bpCalc() {
+        var exp = document.getElementById('bp-exp').value;
+        var hrs = parseInt(document.getElementById('bp-hrs').value);
+        var clients = document.getElementById('bp-clients').value;
+        var svc = document.getElementById('bp-svc').value;
+        var skills = document.getElementById('bp-skills').value;
+        var commit = document.getElementById('bp-commit').value;
+
+        var baseRates = { new: 50, some: 65, experienced: 85, expert: 120 };
+        var svcMult   = { essential: 1.0, strategic: 1.3, executive: 1.8, crisis: 1.5, mixed: 1.2 };
+        var clientBonus = { none: 0, small: 200, medium: 500, large: 1000, executive: 2000 };
+        var skillsMult  = { basic: 1.0, intermediate: 1.1, advanced: 1.3, specialized: 1.5, executive: 1.8 };
+        var commitMult  = { parttime: 0.8, committed: 1.0, fulltime: 1.2, entrepreneurial: 1.5 };
+
+        var base = baseRates[exp];
+        var effRate = base * svcMult[svc] * skillsMult[skills] * commitMult[commit];
+        var monthlyBase = hrs * 4.33 * effRate;
+        var retPct = Math.min(25, Math.max(10, (effRate - 50) / 3));
+        var retention = monthlyBase * (retPct / 100);
+        var network = clientBonus[clients];
+        var total = monthlyBase + retention + network;
+
+        var lo = Math.round(total * 0.8);
+        var hi = Math.round(total * 1.2);
+
+        document.getElementById('bp-monthly').textContent = '$' + lo.toLocaleString() + ' \u2013 $' + hi.toLocaleString();
+        document.getElementById('bp-annual').textContent  = '$' + (lo*12).toLocaleString() + ' \u2013 $' + (hi*12).toLocaleString();
+        document.getElementById('bp-base-rate').textContent = '$' + Math.round(base) + '/hr';
+        document.getElementById('bp-retention').textContent = Math.round(retPct) + '%';
+        document.getElementById('bp-perf').textContent = (svcMult[svc] * skillsMult[skills]).toFixed(1) + '\u00d7';
+        document.getElementById('bp-network').textContent = '$' + network + '/mo';
+        document.getElementById('bp-eff-rate').textContent = '$' + Math.round(effRate) + '/hr';
+
+        ['bp-tier1','bp-tier2','bp-tier3'].forEach(function(id) {
+            document.getElementById(id).style.borderColor = 'transparent';
+            document.getElementById(id).style.transform = 'scale(1)';
+        });
+        var active = total < 15000 ? 'bp-tier1' : total < 35000 ? 'bp-tier2' : 'bp-tier3';
+        document.getElementById(active).style.borderColor = '#DAA520';
+        document.getElementById(active).style.transform = 'scale(1.05)';
+    }
+    window.bpCalc = bpCalc;
+    document.addEventListener('DOMContentLoaded', bpCalc);
+})();
+</script>
+<!-- ============================================================
+     END EARNINGS CALCULATOR
+     ============================================================ -->
+
     <footer>
         <p><strong>BWEN — A Division of Eternal Autumn</strong></p>
         <p>A Component of Black Plum Concierge | Universal Changemakers (L3C)</p>
