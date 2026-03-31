@@ -28,6 +28,7 @@ import MemberIntake from "./pages/MemberIntake";
 import PeerHub from "./pages/PeerHub";
 import Den from "./pages/Den";
 import FinancialHub from "./pages/FinancialHub";
+import ProgramPlanning from "./pages/ProgramPlanning";
 
 function Router() {
   return (
@@ -37,6 +38,7 @@ function Router() {
       <Route path={"/services"} component={Services} />
       <Route path={"/partner-register"} component={PartnerRegister} />
       <Route path={"/member-intake"} component={MemberIntake} />
+      <Route path={"/peer-hub"} component={PeerHub} />
 
       {/* Brand Pages */}
       <Route path={"/black-plum"} component={BlackPlum} />
@@ -49,6 +51,9 @@ function Router() {
       <Route path={"/ibaids"} component={IBAIDS} />
       <Route path={"/tgaa-guild"} component={TGAA} />
 
+      {/* Operational Tools */}
+      <Route path={"/program-planning"} component={ProgramPlanning} />
+
       {/* Member Dashboard */}
       <Route path={"/dashboard"} component={Dashboard} />
       <Route path={"/opportunities"} component={Opportunities} />
@@ -58,7 +63,6 @@ function Router() {
       <Route path={"/profile"} component={MemberProfile} />
       <Route path={"/bwen"} component={BWENChannels} />
       <Route path={"/events"} component={Events} />
-      <Route path={"/peer-hub"} component={PeerHub} />
       <Route path={"/den"} component={Den} />
       <Route path={"/financial-hub"} component={FinancialHub} />
 

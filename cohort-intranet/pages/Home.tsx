@@ -549,7 +549,7 @@ export default function Home() {
           </div>
           <div className="border-t border-zinc-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-xs text-zinc-600">
-              &copy; {new Date().getFullYear()} Universal Changemakers, Series L3C. All rights reserved.
+              &copy; {new Date().getFullYear()} Brandy Bianchini | Universal Changemakers, Series L3C. All rights reserved.
             </div>
             <div className="text-xs text-zinc-600">
               Eternal Autumn Trust · Private Operating Foundation · All programs 100% PRI/DAF Ready
