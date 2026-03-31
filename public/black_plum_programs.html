@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs &amp; Workflow | Black Plum Concierge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --black:#1a0f1b; --plum:#9B4F96; --teal:#007a7a; --gold:#DAA520; --cream:#F5F1ED; --white:#ffffff; --gray-dark:#2a1f2b; --gray-mid:#3a2f3b; --gray-text:#b5aeb6; --border:rgba(255,255,255,0.1); --green:#4CAF50; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:var(--black); color:var(--cream); font-family:'Inter',sans-serif; line-height:1.6; }
+        h1,h2,h3,h4 { font-family:'Playfair Display',serif; color:var(--white); }
+        .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+        header { background:#1a0f1b; border-bottom:2px solid var(--plum); padding:1.5rem 0; position:sticky; top:0; z-index:100; }
+        .header-container { max-width:1200px; margin:0 auto; padding:0 2rem; display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-size:1.6rem; font-weight:bold; color:var(--cream); letter-spacing:2px; text-decoration:none; font-family:'Georgia',serif; }
+        nav a { color:var(--cream); text-decoration:none; margin-left:2rem; font-size:0.9rem; transition:0.3s; }
+        nav a:hover { color:var(--gold); }
+        nav a.active { color:var(--gold); border-bottom:2px solid var(--gold); padding-bottom:2px; }
+        .page-header { padding:80px 0 50px; background:linear-gradient(180deg,#2a1f2b 0%,var(--black) 100%); border-bottom:1px solid var(--border); }
+        .badge { display:inline-block; padding:6px 14px; background:rgba(155,79,150,0.1); border:1px solid var(--plum); border-radius:100px; color:var(--plum); font-size:0.75rem; text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; }
+        .page-header h1 { font-size:clamp(1.8rem,4vw,3rem); margin-bottom:12px; }
+        .page-header p { color:var(--gray-text); font-size:1rem; max-width:700px; }
+        .owner-tag { margin-top:10px; font-size:0.82rem; color:var(--teal); font-style:italic; }
+        .tab-bar { background:var(--gray-dark); border-bottom:1px solid var(--border); position:sticky; top:73px; z-index:99; }
+        .tab-bar .container { display:flex; overflow-x:auto; }
+        .tab-btn { background:none; border:none; color:var(--gray-text); padding:16px 24px; font-size:0.875rem; font-family:'Inter',sans-serif; cursor:pointer; border-bottom:3px solid transparent; white-space:nowrap; transition:0.3s; }
+        .tab-btn:hover { color:var(--cream); }
+        .tab-btn.active { color:var(--gold); border-bottom-color:var(--gold); }
+        .tab-content { display:none; padding:50px 0; }
+        .tab-content.active { display:block; }
+        .section-title { font-size:1.5rem; margin-bottom:8px; }
+        .section-sub { color:var(--gray-text); margin-bottom:28px; font-size:0.9rem; max-width:750px; }
+        .card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-bottom:40px; }
+        .card { background:var(--gray-dark); border:1px solid var(--border); border-radius:12px; padding:24px; }
+        .card h4 { color:var(--gold); margin-bottom:10px; font-size:1rem; }
+        .card p { color:var(--gray-text); font-size:0.875rem; }
+        .pill { display:inline-block; padding:3px 10px; border-radius:100px; font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; margin-top:10px; }
+        .pill-plum { background:rgba(155,79,150,0.15); color:var(--plum); border:1px solid rgba(155,79,150,0.3); }
+        .pill-teal { background:rgba(0,122,122,0.15); color:var(--teal); border:1px solid rgba(0,122,122,0.3); }
+        .pill-gold { background:rgba(218,165,32,0.15); color:var(--gold); border:1px solid rgba(218,165,32,0.3); }
+        .pill-green { background:rgba(76,175,80,0.15); color:var(--green); border:1px solid rgba(76,175,80,0.3); }
+        .stage-card { background:var(--gray-dark); border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:12px; }
+        .stage-header { display:flex; align-items:center; gap:14px; padding:18px 22px; cursor:pointer; }
+        .stage-header:hover { background:rgba(255,255,255,0.02); }
+        .stage-num { width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem; flex-shrink:0; }
+        .s-complete { background:var(--green); color:white; }
+        .s-active { background:var(--gold); color:var(--black); }
+        .s-pending { background:var(--gray-mid); color:var(--gray-text); }
+        .stage-title { font-size:0.95rem; font-weight:600; flex:1; }
+        .stage-badge { font-size:0.7rem; padding:3px 9px; border-radius:100px; }
+        .b-complete { background:rgba(76,175,80,0.15); color:var(--green); border:1px solid rgba(76,175,80,0.3); }
+        .b-active { background:rgba(218,165,32,0.15); color:var(--gold); border:1px solid rgba(218,165,32,0.3); }
+        .b-pending { background:rgba(181,174,182,0.1); color:var(--gray-text); border:1px solid var(--border); }
+        .stage-chevron { color:var(--gray-text); font-size:1rem; transition:0.3s; }
+        .stage-body { display:none; padding:0 22px 22px; border-top:1px solid var(--border); }
+        .stage-body.open { display:block; }
+        .checklist { list-style:none; margin-top:14px; display:flex; flex-direction:column; gap:8px; }
+        .checklist li { display:flex; align-items:flex-start; gap:10px; font-size:0.85rem; color:var(--gray-text); }
+        .checklist li::before { content:'☐'; color:var(--gold); flex-shrink:0; }
+        .checklist li.done::before { content:'✓'; color:var(--green); }
+        .scope-row { display:flex; align-items:center; gap:10px; padding:8px 0; border-bottom:1px solid var(--border); font-size:0.85rem; }
+        .scope-row:last-child { border-bottom:none; }
+        .dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+        .dot-g { background:var(--green); } .dot-y { background:var(--gold); } .dot-gr { background:var(--gray-text); }
+        .data-table { width:100%; border-collapse:collapse; margin-bottom:32px; font-size:0.85rem; }
+        .data-table th { background:var(--gray-mid); color:var(--gold); padding:10px 14px; text-align:left; font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; }
+        .data-table td { padding:10px 14px; border-bottom:1px solid var(--border); color:var(--gray-text); }
+        footer { background:var(--gray-dark); border-top:1px solid var(--border); padding:32px 0; margin-top:60px; text-align:center; }
+        footer p { color:var(--gray-text); font-size:0.8rem; }
+        footer a { color:var(--teal); text-decoration:none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">Eternal Autumn</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="black_plum_concierge.html">Concierge</a>
+            <a href="bwen_hub.html">BWEN</a>
+            <a href="agritourism_events.html">Events</a>
+            <a href="eternal_autumn_trust.html">The Trust</a>
+            <a href="black_plum_programs.html" class="active">Programs</a>
+            <a href="mailto:hello@blackplum.belladynamic.org">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<div class="page-header">
+    <div class="container">
+        <div class="badge">Black Plum Concierge</div>
+        <h1>Programs, Workflow &amp; Partner Onboarding</h1>
+        <p>Black Plum Concierge operates in mutual benefit with Big Heart Solutions, Safe Harbor Public Services &amp; Resources Center, and the Resolute Economic Growth Clinic. Together, we deliver Program 1 — Authentic Living &amp; Healing — and support the full partner onboarding lifecycle.</p>
+        <p class="owner-tag">Owned &amp; Operated by Brandy Bianchini | Universal Changemakers, Series L3C · hello@blackplum.belladynamic.org</p>
+    </div>
+</div>
+
+<div class="tab-bar">
+    <div class="container">
+        <button class="tab-btn active" onclick="showTab('program1',this)">Program 1</button>
+        <button class="tab-btn" onclick="showTab('bella',this)">Bella Dynamic</button>
+        <button class="tab-btn" onclick="showTab('partners',this)">Partner Onboarding</button>
+        <button class="tab-btn" onclick="showTab('denefits',this)">Denefits Financing</button>
+        <button class="tab-btn" onclick="showTab('conduct',this)">Conduct &amp; Protection</button>
+    </div>
+</div>
+
+<!-- PROGRAM 1 -->
+<div id="tab-program1" class="tab-content active">
+    <div class="container">
+        <h3 class="section-title">Program 1 — Authentic Living &amp; Healing</h3>
+        <p class="section-sub">Black Plum Concierge is the primary delivery vehicle for Program 1. This program operates across all 6 scope levels and conducts a minimum of 4 events or projects per quarter. The activity schedule also serves as the production schedule for location-specific content.</p>
+        <div class="card-grid">
+            <div class="card">
+                <h4>State Scope</h4>
+                <p>Outlet arena for cause and matters at the state level. Aligned with California and expanding nationally through the Universal Changemakers, Series L3C framework.</p>
+                <span class="pill pill-green">Active</span>
+            </div>
+            <div class="card">
+                <h4>Regional Scope</h4>
+                <p>Territory cause, matter, and issues not state-specific. Regional outreach through Safe Harbor and Resolute Economic Growth Clinic partnerships.</p>
+                <span class="pill pill-green">Active</span>
+            </div>
+            <div class="card">
+                <h4>Local Scope</h4>
+                <p>Specific sector, cause, matter, and issues at the community level. Events and activities planned 12 weeks in advance through Big Heart Solutions.</p>
+                <span class="pill pill-green">Active</span>
+            </div>
+            <div class="card">
+                <h4>Personal Scope</h4>
+                <p>Solo artists, hobby entrepreneurs, and individuals. Scenario-based concerns, pathways, and benefits. Grief support, POA transitions, conservatorship, IHSS, and die-with-dignity programs.</p>
+                <span class="pill pill-green">Active</span>
+            </div>
+            <div class="card">
+                <h4>Professional Scope</h4>
+                <p>Engagement arenas, strategy, and tactics to achieve, earn, learn, co-deliver, and cooperate. Field Agent program, service agreements, and professional development pathways.</p>
+                <span class="pill pill-green">Active</span>
+            </div>
+            <div class="card">
+                <h4>Member Only Scope</h4>
+                <p>Member type, class, cost, services, and support packages available monthly, quarterly, and yearly. Financed through Denefits for amounts over $300/month.</p>
+                <span class="pill pill-gold">In Development</span>
+            </div>
+        </div>
+
+        <h3 class="section-title">Program 1 Services Checklist</h3>
+        <p class="section-sub">Services delivered through Black Plum Concierge in partnership with Bella Dynamic, Big Heart Solutions, Safe Harbor, and the Resolute Economic Growth Clinic.</p>
+        <div class="stage-card">
+            <div class="stage-header" onclick="toggleStage(this)">
+                <div class="stage-num s-active">☑</div>
+                <span class="stage-title">Authentic Living &amp; Healing — Service Delivery Checklist</span>
+                <span class="stage-badge b-active">Program 1</span>
+                <span class="stage-chevron">▼</span>
+            </div>
+            <div class="stage-body open">
+                <ul class="checklist">
+                    <li class="done">Grief support services available</li>
+                    <li class="done">Death certificate assistance available</li>
+                    <li class="done">Power of Attorney (POA) transition support available</li>
+                    <li class="done">Conservatorship guidance available</li>
+                    <li class="done">In-Home Supportive Services (IHSS) navigation available</li>
+                    <li class="done">Die-with-dignity and organ donation programs available</li>
+                    <li class="done">Google Grandparent initiative active</li>
+                    <li class="done">Safe rides program active</li>
+                    <li class="done">Women-only rides program active</li>
+                    <li class="done">Rehabilitation support available</li>
+                    <li>NAICS code matching for all services — in progress</li>
+                    <li>Member-only service packages finalized</li>
+                    <li>Denefits financing integrated for service packages over $300/month</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BELLA DYNAMIC -->
+<div id="tab-bella" class="tab-content">
+    <div class="container">
+        <h3 class="section-title">Bella Dynamic — Sister Entity</h3>
+        <p class="section-sub">Black Plum Concierge and Bella Dynamic are sister entities. They work together to deliver Authentic Living and Authentic Healing services. Field Agent training and earning systems are unified across both brands.</p>
+        <div class="card-grid">
+            <div class="card">
+                <h4>Authentic Healing</h4>
+                <p>Whole-human health advocacy. Grief support, end-of-life planning, IHSS navigation, and die-with-dignity programs for individuals without family or friends.</p>
+                <span class="pill pill-plum">Bella Dynamic</span>
+            </div>
+            <div class="card">
+                <h4>Authentic Living</h4>
+                <p>Public wellness advocacy. Safe rides, women-only rides, Google Grandparent initiative, rehabilitation support, and community health programs.</p>
+                <span class="pill pill-plum">Bella Dynamic</span>
+            </div>
+            <div class="card">
+                <h4>Sofia Health &amp; Rupa Health</h4>
+                <p>Outlet platforms for wellness services. Amazon and Google integrations for product and service delivery. Social media content creation and marketing.</p>
+                <span class="pill pill-teal">Outlets</span>
+            </div>
+            <div class="card">
+                <h4>Field Agent — Unified Training</h4>
+                <p>Field Agents operate across both Black Plum Concierge and Bella Dynamic. Earning systems, training, and service delivery are succinct across both brands.</p>
+                <span class="pill pill-gold">Unified</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PARTNER ONBOARDING -->
+<div id="tab-partners" class="tab-content">
+    <div class="container">
+        <h3 class="section-title">Partner &amp; Field Agent Onboarding</h3>
+        <p class="section-sub">No partner, contractor, field rep, or agent profile goes live until all stages are complete and they have formally said yes. Each person receives a service agreement per project and per person that complements their individual needs and life position.</p>
+        <div class="stage-card">
+            <div class="stage-header" onclick="toggleStage(this)">
+                <div class="stage-num s-complete">0</div>
+                <span class="stage-title">Legal Vetting &amp; Due Diligence</span>
+                <span class="stage-badge b-complete">Required First</span>
+                <span class="stage-chevron">▼</span>
+            </div>
+            <div class="stage-body open">
+                <ul class="checklist">
+                    <li>Background and reference verification completed</li>
+                    <li>Due diligence checklist passed</li>
+                    <li>Intellectual property protection clause acknowledged</li>
+                    <li>Bad Business Behavior policy reviewed and signed</li>
+                    <li>Professional conduct standards confirmed (business casual or formal — jacket and slacks required)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="stage-card">
+            <div class="stage-header" onclick="toggleStage(this)">
+                <div class="stage-num s-active">1</div>
+                <span class="stage-title">Intake &amp; Needs Assessment</span>
+                <span class="stage-badge b-active">Active</span>
+                <span class="stage-chevron">▼</span>
+            </div>
+            <div class="stage-body">
+                <ul class="checklist">
+                    <li>First session completed — listening and questions</li>
+                    <li>Fill-in-the-blanks needs assessment form submitted</li>
+                    <li>Life position and professional goals documented</li>
+                    <li>Service agreement scope defined</li>
+                    <li>Denefits financing education completed</li>
+                </ul>
+            </div>
+        </div>
+        <div class="stage-card">
+            <div class="stage-header" onclick="toggleStage(this)">
+                <div class="stage-num s-pending">2</div>
+                <span class="stage-title">Ecosystem Education &amp; Orientation</span>
+                <span class="stage-badge b-pending">Pending</span>
+                <span class="stage-chevron">▼</span>
+            </div>
+            <div class="stage-body">
+                <ul class="checklist">
+                    <li>Black Plum Concierge and Bella Dynamic sister entity relationship explained</li>
+                    <li>Big Heart Solutions, Safe Harbor, and Resolute Economic Growth Clinic mutual benefit explained</li>
+                    <li>Universal Changemakers, Series L3C mission and funding structure explained</li>
+                    <li>Perpetual financing model through Denefits explained</li>
+                    <li>Rapid Response Plan compliance requirements reviewed</li>
+                </ul>
+            </div>
+        </div>
+        <div class="stage-card">
+            <div class="stage-header" onclick="toggleStage(this)">
+                <div class="stage-num s-pending">3</div>
+                <span class="stage-title">Service Agreement Execution</span>
+                <span class="stage-badge b-pending">Pending</span>
+                <span class="stage-chevron">▼</span>
+            </div>
+            <div class="stage-body">
+                <ul class="checklist">
+                    <li>Service agreement drafted per project and per person</li>
+                    <li>Suggestion fee and dues structure confirmed</li>
+                    <li>Liability and recovery schedule acknowledged</li>
+                    <li>Investor meeting protocol signed</li>
+                    <li>Contract executed and filed</li>
+                </ul>
+            </div>
+        </div>
+        <div class="stage-card">
+            <div class="stage-header" onclick="toggleStage(this)">
+                <div class="stage-num s-pending">4</div>
+                <span class="stage-title">Pod / Nest Build-Out</span>
+                <span class="stage-badge b-pending">Pending</span>
+                <span class="stage-chevron">▼</span>
+            </div>
+            <div class="stage-body">
+                <ul class="checklist">
+                    <li>Odoo CRM profile created</li>
+                    <li>Denefits account activated</li>
+                    <li>BetterWorld, Pietra Studio, and Wethos Studio connected</li>
+                    <li>Document upload and real-time collaboration tools enabled</li>
+                    <li>Group app access granted</li>
+                </ul>
+            </div>
+        </div>
+        <div class="stage-card">
+            <div class="stage-header" onclick="toggleStage(this)">
+                <div class="stage-num s-pending">5</div>
+                <span class="stage-title">Go-Live — Profile Published</span>
+                <span class="stage-badge b-pending">Pending</span>
+                <span class="stage-chevron">▼</span>
+            </div>
+            <div class="stage-body">
+                <ul class="checklist">
+                    <li>Formal "Yes" received and documented</li>
+                    <li>Dedicated landing page created and published</li>
+                    <li>First project or event assigned</li>
+                    <li>Sustainability financing through Denefits activated</li>
+                    <li>Opportunities shared broadly with the cohort</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DENEFITS -->
+<div id="tab-denefits" class="tab-content">
+    <div class="container">
+        <h3 class="section-title">Denefits — White Glove Service Center</h3>
+        <p class="section-sub">Denefits is our partner White Glove Service Center for CRM and Receivables. It provides the financing infrastructure that allows us to finance service providers and members into projects in perpetuity, creating sustainability and preventing devaluation of services.</p>
+        <div class="card-grid">
+            <div class="card">
+                <h4>Financing Terms</h4>
+                <p>Available for service agreements and member plans over $300 per month. Payment plans of 3, 6, 9, or 12 months. No interest charged. One-time service fee of $39.</p>
+                <span class="pill pill-teal">CRM · Receivables</span>
+            </div>
+            <div class="card">
+                <h4>Pre-Approved Integration</h4>
+                <p>Denefits provides a pre-approved link, API, and widget for direct integration into our site. Automated payment processing and receivables management.</p>
+                <span class="pill pill-gold">API · Widget</span>
+            </div>
+            <div class="card">
+                <h4>Perpetual Financing Model</h4>
+                <p>Service providers are educated on how the organization finances them into projects in perpetuity. This makes the opportunity privileged and awarded — not dependent on public outreach.</p>
+                <span class="pill pill-plum">Sustainability</span>
+            </div>
+        </div>
+        <table class="data-table">
+            <thead><tr><th>Plan</th><th>Duration</th><th>Interest</th><th>Service Fee</th><th>Minimum Amount</th></tr></thead>
+            <tbody>
+                <tr><td>Short-Term</td><td>3 months</td><td>None</td><td>$39 one-time</td><td>$300/month</td></tr>
+                <tr><td>Standard</td><td>6 months</td><td>None</td><td>$39 one-time</td><td>$300/month</td></tr>
+                <tr><td>Extended</td><td>9 months</td><td>None</td><td>$39 one-time</td><td>$300/month</td></tr>
+                <tr><td>Annual</td><td>12 months</td><td>None</td><td>$39 one-time</td><td>$300/month</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- CONDUCT & PROTECTION -->
+<div id="tab-conduct" class="tab-content">
+    <div class="container">
+        <h3 class="section-title">Professional Conduct &amp; Protection Policy</h3>
+        <p class="section-sub">This ecosystem is owned and operated by one person — Brandy Bianchini. Any disruption to operations, misrepresentation of roles, or bad business behavior results in documented fees, reported liabilities, and legal action. These are not threats — they are law and your right when a year of time and funding has been affected by manipulative behavior.</p>
+        <div class="card-grid">
+            <div class="card">
+                <h4>Professional Attire Standard</h4>
+                <p>All team members, field agents, and collaborators are required to maintain business casual or business formal dress at all events and meetings. Minimum standard: jacket and slacks. Check specific event requirements in advance.</p>
+                <span class="pill pill-gold">Non-Negotiable</span>
+            </div>
+            <div class="card">
+                <h4>Investor Meeting Protocol</h4>
+                <p>No partner or peer may speak for Brandy Bianchini, represent her financial role, or include her in investor discussions without prior written approval. Violation results in immediate liability documentation and fees.</p>
+                <span class="pill pill-plum">Legal Protection</span>
+            </div>
+            <div class="card">
+                <h4>Bad Business Behavior Policy</h4>
+                <p>Process disrespect, misrepresentation, unauthorized financial inclusion, and manipulation of the ecosystem are billable offenses. Fees range from $500 to $5,000+ per incident. Losses are reported against the project and person.</p>
+                <span class="pill pill-plum">Enforceable</span>
+            </div>
+            <div class="card">
+                <h4>Due Diligence Requirement</h4>
+                <p>All partners must pass Stage 0 legal vetting before any intake session, service agreement, or pod build-out begins. Failure to pass due diligence results in immediate removal from the active pipeline.</p>
+                <span class="pill pill-teal">Stage 0 Required</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Black Plum Concierge · Sister Entity: Bella Dynamic · Mutual Benefit Partners: Big Heart Solutions · Safe Harbor Public Services &amp; Resources Center · Resolute Economic Growth Clinic</p>
+    <p style="margin-top:8px;">Owned &amp; Operated by Brandy Bianchini | Universal Changemakers, Series L3C · <a href="mailto:hello@blackplum.belladynamic.org">hello@blackplum.belladynamic.org</a></p>
+</footer>
+
+<script>
+function showTab(id,btn){document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active');btn.classList.add('active');}
+function toggleStage(h){var b=h.nextElementSibling;var c=h.querySelector('.stage-chevron');if(b.classList.contains('open')){b.classList.remove('open');c.style.transform='rotate(-90deg)';}else{b.classList.add('open');c.style.transform='rotate(0deg)';}}
+</script>
+</body>
+</html>
