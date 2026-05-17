@@ -8,7 +8,7 @@
 
 ## Welcome
 
-Black Plum Concierge is the direct portal to founder **Brandy Bianchini** and a premier brand of **Universal Changemakers (L3C)**. We provide transformative, multi-industry advising and consulting across six service pillars. Our work is funded and supported by the **Eternal Autumn Trust**, a private operating foundation dedicated to our mission.
+Black Plum Concierge is the direct portal to founder **Brandy Bianchini** and a premier brand of **Universal Changemakers (L3C)**. We provide transformative, multi-industry advising and consulting across six service pillars. Our work operates in collaboration with the **Eternal Autumn Trust**, a private operating foundation that funds and fuels program outreach and fulfillment. These are two separate entities with distinct operating functions that work together strategically.
 
 ---
 
@@ -66,8 +66,8 @@ The Black Plum ecosystem is built on a clear and powerful structure:
 
 | Entity | Role |
 |:---|:---|
-| **Universal Changemakers, Series L3C** | The primary operating entity. |
-| **Eternal Autumn Trust** | The private operating foundation that funds our work. |
+| **Universal Changemakers, Series L3C** | The primary operating entity (founded December 11, 2015). |
+| **Eternal Autumn Trust** | A separate private operating foundation (created July 2025) that funds and fuels program outreach and fulfillment. |
 | **Black Plum Concierge** | The direct portal to founder Brandy Bianchini. |
 | **Bella Dynamic** | Our sister brand for public wellness advocacy. |
 

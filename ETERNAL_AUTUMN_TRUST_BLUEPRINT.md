@@ -9,11 +9,11 @@ This document provides a comprehensive blueprint of the Eternal Autumn Trust, a 
 
 The ecosystem is built upon six core pillars, each with a distinct yet interconnected function. These pillars are:
 
-1.  **The Eternal Autumn Trust:** The foundational holding and dynasty structure.
+1.  **The Eternal Autumn Trust:** The foundational holding and dynasty structure that funds and fuels program outreach.
 2.  **Sister Companies:** The primary commercial arms of the Trust, focused on specific industries.
 3.  **The Field Rep Program:** A network of multipurpose agents driving the Trust's mission on the ground.
 4.  **Membership & Benefits Framework:** A system for engaging and rewarding stakeholders.
-5.  **Universal Changemakers Series L3C:** The social enterprise and community development engine.
+5.  **Universal Changemakers Series L3C:** A separate operating entity (founded December 11, 2015) that serves as the social enterprise and community development engine, working collaboratively with the Trust.
 6.  **Quarterly Events & Activity Calendar:** The programmatic and engagement arm of the ecosystem.
 
 This blueprint will detail each of these pillars, outlining their individual roles and their collective function within the broader Eternal Autumn Trust ecosystem.
@@ -63,7 +63,7 @@ The Membership & Benefits Framework is the system through which the Eternal Autu
 
 ## 6. Universal Changemakers Series L3C: Social Impact
 
-The Universal Changemakers Series L3C is a low-profit limited liability company that serves as the social enterprise arm of the Eternal Autumn Trust. This "frankensteined entity" was created to address systemic issues in various industries and to drive community development. The L3C is a key component of the Trust's strategy for aligning with government awards, contracting, and grants, and for implementing community development strategies.
+The Universal Changemakers Series L3C is a separate low-profit limited liability company (founded December 11, 2015) that serves as the social enterprise and community development engine. This entity was created to address systemic issues in various industries and to drive community development. The L3C works collaboratively with the Eternal Autumn Trust to align with government awards, contracting, and grants, and for implementing community development strategies.
 
 | Entity | Description |
 |---|---|
@@ -86,4 +86,4 @@ The Quarterly Events & Activity Calendar is the programmatic heart of the Eterna
 
 ## 8. Conclusion
 
-The Eternal Autumn Trust is a complex and ambitious undertaking, but one that is built on a solid foundation of strategic planning and a clear vision. The integrated ecosystem of the Trust, its Sister Companies, the Field Rep Program, the Membership & Benefits Framework, the Universal Changemakers L3C, and the Quarterly Events & Activity Calendar is designed to be a powerful engine for economic growth, social impact, and generational wealth creation. This blueprint provides a comprehensive overview of this ecosystem, and will serve as a guide for its continued development and success.
+The Eternal Autumn Trust is a complex and ambitious undertaking, but one that is built on a solid foundation of strategic planning and a clear vision. The integrated ecosystem includes the Trust, its Sister Companies, the Field Rep Program, the Membership & Benefits Framework, and the Quarterly Events & Activity Calendar. The Universal Changemakers Series L3C operates as a separate but collaborating entity within this broader ecosystem. Together, these entities are designed to be a powerful engine for economic growth, social impact, and generational wealth creation. This blueprint provides a comprehensive overview of this ecosystem, and will serve as a guide for its continued development and success.
