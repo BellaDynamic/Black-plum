@@ -204,13 +204,13 @@ This roadmap consolidates all previous work and provides a clear, actionable pat
 
 ### Priority 1: Brand Identity & Messaging Alignment
 
-**Objective:** Ensure all public-facing content reflects the authentic brand voice, removing all "gothic" language and clearly positioning Black Plum as the direct portal to founder Brandy Bianchini.
+**Objective:** Ensure all public-facing content reflects the authentic brand voice, removing all "nocturnal luxury" language and clearly positioning Black Plum as the direct portal to founder Brandy Bianchini.
 
 **Key Actions:**
 - Audit all existing website copy, marketing materials, and internal documents for brand voice consistency.
 - Rewrite all content to align with the core message of multi-industry advising and fulfillment for founders.
 - Prominently feature the "Your Direct Portal to Brandy Bianchini" positioning on the website homepage and key service pages.
-- Update brand style guide to explicitly forbid "gothic" or overly ornate language.
+- Update brand style guide to explicitly forbid "nocturnal luxury" or overly ornate language.
 
 **Success Metrics:**
 - 100% of public-facing content is rewritten and aligned with the new brand voice.

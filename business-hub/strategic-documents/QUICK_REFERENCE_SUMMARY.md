@@ -93,7 +93,7 @@
 ## Contact Information
 
 **Email:** hello@blackplum.belladynamic.org  
-**Brand Colors:** Black (#1a0f1b), Plum (#9B4F96), Gold (#d4af37), Cream (#F5F1ED)  
+**Brand Colors:** Black (#1a0f1b), Plum (#9B4F96), Gold (#9B3A6A), Cream (#F5F1ED)  
 **Tagline:** *Transformation Through Excellence*
 
 ---

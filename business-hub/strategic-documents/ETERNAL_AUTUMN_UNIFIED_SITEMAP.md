@@ -63,7 +63,7 @@ The main navigation will be consistent across all pages to ensure seamless movem
 
 - **Colors:** Primary use of **Deep Plum (#1a0f1b)** and **Black**. Accents in **Lavender (#9b7fd4)** and **Deep Teal (#007a7a)**.
 - **Typography:** **Playfair Display** for headings (elegance/rarity) and **Inter/Georgia** for body (professionalism).
-- **Integrity:** Explicitly avoid "gothic" descriptors while maintaining the atmospheric richness of the autumn season. Focus on "rarity," "foundational legacy," and "lasting generation."
+- **Integrity:** Explicitly avoid "nocturnal luxury" descriptors while maintaining the atmospheric richness of the autumn season. Focus on "rarity," "foundational legacy," and "lasting generation."
 
 ---
 

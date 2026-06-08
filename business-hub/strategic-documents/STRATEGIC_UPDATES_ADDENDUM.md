@@ -29,9 +29,9 @@ This addendum documents critical updates made to the Black Plum strategic framew
 
 ### 2. Brand Voice Correction
 
-**Update:** Removed all references to "gothic luxury," "dark aesthetic," and ornate language. The brand voice now emphasizes **professional excellence, multi-industry expertise, and fulfillment for founders.**
+**Update:** Removed all references to "nocturnal luxury luxury," "nocturnal luxury," and ornate language. The brand voice now emphasizes **professional excellence, multi-industry expertise, and fulfillment for founders.**
 
-**Rationale:** Previous iterations of the brand identity included gothic or dark aesthetic language that does not align with the authentic, approachable, and professional nature of the services provided. The corrected brand voice focuses on clarity, accessibility, and the founder's extensive experience.
+**Rationale:** Previous iterations of the brand identity included nocturnal luxury or nocturnal luxury language that does not align with the authentic, approachable, and professional nature of the services provided. The corrected brand voice focuses on clarity, accessibility, and the founder's extensive experience.
 
 **Key Messaging:**
 - "Multi-industry advising and consulting applied to your individual needs"
@@ -48,13 +48,13 @@ This addendum documents critical updates made to the Black Plum strategic framew
 
 **Update:** Added a new Priority 1 in Phase 3 of the Implementation Roadmap focused on brand identity and messaging alignment.
 
-**Objective:** Ensure all public-facing content reflects the authentic brand voice, removing all "gothic" language and clearly positioning Black Plum as the direct portal to founder Brandy Bianchini.
+**Objective:** Ensure all public-facing content reflects the authentic brand voice, removing all "nocturnal luxury" language and clearly positioning Black Plum as the direct portal to founder Brandy Bianchini.
 
 **Key Actions:**
 - Audit all existing website copy, marketing materials, and internal documents for brand voice consistency
 - Rewrite all content to align with the core message of multi-industry advising and fulfillment for founders
 - Prominently feature the "Your Direct Portal to Brandy Bianchini" positioning on the website homepage and key service pages
-- Update brand style guide to explicitly forbid "gothic" or overly ornate language
+- Update brand style guide to explicitly forbid "nocturnal luxury" or overly ornate language
 
 **Success Metrics:**
 - 100% of public-facing content is rewritten and aligned with the new brand voice
@@ -104,13 +104,13 @@ This addendum documents critical updates made to the Black Plum strategic framew
 ### Approved Brand Voice
 
 **Tone:** Professional, approachable, expert, and transformative  
-**Language:** Clear, direct, and accessible—avoiding overly ornate or "gothic" phrasing  
+**Language:** Clear, direct, and accessible—avoiding overly ornate or "nocturnal luxury" phrasing  
 **Focus:** Multi-industry expertise, personalized consulting, fulfillment for founders
 
 ### Prohibited Language
 
-- "Gothic luxury"
-- "Dark elegance"
+- "nocturnal luxury luxury"
+- "sophisticated elegance"
 - Overly ornate or archaic phrasing
 - Any language that creates distance between the founder and the client
 
@@ -147,7 +147,7 @@ To ensure full alignment with the updated brand identity, the following content 
 **Immediate (Next 7 Days):**
 1. Conduct full website content audit using the brand voice checklist
 2. Rewrite homepage to prominently feature "Your Direct Portal to Brandy Bianchini"
-3. Update all service pillar descriptions to remove gothic language
+3. Update all service pillar descriptions to remove nocturnal luxury language
 4. Finalize brand style guide with prohibited language list
 
 **Short-Term (Next 30 Days):**

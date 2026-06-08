@@ -93,7 +93,7 @@ black_plum_concierge/
 
 - **Color Palette:** Black (#1a0f1b), Plum (#9B4F96), Cream (#F5F1ED), Silver (#C0C0C0)
 - **Typography:** Georgia serif font with generous letter-spacing
-- **Aesthetic:** Gothic luxury, sophisticated, professional excellence
+- **Aesthetic:** nocturnal luxury luxury, sophisticated, professional excellence
 - **Tone:** Integrity-first, transparent, transformational
 
 ## Contact

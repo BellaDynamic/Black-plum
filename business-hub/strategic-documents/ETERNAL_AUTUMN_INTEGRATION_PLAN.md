@@ -9,9 +9,9 @@ This document outlines the strategic integration of the 'Eternal Autumn' brand e
 
 ## 2. Brand Identity Synthesis and Aesthetic Reconciliation
 
-The Eternal Autumn brand, as presented in the PDF, embraces a 'Spooky Autumn Experience' with a 'Gothic Luxury Ecosystem.' This aesthetic requires careful reconciliation with Black Plum's established brand identity, which emphasizes 'Professional excellence, rarity and unique foundational legacy' and explicitly avoids 'gothic' or similar dark, stylized aesthetics, as well as colors like gold, yellow, and rust red [1] [2] [3].
+The Eternal Autumn brand, as presented in the PDF, embraces a 'Spooky Autumn Experience' with a 'nocturnal luxury Luxury Ecosystem.' This aesthetic requires careful reconciliation with Black Plum's established brand identity, which emphasizes 'Professional excellence, rarity and unique foundational legacy' and explicitly avoids 'nocturnal luxury' or similar dark, stylized aesthetics, as well as colors like gold, yellow, and rust red [1] [2] [3].
 
-To achieve a cohesive brand identity, the 'Gothic Luxury' aspect of Eternal Autumn will be interpreted through the lens of **sophisticated elegance, deep thematic richness, and an elevated sense of mystery**, rather than literal gothic imagery. The visual language will focus on rich textures, refined typography, and a color palette that aligns with Black Plum's existing scheme while incorporating the deep purples and lavenders suggested by Eternal Autumn. This approach ensures that the unique foundational legacy of both brands is maintained without aesthetic conflict.
+To achieve a cohesive brand identity, the 'nocturnal luxury Luxury' aspect of Eternal Autumn will be interpreted through the lens of **sophisticated elegance, deep thematic richness, and an elevated sense of mystery**, rather than literal nocturnal luxury imagery. The visual language will focus on rich textures, refined typography, and a color palette that aligns with Black Plum's existing scheme while incorporating the deep purples and lavenders suggested by Eternal Autumn. This approach ensures that the unique foundational legacy of both brands is maintained without aesthetic conflict.
 
 ### 2.1. Color Palette Integration
 

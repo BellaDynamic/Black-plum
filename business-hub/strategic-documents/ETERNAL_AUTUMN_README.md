@@ -27,7 +27,7 @@ The primary gateway to the Eternal Autumn ecosystem. This page serves as the cen
 - **Component Navigation:** Direct links to all major Eternal Autumn divisions
 
 **Key Features:**
-- Sophisticated dark aesthetic (deep plum/black backgrounds) with cream and lavender accents
+- Sophisticated nocturnal luxury (deep plum/black backgrounds) with cream and lavender accents
 - Professional serif typography (Georgia) for headers and body text
 - Responsive design optimized for all devices
 - Clear call-to-action pathways for engagement
@@ -105,7 +105,7 @@ The integration maintains Black Plum's established color scheme while incorporat
 | Accent Color | Plum | #9B4F96 |
 | Highlight Color | Light Lavender | #d4a5d4 |
 
-**Important Note:** The integration explicitly avoids "gothic" aesthetic language while maintaining sophisticated elegance. The brand is positioned as celebrating "rarity and unique foundational legacy" with an emphasis on "lasting generation" rather than dark or morbid themes.
+**Important Note:** The integration explicitly avoids "nocturnal luxury" aesthetic language while maintaining sophisticated elegance. The brand is positioned as celebrating "rarity and unique foundational legacy" with an emphasis on "lasting generation" rather than dark or morbid themes.
 
 ### Typography
 - **Headers:** Georgia serif font with increased letter-spacing for elegance

@@ -131,7 +131,7 @@ A Division of Universal Changemakers (L3C)
 
 ## Brand Identity
 
-**Color Palette:** Black (#1a0f1b), Plum (#9B4F96), Gold (#d4af37), Cream (#F5F1ED)  
+**Color Palette:** Black (#1a0f1b), Plum (#9B4F96), Gold (#9B3A6A), Cream (#F5F1ED)  
 **Typography:** Georgia serif, Playfair Display  
 **Aesthetic:** Professional excellence, rarity and unique foundational legacy  
 **Tone:** Professional, approachable, expert, transformative

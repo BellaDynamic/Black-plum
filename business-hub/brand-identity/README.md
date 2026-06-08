@@ -20,8 +20,8 @@ This directory contains all brand guidelines, visual assets, messaging framework
 
 ### Prohibited Language
 
-- "Gothic luxury" or "gothic elegance"
-- "Dark elegance"
+- "nocturnal luxury luxury" or "nocturnal luxury elegance"
+- "sophisticated elegance"
 - Overly ornate or archaic phrasing
 - The word "paramount" (trademark conflict)
 - Any language that creates distance between the founder and the client
@@ -40,7 +40,7 @@ This directory contains all brand guidelines, visual assets, messaging framework
 **Color Palette:**
 - Black: #1a0f1b
 - Plum: #9B4F96
-- Gold: #d4af37
+- Gold: #9B3A6A
 - Cream: #F5F1ED
 - Silver: #C0C0C0
 
